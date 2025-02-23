@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://hiq8v640fdkr"]
+
+[ext_resource type="Script" path="res://Scripts/mov_obs_3.gd" id="1_qv70j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ys632"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i24r"]
+
+[node name="MovObs3" type="Node2D"]
+script = ExtResource("1_qv70j")
+
+[node name="Bajar" type="Area2D" parent="."]
+position = Vector2(0, -264)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bajar"]
+shape = SubResource("RectangleShape2D_ys632")
+
+[node name="Subir" type="Area2D" parent="."]
+position = Vector2(0, 248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Subir"]
+shape = SubResource("RectangleShape2D_2i24r")
+
+[connection signal="area_entered" from="Bajar" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Subir" to="." method="_on_area_2d_2_area_entered"]

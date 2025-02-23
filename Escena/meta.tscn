@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://tbovlcygn17y"]
+
+[ext_resource type="Script" path="res://Scripts/meta.gd" id="1_8p87p"]
+[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="2_tjfqg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8w88y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tjfqg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddw8p"]
+radius = 48.0
+
+[node name="Meta" type="Area2D"]
+script = ExtResource("1_8p87p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.917912, 0.0131528, 0, 1)
+sprite_frames = SubResource("SpriteFrames_8w88y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ddw8p")
+
+[connection signal="body_entered" from="." to="." method="TerminarNivel"]

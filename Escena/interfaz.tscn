@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://blbrhdkmb00ge"]
+
+[ext_resource type="Script" path="res://Scripts/interfaz.gd" id="1_l0ay0"]
+
+[node name="Interfaz" type="CanvasLayer"]
+script = ExtResource("1_l0ay0")

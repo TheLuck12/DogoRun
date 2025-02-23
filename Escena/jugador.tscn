@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcdxy02n2up7v"]
+
+[ext_resource type="Script" path="res://Scripts/jugador.gd" id="1_t2qgo"]
+[ext_resource type="Texture2D" uid="uid://dymueski7quti" path="res://Arte/Dogo/Idle.png" id="2_uophi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbyo6"]
+radius = 45.7143
+height = 137.143
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kevp1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uophi")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Jugador" type="CharacterBody2D"]
+script = ExtResource("1_t2qgo")
+fuerzaSalto = 800
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(1.90735e-06, 11.4286)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lbyo6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 7.14286)
+scale = Vector2(0.160714, 0.190476)
+sprite_frames = SubResource("SpriteFrames_kevp1")
+animation = &"Idle"
+flip_h = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(274.286, 0)
+limit_left = 0
+limit_top = 0
+limit_bottom = 720
+limit_smoothed = true
+position_smoothing_speed = 3.5
