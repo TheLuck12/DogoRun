@@ -1,68 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcdxy02n2up7v"]
+[gd_scene load_steps=3 format=3 uid="uid://bcdxy02n2up7v"]
 
 [ext_resource type="Script" path="res://Scripts/jugador.gd" id="1_t2qgo"]
-[ext_resource type="Texture2D" uid="uid://glxfpdrjm0vp" path="res://Arte/Dogo/IdleDog.png" id="2_y1tqs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbyo6"]
 radius = 45.7143
-height = 137.143
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8rjpq"]
-atlas = ExtResource("2_y1tqs")
-region = Rect2(0, 32, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c4k5g"]
-atlas = ExtResource("2_y1tqs")
-region = Rect2(64, 32, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pg123"]
-atlas = ExtResource("2_y1tqs")
-region = Rect2(128, 32, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_srly1"]
-atlas = ExtResource("2_y1tqs")
-region = Rect2(192, 32, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0llt3"]
-atlas = ExtResource("2_y1tqs")
-region = Rect2(256, 32, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ptu6x"]
-atlas = ExtResource("2_y1tqs")
-region = Rect2(320, 32, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qmxgg"]
-atlas = ExtResource("2_y1tqs")
-region = Rect2(384, 32, 64, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kevp1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8rjpq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c4k5g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pg123")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_srly1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0llt3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ptu6x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qmxgg")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}]
+height = 128.0
 
 [node name="Jugador" type="CharacterBody2D"]
 script = ExtResource("1_t2qgo")
@@ -73,12 +15,6 @@ physics_interpolation_mode = 1
 position = Vector2(-1.36424e-12, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_lbyo6")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, -17)
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_kevp1")
-animation = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(274.286, 0)

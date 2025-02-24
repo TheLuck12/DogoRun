@@ -92,12 +92,12 @@ position = Vector2(3720, 288)
 position = Vector2(7792, 280)
 
 [node name="DetectarObjTirable" type="Area2D" parent="."]
-position = Vector2(648, 576)
+position = Vector2(680, 368)
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectarObjTirable"]
-position = Vector2(4488, 7)
+position = Vector2(2672, 216)
 shape = SubResource("RectangleShape2D_n1rjw")
 one_way_collision_margin = 35.6
 

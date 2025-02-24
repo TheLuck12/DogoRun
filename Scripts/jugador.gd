@@ -1,21 +1,18 @@
 extends CharacterBody2D
 
-@onready var Sprite = $AnimatedSprite2D
+
 
 var salte : int
 @export var fuerzaSalto : int
 
 func _ready() -> void:
-	Sprite.play("Idle")
-
+	pass
 func _physics_process(delta: float) -> void:
 	if Global.enJuego == true:
 		Gravedad(delta)
 		Saltar()
 		Mover()
 		move_and_slide()
-	elif  Global.enJuego == false and Global.FinNivel == true:
-		Sprite.modulate = Color("black")
 	else:
 		pass
 
