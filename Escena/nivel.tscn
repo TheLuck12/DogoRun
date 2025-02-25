@@ -117,6 +117,7 @@ centered = false
 scroll_scale = Vector2(2, 2)
 
 [node name="Jugador" parent="." instance=ExtResource("1_re4s4")]
-position = Vector2(152, 488)
+position = Vector2(128, 472)
+scale = Vector2(-0.731244, 0.726351)
 
 [connection signal="body_entered" from="DetectarObjTirable" to="." method="ActivarTimer"]

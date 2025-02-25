@@ -18,11 +18,10 @@ func _physics_process(_delta: float) -> void:
 func _on_eliminar_timeout() -> void:
 	queue_free()
 
-
-func _on_detectar_jugador_body_entered(body: Node2D) -> void:
-	if body.name == "Jugador":
-		Global.enJuego = false
-
 func Eliminar():
 	if Global.enJuego == true:
 		queue_free()
+
+func _on_detectar_jugador_area_entered(area: Area2D) -> void:
+	if area.is_in_group("PJ"):
+		Global.enJuego = false

@@ -6,7 +6,7 @@ var salte : int
 @export var fuerzaSalto : int
 
 func _ready() -> void:
-	pass
+	$AnimationPlayer.play("Correr")
 func _physics_process(delta: float) -> void:
 	if Global.enJuego == true:
 		Gravedad(delta)
@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		Mover()
 		move_and_slide()
 	else:
-		pass
+		$AnimationPlayer.stop()
 
 func Gravedad(Masa):
 	if not is_on_floor():

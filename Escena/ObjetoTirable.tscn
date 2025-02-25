@@ -42,4 +42,4 @@ shape = SubResource("CapsuleShape2D_37fip")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectarJugador"]
 shape = SubResource("CapsuleShape2D_ie8c3")
 
-[connection signal="body_entered" from="DetectarJugador" to="." method="_on_detectar_jugador_body_entered"]
+[connection signal="area_entered" from="DetectarJugador" to="." method="_on_detectar_jugador_area_entered"]
