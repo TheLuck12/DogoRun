@@ -4,12 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://uu2fgpx4h2cv" path="res://Arte/Dogo/DogoArgentino.png" id="2_vsv37"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbyo6"]
-height = 160.0
+radius = 7.2
+height = 177.778
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_x1bex"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ehte"]
-radius = 36.0
+radius = 57.6
 height = 174.0
 
 [sub_resource type="Animation" id="Animation_hw46g"]
@@ -219,13 +220,14 @@ _data = {
 }
 
 [node name="Jugador" type="CharacterBody2D" groups=["PJ"]]
+scale = Vector2(0.84375, 0.833333)
 script = ExtResource("1_t2qgo")
 fuerzaSalto = 800
 metadata/_edit_horizontal_guides_ = [102.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(0, 92)
+position = Vector2(9.48148, 97.2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_lbyo6")
 
@@ -375,6 +377,7 @@ rotation = -0.548492
 rest = Transform2D(0.853312, -0.521401, 0.521401, 0.853312, 21.0634, 6.11022)
 
 [node name="Perder" type="Area2D" parent="." groups=["PJ"]]
+position = Vector2(0, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
 position = Vector2(0, 11)
