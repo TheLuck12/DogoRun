@@ -1,15 +1,16 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcdxy02n2up7v"]
 
-[ext_resource type="Script" path="res://Scripts/jugador.gd" id="1_t2qgo"]
+[ext_resource type="Script" uid="uid://colr1nhvexkrd" path="res://Scripts/jugador.gd" id="1_t2qgo"]
 [ext_resource type="Texture2D" uid="uid://uu2fgpx4h2cv" path="res://Arte/Dogo/DogoArgentino.png" id="2_vsv37"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_2q7ru"]
-radius = 56.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbyo6"]
 height = 160.0
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_x1bex"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ehte"]
+radius = 36.0
+height = 174.0
 
 [sub_resource type="Animation" id="Animation_hw46g"]
 resource_name = "Correr"
@@ -213,8 +214,8 @@ tracks/7/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_22yas"]
 _data = {
-"Correr": SubResource("Animation_hw46g"),
-"RESET": SubResource("Animation_3mo6d")
+&"Correr": SubResource("Animation_hw46g"),
+&"RESET": SubResource("Animation_3mo6d")
 }
 
 [node name="Jugador" type="CharacterBody2D" groups=["PJ"]]
@@ -222,25 +223,11 @@ script = ExtResource("1_t2qgo")
 fuerzaSalto = 800
 metadata/_edit_horizontal_guides_ = [102.0]
 
-[node name="Perder" type="Area2D" parent="." groups=["PJ"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
-position = Vector2(0, 32)
-shape = SubResource("CircleShape2D_2q7ru")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
 position = Vector2(0, 92)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_lbyo6")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-435.22, -26.0826)
-limit_left = 0
-limit_top = 0
-limit_bottom = 720
-limit_smoothed = true
-position_smoothing_speed = 3.5
 
 [node name="Cuerpo" type="Node2D" parent="."]
 position = Vector2(-3, 37)
@@ -354,7 +341,7 @@ rest = Transform2D(-0.731201, -0.682161, 0.682161, -0.731201, 13, 15)
 
 [node name="ColaA" type="Bone2D" parent="Skeleton2D/Init/ParteA"]
 position = Vector2(24, -6)
-scale = Vector2(0.999875, 0.999875)
+scale = Vector2(0.999876, 0.999876)
 rest = Transform2D(1, 0, 0, 1, 24, -6)
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Init/ParteA/ColaA"]
@@ -387,8 +374,15 @@ position = Vector2(21.0634, 6.11022)
 rotation = -0.548492
 rest = Transform2D(0.853312, -0.521401, 0.521401, 0.853312, 21.0634, 6.11022)
 
+[node name="Perder" type="Area2D" parent="." groups=["PJ"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
+position = Vector2(0, 11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6ehte")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_22yas")
+&"": SubResource("AnimationLibrary_22yas")
 }
 speed_scale = 1.578

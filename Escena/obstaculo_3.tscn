@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://djnfgbyrp0knr"]
 
-[ext_resource type="Script" path="res://Scripts/obstaculo_3.gd" id="1_o2an6"]
+[ext_resource type="Script" uid="uid://cdlfqftnkcqvs" path="res://Scripts/obstaculo_3.gd" id="1_o2an6"]
 [ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_o8jfc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u5a67"]

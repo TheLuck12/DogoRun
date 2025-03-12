@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dlkxpwy0sdxy8"]
 
-[ext_resource type="Script" path="res://Scripts/enemigo.gd" id="1_1o23q"]
+[ext_resource type="Script" uid="uid://cy0j88ip65ljb" path="res://Scripts/enemigo.gd" id="1_1o23q"]
 [ext_resource type="Texture2D" uid="uid://cm5rdp15ihl3r" path="res://Arte/CANGREJITO caminata3.png" id="1_k4ee2"]
 [ext_resource type="PackedScene" uid="uid://boi68xbn2si2g" path="res://Escena/ObjetoTirable.tscn" id="2_5ulp1"]
 [ext_resource type="Texture2D" uid="uid://b6u878rr62gfw" path="res://Arte/CANGREJITO caminata 1.png" id="2_vrpao"]
@@ -43,7 +43,7 @@ flip_h = true
 [node name="Spawn" type="Node2D" parent="."]
 
 [node name="IntanciarObj" type="Timer" parent="Spawn"]
-wait_time = 0.8
+wait_time = 0.7
 autostart = true
 
 [node name="SpawnObjeto" type="Marker2D" parent="Spawn"]

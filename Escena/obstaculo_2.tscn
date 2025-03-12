@@ -1,7 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1op76fi6ecrv"]
+[gd_scene load_steps=15 format=3 uid="uid://b1op76fi6ecrv"]
 
-[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_geee0"]
-[ext_resource type="Script" path="res://Scripts/obstaculo_2.gd" id="1_okkqa"]
+[ext_resource type="Script" uid="uid://bnx5lhqihtmaj" path="res://Scripts/obstaculo_2.gd" id="1_okkqa"]
+[ext_resource type="Texture2D" uid="uid://d4fjrvhgnlj7" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_000.png" id="2_aa0ot"]
+[ext_resource type="Texture2D" uid="uid://c623wkpgf5f4u" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_001.png" id="3_typqv"]
+[ext_resource type="Texture2D" uid="uid://d0lkj3liiqfn0" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_002.png" id="4_m6dfx"]
+[ext_resource type="Texture2D" uid="uid://bv54e0uixswhd" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_003.png" id="5_xc3rf"]
+[ext_resource type="Texture2D" uid="uid://dja1ym8m821uu" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_004.png" id="6_i6dg8"]
+[ext_resource type="Texture2D" uid="uid://4ni5a32sbgfk" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_005.png" id="7_771og"]
+[ext_resource type="Texture2D" uid="uid://5rodhsvj3bo2" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_006.png" id="8_tstgc"]
+[ext_resource type="Texture2D" uid="uid://d10hww881t4bq" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_007.png" id="9_rxou1"]
+[ext_resource type="Texture2D" uid="uid://2gaahol0lanf" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_008.png" id="10_w1x7g"]
+[ext_resource type="Texture2D" uid="uid://bikl7ip6oioyc" path="res://Arte/Obstaculo2/Colectivo/-_Mobil_Bus_009.png" id="11_baxdx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jovj6"]
 friction = 0.0
@@ -11,33 +20,65 @@ bounce = 0.2
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_geee0")
+"texture": ExtResource("2_aa0ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_typqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m6dfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xc3rf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i6dg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_771og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tstgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rxou1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w1x7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_baxdx")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"Colectivo",
+"speed": 23.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uk0x7"]
-size = Vector2(13.3333, 112)
+size = Vector2(13.3333, 493)
 
 [node name="Obstaculo2" type="StaticBody2D"]
-scale = Vector2(6, 2)
+position = Vector2(0, -2.38419e-07)
+scale = Vector2(0.475, 0.475)
 physics_material_override = SubResource("PhysicsMaterial_jovj6")
 script = ExtResource("1_okkqa")
+metadata/_edit_horizontal_guides_ = [208.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2.38419e-07, 0)
 scale = Vector2(0.875, 1)
 sprite_frames = SubResource("SpriteFrames_jndjp")
+animation = &"Colectivo"
+frame_progress = 0.170674
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-46.6667, 8)
+position = Vector2(-631, -5.5)
 shape = SubResource("RectangleShape2D_uk0x7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-53.3333, -52, -49.3333, -56, -45.3333, -60, -41.3333, -64, 45.3333, -64, 56, -52, -52, -48)
+position = Vector2(-590, -219)
+polygon = PackedVector2Array(0.526306, -67.3158, 1263.68, -67.3158, 1263.68, -33.6316, -66.8421, -33.6316)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
