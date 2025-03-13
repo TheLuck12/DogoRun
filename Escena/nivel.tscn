@@ -164,7 +164,7 @@ position = Vector2(24272, 920)
 position = Vector2(8, -104)
 
 [node name="MovObs10" parent="Obstaculos/Drones" instance=ExtResource("6_ovso8")]
-position = Vector2(26704, 920)
+position = Vector2(26232, 952)
 
 [node name="Obstaculo3" parent="Obstaculos/Drones/MovObs10" instance=ExtResource("5_2jeap")]
 position = Vector2(8, 8)
@@ -176,7 +176,7 @@ position = Vector2(27408, 920)
 position = Vector2(8, 216)
 
 [node name="MovObs12" parent="Obstaculos/Drones" instance=ExtResource("6_ovso8")]
-position = Vector2(28288, 920)
+position = Vector2(28624, 920)
 
 [node name="Obstaculo3" parent="Obstaculos/Drones/MovObs12" instance=ExtResource("5_2jeap")]
 position = Vector2(8, -160)
