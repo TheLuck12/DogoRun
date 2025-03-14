@@ -32,6 +32,7 @@ script = ExtResource("1_1o23q")
 objetoTirable = ExtResource("2_5ulp1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_r2tdg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

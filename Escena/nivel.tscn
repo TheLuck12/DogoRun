@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dso2lp2f733xt"]
+[gd_scene load_steps=14 format=3 uid="uid://dso2lp2f733xt"]
 
 [ext_resource type="Texture2D" uid="uid://f4j5hrwf0bd4" path="res://Arte/TilePlataformaSuelo.png" id="1_6ytlt"]
 [ext_resource type="Script" uid="uid://bnvyd0ckmyyab" path="res://Scripts/nivel.gd" id="1_ij3rq"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://hiq8v640fdkr" path="res://Escena/mov_obs_3.tscn" id="6_ovso8"]
 [ext_resource type="Texture2D" uid="uid://c3j74w5qh2243" path="res://Arte/ObeliscoBA2015.2.jpg" id="7_f8y3q"]
 [ext_resource type="PackedScene" uid="uid://tbovlcygn17y" path="res://Escena/meta.tscn" id="9_cbkso"]
+[ext_resource type="PackedScene" uid="uid://blbrhdkmb00ge" path="res://Escena/interfaz.tscn" id="10_nuv4m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmxtv"]
 texture = ExtResource("1_6ytlt")
@@ -59,7 +60,7 @@ layer_0/tile_data = PackedInt32Array(720918, 65536, 0, 786454, 65536, 1, 720919,
 position = Vector2(0, 8)
 
 [node name="Colectivos" type="Node2D" parent="Obstaculos"]
-position = Vector2(-152, 592)
+position = Vector2(-152, 579)
 
 [node name="Obstaculo2" parent="Obstaculos/Colectivos" instance=ExtResource("5_q23nn")]
 position = Vector2(1832, -162)
@@ -217,5 +218,7 @@ limit_top = 0
 limit_bottom = 720
 limit_smoothed = true
 position_smoothing_speed = 3.5
+
+[node name="Interfaz" parent="." instance=ExtResource("10_nuv4m")]
 
 [connection signal="body_entered" from="DetectarObjTirable" to="." method="ActivarTimer"]

@@ -17,7 +17,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_orvw1"]
 radius = 33.0
 
-[node name="Obstaculo3" type="Area2D" groups=["Enemigo"]]
+[node name="Obstaculo3" type="Area2D" groups=["Enemigo3"]]
 script = ExtResource("1_o2an6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

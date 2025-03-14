@@ -1,24 +1,90 @@
-[gd_scene load_steps=2 format=3 uid="uid://blbrhdkmb00ge"]
+[gd_scene load_steps=11 format=3 uid="uid://blbrhdkmb00ge"]
 
 [ext_resource type="Script" uid="uid://caulwwu4ccwsh" path="res://Scripts/interfaz.gd" id="1_l0ay0"]
+[ext_resource type="Texture2D" uid="uid://b1v465p8fftsf" path="res://Arte/BarraDeProgreso/Atras.png" id="2_o6vvq"]
+[ext_resource type="Texture2D" uid="uid://5ykmt00ylyvj" path="res://Arte/Carpincho.png" id="3_f5vjo"]
+[ext_resource type="Texture2D" uid="uid://ch1ijc3p0eksc" path="res://Arte/BarraDeProgreso/full.png" id="3_o6vvq"]
+[ext_resource type="Texture2D" uid="uid://dymueski7quti" path="res://Arte/Dogo/Idle.png" id="5_8l6ld"]
+[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="6_l3x6v"]
+
+[sub_resource type="Animation" id="Animation_83pey"]
+resource_name = "Barra"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Idle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 60),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(784, 61), Vector2(1233, 61)]
+}
+
+[sub_resource type="Animation" id="Animation_l3x6v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Idle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(784, 61)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6fut1"]
+_data = {
+&"Barra": SubResource("Animation_83pey"),
+&"RESET": SubResource("Animation_l3x6v")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7tdul"]
+blend_mode = 2
 
 [node name="Interfaz" type="CanvasLayer"]
 script = ExtResource("1_l0ay0")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = 598.0
-offset_right = 602.0
-offset_bottom = 27.0
-max_value = 60.0
-
-[node name="Label" type="Label" parent="."]
-offset_left = 598.0
-offset_right = 665.0
-offset_bottom = 162.0
-theme_override_font_sizes/font_size = 118
-text = "0"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6fut1")
+}
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="BarraProceso" type="TextureProgressBar" parent="CanvasGroup"]
+offset_left = 779.0
+offset_top = 16.0
+offset_right = 2059.0
+offset_bottom = 736.0
+scale = Vector2(0.37525, 0.105482)
+max_value = 60.0
+texture_under = ExtResource("2_o6vvq")
+texture_progress = ExtResource("3_o6vvq")
+
+[node name="Carpincho" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(1248, 56)
+scale = Vector2(0.499999, 0.5)
+texture = ExtResource("3_f5vjo")
+flip_h = true
+
+[node name="Idle" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(784, 61)
+scale = Vector2(0.0406251, 0.0444444)
+texture = ExtResource("5_8l6ld")
+flip_h = true
+
+[node name="Icon" type="Sprite2D" parent="CanvasGroup"]
+material = SubResource("CanvasItemMaterial_7tdul")
+position = Vector2(715, 54)
+texture = ExtResource("6_l3x6v")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
