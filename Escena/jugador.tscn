@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcdxy02n2up7v"]
+[gd_scene load_steps=10 format=3 uid="uid://bcdxy02n2up7v"]
 
 [ext_resource type="Script" uid="uid://colr1nhvexkrd" path="res://Scripts/jugador.gd" id="1_t2qgo"]
 [ext_resource type="Texture2D" uid="uid://uu2fgpx4h2cv" path="res://Arte/Dogo/DogoArgentino.png" id="2_vsv37"]
@@ -6,8 +6,6 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbyo6"]
 radius = 7.2
 height = 146.963
-
-[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_x1bex"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ehte"]
 radius = 57.6
@@ -36,7 +34,7 @@ tracks/1/path = NodePath("Skeleton2D/Init/ParteA/PiernaD:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.233333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-2.39088, -1.80202]
@@ -48,7 +46,7 @@ tracks/2/path = NodePath("Skeleton2D/Init/ParteD/PiernaD:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.233333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.452513, -0.42591]
@@ -60,7 +58,7 @@ tracks/3/path = NodePath("Skeleton2D/Init/ParteD/PIernaI:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.233333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.587333, -0.357595]
@@ -72,7 +70,7 @@ tracks/4/path = NodePath("Skeleton2D/Init/cuello:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.233333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-2.69624, -2.95037]
@@ -84,7 +82,7 @@ tracks/5/path = NodePath("Skeleton2D/Init/cuello:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.233333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-28, -40), Vector2(-33, -31)]
@@ -96,7 +94,7 @@ tracks/6/path = NodePath("Skeleton2D/Init/ParteA/ColaA:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.233333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -0.678414]
@@ -108,7 +106,7 @@ tracks/7/path = NodePath("Skeleton2D/Init:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.233333),
+"times": PackedFloat32Array(0, 0.233333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-50, 8), Vector2(-50.4004, 4.87897)]
@@ -212,12 +210,92 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(-50, 8)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/Init/ParteA/PiernaD:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15.6365, 8.24083)]
+}
+
+[sub_resource type="Animation" id="Animation_6ehte"]
+resource_name = "Saltar"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Init/ParteA/PiernaI:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-2.57187, -2.26334]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Init/ParteA/PiernaD:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-2.8537, -2.5712]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Init/ParteA/PiernaD:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15.6365, 8.24083)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Init/ParteD/PiernaD:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.07447, 0.784655]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Init/ParteD/PIernaI:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.10143, 0.820941]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_22yas"]
 _data = {
 &"Correr": SubResource("Animation_hw46g"),
-&"RESET": SubResource("Animation_3mo6d")
+&"RESET": SubResource("Animation_3mo6d"),
+&"Saltar": SubResource("Animation_6ehte")
 }
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_x1bex"]
 
 [node name="Jugador" type="CharacterBody2D" groups=["PJ"]]
 scale = Vector2(0.84375, 0.833333)
@@ -315,14 +393,30 @@ uv = PackedVector2Array(1003.77, 379.871, 1031.51, 351.694, 1088.3, 338.046, 113
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 13, 14, 15, 16), PackedInt32Array(13, 12, 11, 10, 9, 8, 7, 6)]
 bones = ["Init", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteA", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteA/PiernaI", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteA/PiernaI/PataI", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteA/PiernaD", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Init/ParteA/PiernaD/PataD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteA/ColaA", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteA/ColaA/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteD/PiernaD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteD/PiernaD/PataD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteD/PIernaI", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/ParteD/PIernaI/PataI", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/cuello", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Init/cuello/Cabeza", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
+[node name="Perder" type="Area2D" parent="." groups=["PJ"]]
+position = Vector2(0, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
+position = Vector2(0, 11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6ehte")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_22yas")
+}
+speed_scale = 1.578
+
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 position = Vector2(-3, 10)
-rotation = 0.000176977
+rotation = 0.0410393
+scale = Vector2(1, 1)
 modification_stack = SubResource("SkeletonModificationStack2D_x1bex")
 
 [node name="Init" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(-50, 8)
 rotation = -0.0316577
+scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(1, 0, 0, 1, -50, 8)
 
 [node name="ParteA" type="Bone2D" parent="Skeleton2D/Init"]
@@ -332,13 +426,13 @@ rest = Transform2D(1, 0, 0, 1, 119, 0)
 [node name="PiernaI" type="Bone2D" parent="Skeleton2D/Init/ParteA"]
 position = Vector2(-3, 11)
 rotation = -1.98773
-scale = Vector2(0.999826, 0.999826)
+scale = Vector2(0.999828, 0.999828)
 rest = Transform2D(-0.404956, -0.914335, 0.914335, -0.404956, -3, 11)
 
 [node name="PiernaD" type="Bone2D" parent="Skeleton2D/Init/ParteA"]
-position = Vector2(13, 15)
+position = Vector2(15.6365, 8.24083)
 rotation = -2.39088
-scale = Vector2(0.999878, 0.999878)
+scale = Vector2(0.999877, 0.999877)
 rest = Transform2D(-0.731201, -0.682161, 0.682161, -0.731201, 13, 15)
 
 [node name="ColaA" type="Bone2D" parent="Skeleton2D/Init/ParteA"]
@@ -375,17 +469,3 @@ rest = Transform2D(-0.8912, -0.453611, 0.453611, -0.8912, -28, -40)
 position = Vector2(21.0634, 6.11022)
 rotation = -0.548492
 rest = Transform2D(0.853312, -0.521401, 0.521401, 0.853312, 21.0634, 6.11022)
-
-[node name="Perder" type="Area2D" parent="." groups=["PJ"]]
-position = Vector2(0, 13)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
-position = Vector2(0, 11)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_6ehte")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_22yas")
-}
-speed_scale = 1.578
