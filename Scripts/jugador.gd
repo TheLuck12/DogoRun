@@ -19,6 +19,7 @@ func _physics_process(delta: float) -> void:
 func Gravedad(Masa):
 	if not is_on_floor():
 		velocity += get_gravity() * Masa
+		Caida()
 
 func Saltar():
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and salte == 0:
@@ -38,7 +39,9 @@ func Caida():
 	elif is_on_floor() and salte != 0:
 		salte = 0
 		Animaciones()
-
+	elif not is_on_floor():
+		salte = 1
+		Animaciones()
 func MaxAltura():
 	if velocity.y <= -800:
 		velocity.y = -800
@@ -46,5 +49,5 @@ func MaxAltura():
 func Animaciones():
 	if salte == 0:
 		animacion.play("Correr")
-	elif salte != 0:
+	elif salte != 0 and not is_on_floor():
 		animacion.play("Saltar")
