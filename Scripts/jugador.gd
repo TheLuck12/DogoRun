@@ -13,7 +13,6 @@ func _physics_process(delta: float) -> void:
 		Movimiento()
 		Mover()
 		move_and_slide()
-		print(salte)
 	else:
 		$AnimationPlayer.stop()
 

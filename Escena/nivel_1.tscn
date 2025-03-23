@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs3c03h3v5l6a"]
+
+[ext_resource type="PackedScene" uid="uid://b1op76fi6ecrv" path="res://Escena/obstaculo_2.tscn" id="1_jmg74"]
+[ext_resource type="PackedScene" uid="uid://dlkxpwy0sdxy8" path="res://Escena/enemigo1.tscn" id="2_0aman"]
+[ext_resource type="PackedScene" uid="uid://djnfgbyrp0knr" path="res://Escena/obstaculo_3.tscn" id="2_wwfy2"]
+[ext_resource type="PackedScene" uid="uid://hiq8v640fdkr" path="res://Escena/mov_obs_3.tscn" id="3_dfqce"]
+[ext_resource type="PackedScene" uid="uid://tbovlcygn17y" path="res://Escena/meta.tscn" id="4_dfqce"]
+
+[node name="Nivel1" type="Node2D"]
+scale = Vector2(0.920181, 0.835394)
+metadata/_edit_vertical_guides_ = [15212.0]
+metadata/_edit_horizontal_guides_ = [554.0]
+
+[node name="Colectivo" type="Node2D" parent="."]
+position = Vector2(63.0311, 124.492)
+
+[node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_jmg74")]
+position = Vector2(2573, 430)
+
+[node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_jmg74")]
+position = Vector2(3584.08, 429.737)
+
+[node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_jmg74")]
+position = Vector2(6809.53, 429.737)
+
+[node name="Obstaculo5" parent="Colectivo" instance=ExtResource("1_jmg74")]
+position = Vector2(7852.8, 429.737)
+
+[node name="Obstaculo6" parent="Colectivo" instance=ExtResource("1_jmg74")]
+position = Vector2(14982.9, 429.737)
+
+[node name="Ciruja" type="Node2D" parent="."]
+
+[node name="Enemigo1" parent="Ciruja" instance=ExtResource("2_0aman")]
+position = Vector2(9725.26, 623.658)
+
+[node name="Enemigo2" parent="Ciruja" instance=ExtResource("2_0aman")]
+position = Vector2(12082.4, 623.658)
+
+[node name="Dron" type="Node2D" parent="."]
+position = Vector2(66.2913, 117.31)
+
+[node name="Obstaculo3" parent="Dron" instance=ExtResource("2_wwfy2")]
+position = Vector2(5358.73, 416.57)
+
+[node name="MovObs3" parent="Dron" instance=ExtResource("3_dfqce")]
+position = Vector2(5358.73, 242.999)
+
+[node name="Obstaculo4" parent="Dron" instance=ExtResource("2_wwfy2")]
+position = Vector2(13771.2, 450.087)
+
+[node name="MovObs4" parent="Dron" instance=ExtResource("3_dfqce")]
+position = Vector2(13767.9, 242.999)
+
+[node name="Meta" parent="." instance=ExtResource("4_dfqce")]
+position = Vector2(16731.5, 621.263)

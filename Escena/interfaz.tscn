@@ -54,6 +54,7 @@ script = ExtResource("1_l0ay0")
 libraries = {
 &"": SubResource("AnimationLibrary_6fut1")
 }
+speed_scale = 2.0
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
@@ -66,7 +67,7 @@ offset_top = 16.0
 offset_right = 2059.0
 offset_bottom = 736.0
 scale = Vector2(0.37525, 0.105482)
-max_value = 60.0
+max_value = 30.0
 texture_under = ExtResource("2_o6vvq")
 texture_progress = ExtResource("3_o6vvq")
 

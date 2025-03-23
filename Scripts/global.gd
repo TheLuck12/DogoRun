@@ -4,6 +4,7 @@ extends Node
 var enJuego = true
 var FinNivel = false
 var timer = 0
+var Nivel : int
 func Randomizar(MinNum, MaxNum):
 	rng.randomize()
 	return rng.randi_range(MinNum, MaxNum)

@@ -298,9 +298,9 @@ _data = {
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_x1bex"]
 
 [node name="Jugador" type="CharacterBody2D" groups=["PJ"]]
-scale = Vector2(0.84375, 0.833333)
+scale = Vector2(0.22, 0.18)
 script = ExtResource("1_t2qgo")
-fuerzaSalto = 800
+fuerzaSalto = 605
 metadata/_edit_horizontal_guides_ = [102.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

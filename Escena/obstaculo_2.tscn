@@ -59,7 +59,7 @@ size = Vector2(13.3333, 493)
 
 [node name="Obstaculo2" type="StaticBody2D"]
 position = Vector2(0, -2.38419e-07)
-scale = Vector2(0.475, 0.475)
+scale = Vector2(0.4, 0.4)
 physics_material_override = SubResource("PhysicsMaterial_jovj6")
 script = ExtResource("1_okkqa")
 metadata/_edit_horizontal_guides_ = [208.0]
