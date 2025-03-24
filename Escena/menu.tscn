@@ -160,6 +160,37 @@ text = "10
 icon_alignment = 1
 expand_icon = true
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1512.0
+offset_top = 622.0
+offset_right = 1676.0
+offset_bottom = 700.0
+theme_override_font_sizes/font_size = 51
+text = "Volver
+"
+
+[node name="Titulo" type="Label" parent="." groups=["Enemigo"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -444.5
+offset_top = -222.5
+offset_right = 444.5
+offset_bottom = 222.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 161
+text = "DOGO-RUN
+"
+vertical_alignment = 2
+
 [connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_button_2_button_down"]
 [connection signal="button_down" from="VBoxContainer2/HBoxContainer/Nivel1" to="." method="_on_nivel_1_button_down"]
+[connection signal="button_down" from="VBoxContainer2/HBoxContainer/Nivel2" to="." method="_on_nivel_2_button_down"]
+[connection signal="button_down" from="VBoxContainer2/HBoxContainer/Nivel3" to="." method="_on_nivel_3_button_down"]
+[connection signal="button_down" from="Button" to="." method="ReposicionarTodo"]

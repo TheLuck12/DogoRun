@@ -1,6 +1,6 @@
 extends Area2D
 
-var Movimiento = 0
+@export var Movimiento = 0
 
 
 

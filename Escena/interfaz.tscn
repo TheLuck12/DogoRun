@@ -88,4 +88,14 @@ material = SubResource("CanvasItemMaterial_7tdul")
 position = Vector2(715, 54)
 texture = ExtResource("6_l3x6v")
 
+[node name="Saltar" type="TouchScreenButton" parent="."]
+position = Vector2(1104, 569)
+texture_normal = ExtResource("6_l3x6v")
+action = "Saltar"
+
+[node name="Caer" type="TouchScreenButton" parent="."]
+position = Vector2(39, 569)
+texture_normal = ExtResource("6_l3x6v")
+action = "Caer"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

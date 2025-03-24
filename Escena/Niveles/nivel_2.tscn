@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://piqe1xe4i55h"]
+
+[ext_resource type="PackedScene" uid="uid://b1op76fi6ecrv" path="res://Escena/Obstaculos/obstaculo_2.tscn" id="1_hu7yi"]
+[ext_resource type="PackedScene" uid="uid://tbovlcygn17y" path="res://Escena/meta.tscn" id="1_xdxrl"]
+[ext_resource type="PackedScene" uid="uid://dlkxpwy0sdxy8" path="res://Escena/Obstaculos/enemigo1.tscn" id="2_fnebr"]
+[ext_resource type="PackedScene" uid="uid://djnfgbyrp0knr" path="res://Escena/Obstaculos/obstaculo_3.tscn" id="3_y1ift"]
+[ext_resource type="PackedScene" uid="uid://hiq8v640fdkr" path="res://Escena/Obstaculos/mov_obs_3.tscn" id="4_qs5py"]
+
+[node name="Nivel2" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [552.0]
+metadata/_edit_vertical_guides_ = [15216.0]
+
+[node name="Colectivo" type="Node2D" parent="."]
+
+[node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_hu7yi")]
+position = Vector2(3425, 460)
+
+[node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_hu7yi")]
+position = Vector2(5692, 460)
+
+[node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_hu7yi")]
+position = Vector2(11723, 460)
+
+[node name="Obstaculo5" parent="Colectivo" instance=ExtResource("1_hu7yi")]
+position = Vector2(12275, 460)
+
+[node name="Obstaculo6" parent="Colectivo" instance=ExtResource("1_hu7yi")]
+position = Vector2(12834, 460)
+
+[node name="Ciruja" type="Node2D" parent="."]
+
+[node name="Enemigo1" parent="Ciruja" instance=ExtResource("2_fnebr")]
+position = Vector2(2194, 526)
+
+[node name="Enemigo2" parent="Ciruja" instance=ExtResource("2_fnebr")]
+position = Vector2(7168, 526)
+
+[node name="Enemigo3" parent="Ciruja" instance=ExtResource("2_fnebr")]
+position = Vector2(8976, 526)
+
+[node name="Enemigo4" parent="Ciruja" instance=ExtResource("2_fnebr")]
+position = Vector2(12712, 334)
+
+[node name="Enemigo5" parent="Ciruja" instance=ExtResource("2_fnebr")]
+position = Vector2(14472, 526)
+
+[node name="Dron" type="Node2D" parent="."]
+
+[node name="Obstaculo3" parent="Dron" instance=ExtResource("3_y1ift")]
+position = Vector2(4501, 262)
+
+[node name="MovObs3" parent="Dron" instance=ExtResource("4_qs5py")]
+position = Vector2(4501, 262)
+
+[node name="Obstaculo4" parent="Dron" instance=ExtResource("3_y1ift")]
+position = Vector2(10634, 262)
+
+[node name="MovObs4" parent="Dron" instance=ExtResource("4_qs5py")]
+position = Vector2(10634, 262)
+
+[node name="Meta" parent="." instance=ExtResource("1_xdxrl")]
+position = Vector2(15417, 504)

@@ -1,7 +1,8 @@
 extends CanvasLayer
 @onready var Barra = $CanvasGroup/BarraProceso
+@onready var Animacion = $AnimationPlayer
 func _ready() -> void:
-	$AnimationPlayer.play("Barra")
+	Animacion.play("Barra")
 func _process(_delta: float) -> void:
 	DetenerTimer()
 func _on_timer_timeout() -> void:
@@ -9,11 +10,17 @@ func _on_timer_timeout() -> void:
 	Barra.value += 1
 	print(Global.timer)
 
-
+func TiempoBarra():
+	if Global.Nivel <= 5: 
+		Barra.max_value = 30
+		Animacion.speed_scale = 2
+	else:
+		Barra.max_value = 60
+		Animacion.speed_scale = 1
 func DetenerTimer():
 	if Barra.value == 60:
 		$Timer.stop()
-		$AnimationPlayer.pause()
+		Animacion.pause()
 	elif Global.enJuego == false:
 		$Timer.stop()
-		$AnimationPlayer.pause()
+		Animacion.pause()
