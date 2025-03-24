@@ -425,18 +425,18 @@ rest = Transform2D(1, 0, 0, 1, 119, 0)
 [node name="PiernaI" type="Bone2D" parent="Skeleton2D/Init/ParteA"]
 position = Vector2(-3, 11)
 rotation = -1.98773
-scale = Vector2(0.999828, 0.999828)
+scale = Vector2(0.99983, 0.99983)
 rest = Transform2D(-0.404956, -0.914335, 0.914335, -0.404956, -3, 11)
 
 [node name="PiernaD" type="Bone2D" parent="Skeleton2D/Init/ParteA"]
 position = Vector2(15.6365, 8.24083)
 rotation = -2.39088
-scale = Vector2(0.999877, 0.999877)
+scale = Vector2(0.999875, 0.999875)
 rest = Transform2D(-0.731201, -0.682161, 0.682161, -0.731201, 13, 15)
 
 [node name="ColaA" type="Bone2D" parent="Skeleton2D/Init/ParteA"]
 position = Vector2(24, -6)
-scale = Vector2(0.999876, 0.999876)
+scale = Vector2(0.999873, 0.999873)
 rest = Transform2D(1, 0, 0, 1, 24, -6)
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/Init/ParteA/ColaA"]
@@ -450,18 +450,18 @@ rest = Transform2D(-0.849873, 0.526988, -0.526988, -0.849873, -15, 11)
 
 [node name="PiernaD" type="Bone2D" parent="Skeleton2D/Init/ParteD"]
 position = Vector2(-7.03654, -11.4231)
-scale = Vector2(0.999848, 0.999848)
+scale = Vector2(0.999849, 0.999849)
 rest = Transform2D(1, 0, 0, 1, -7.03654, -11.4231)
 
 [node name="PIernaI" type="Bone2D" parent="Skeleton2D/Init/ParteD"]
 position = Vector2(1.29154, 5.50744)
-scale = Vector2(0.999849, 0.999849)
+scale = Vector2(0.99985, 0.99985)
 rest = Transform2D(1, 0, 0, 1, 1.29154, 5.50744)
 
 [node name="cuello" type="Bone2D" parent="Skeleton2D/Init"]
 position = Vector2(-28, -40)
 rotation = -2.69624
-scale = Vector2(0.999855, 0.999855)
+scale = Vector2(0.999853, 0.999853)
 rest = Transform2D(-0.8912, -0.453611, 0.453611, -0.8912, -28, -40)
 
 [node name="Cabeza" type="Bone2D" parent="Skeleton2D/Init/cuello"]

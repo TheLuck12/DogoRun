@@ -28,3 +28,8 @@ func _on_nivel_3_button_down() -> void:
 
 func ReposicionarTodo() -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_nivel_4_button_down() -> void:
+	Global.Nivel = 4
+	IrANivel()

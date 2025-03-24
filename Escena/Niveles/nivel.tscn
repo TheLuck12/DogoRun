@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dso2lp2f733xt"]
+[gd_scene load_steps=12 format=3 uid="uid://dso2lp2f733xt"]
 
 [ext_resource type="Texture2D" uid="uid://f4j5hrwf0bd4" path="res://Arte/TilePlataformaSuelo.png" id="1_6ytlt"]
 [ext_resource type="Script" uid="uid://bnvyd0ckmyyab" path="res://Scripts/nivel.gd" id="1_ij3rq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bs3c03h3v5l6a" path="res://Escena/Niveles/nivel_1.tscn" id="2_nuv4m"]
 [ext_resource type="PackedScene" uid="uid://piqe1xe4i55h" path="res://Escena/Niveles/nivel_2.tscn" id="3_c0pia"]
 [ext_resource type="PackedScene" uid="uid://cba5wu185d5o1" path="res://Escena/Niveles/nivel_3.tscn" id="4_2sfly"]
+[ext_resource type="PackedScene" uid="uid://c6f738v8okaqr" path="res://Escena/Niveles/nivel_4.tscn" id="5_u8566"]
 [ext_resource type="PackedScene" uid="uid://blbrhdkmb00ge" path="res://Escena/interfaz.tscn" id="10_nuv4m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmxtv"]
@@ -44,6 +45,7 @@ script = ExtResource("1_ij3rq")
 nivel1 = ExtResource("2_nuv4m")
 nivel2 = ExtResource("3_c0pia")
 nivel3 = ExtResource("4_2sfly")
+nivel4 = ExtResource("5_u8566")
 metadata/_edit_vertical_guides_ = [30184.0]
 metadata/_edit_horizontal_guides_ = [560.0]
 

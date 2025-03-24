@@ -193,4 +193,5 @@ vertical_alignment = 2
 [connection signal="button_down" from="VBoxContainer2/HBoxContainer/Nivel1" to="." method="_on_nivel_1_button_down"]
 [connection signal="button_down" from="VBoxContainer2/HBoxContainer/Nivel2" to="." method="_on_nivel_2_button_down"]
 [connection signal="button_down" from="VBoxContainer2/HBoxContainer/Nivel3" to="." method="_on_nivel_3_button_down"]
+[connection signal="button_down" from="VBoxContainer2/HBoxContainer/Nivel4" to="." method="_on_nivel_4_button_down"]
 [connection signal="button_down" from="Button" to="." method="ReposicionarTodo"]
