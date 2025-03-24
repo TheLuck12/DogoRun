@@ -4,6 +4,7 @@ extends Node2D
 @export var nivel2 : PackedScene
 @export var nivel3 : PackedScene
 @export var nivel4 : PackedScene
+@export var nivel5 : PackedScene
 func _ready() -> void:
 	CrearNivel()
 	Global.enJuego = true
@@ -28,6 +29,8 @@ func CrearNivel():
 		InstanciarNivel(nivel3)
 	elif Global.Nivel == 4:
 		InstanciarNivel(nivel4)
+	elif Global.Nivel == 5:
+		InstanciarNivel(nivel5)
 func InstanciarNivel(Nivel):
 	var InsNivel = Nivel.instantiate()
 	InsNivel.global_position = Vector2.ZERO

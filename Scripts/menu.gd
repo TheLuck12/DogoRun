@@ -33,3 +33,8 @@ func ReposicionarTodo() -> void:
 func _on_nivel_4_button_down() -> void:
 	Global.Nivel = 4
 	IrANivel()
+
+
+func _on_nivel_5_button_down() -> void:
+	Global.Nivel = 5
+	IrANivel()
