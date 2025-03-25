@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh0xbbgibhbu3"]
+
+[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_docmw"]
+[ext_resource type="Script" uid="uid://bt1l8i25slems" path="res://pantalla_de_carga.gd" id="2_7utx7"]
+
+[node name="PantallaDeCarga" type="TextureProgressBar"]
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 48.0
+offset_bottom = 88.0
+scale = Vector2(11.8515, 6.28196)
+fill_mode = 1
+texture_progress = ExtResource("1_docmw")
+tint_progress = Color(0, 0, 0, 1)
+script = ExtResource("2_7utx7")
