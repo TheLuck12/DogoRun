@@ -57,7 +57,6 @@ libraries = {
 speed_scale = 2.0
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 

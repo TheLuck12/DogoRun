@@ -1,10 +1,12 @@
 extends Control
 
-func IrANivel():
-	get_tree().change_scene_to_file("res://Escena/Niveles/nivel.tscn")
-	
+@export var PantallaCarga : PackedScene
+func _ready()-> void:
+	Global.menu = true
 
-
+func InstanciarPantalla():
+	var InsPantalla = PantallaCarga.instantiate()
+	add_child(InsPantalla)
 func _on_button_button_down() -> void:
 	$VBoxContainer2.global_position = Vector2(263,118)
 	$Titulo.global_position = Vector2(-1000, 0)
@@ -15,15 +17,15 @@ func _on_button_2_button_down() -> void:
 
 func _on_nivel_1_button_down() -> void:
 	Global.Nivel = 1
-	IrANivel()
+	InstanciarPantalla()
 
 func _on_nivel_2_button_down() -> void:
 	Global.Nivel = 2
-	IrANivel()
+	InstanciarPantalla()
 
 func _on_nivel_3_button_down() -> void:
 	Global.Nivel = 3
-	IrANivel()
+	InstanciarPantalla()
 
 
 func ReposicionarTodo() -> void:
@@ -32,9 +34,8 @@ func ReposicionarTodo() -> void:
 
 func _on_nivel_4_button_down() -> void:
 	Global.Nivel = 4
-	IrANivel()
-
+	InstanciarPantalla()
 
 func _on_nivel_5_button_down() -> void:
 	Global.Nivel = 5
-	IrANivel()
+	InstanciarPantalla()

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://hiq8v640fdkr" path="res://Escena/Obstaculos/mov_obs_3.tscn" id="4_8xncl"]
 [ext_resource type="PackedScene" uid="uid://tbovlcygn17y" path="res://Escena/meta.tscn" id="5_f0jto"]
 
-[node name="Nivel5" type="Node2D"]
+[node name="Nivel5" type="Node2D" groups=["Enemigo"]]
 metadata/_edit_horizontal_guides_ = [552.0]
 metadata/_edit_vertical_guides_ = [15216.0]
 

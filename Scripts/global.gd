@@ -3,6 +3,7 @@ extends Node
 @onready var rng = RandomNumberGenerator.new()
 var enJuego = true
 var FinNivel = false
+var menu = true
 var timer = 0
 var Nivel : int
 func Randomizar(MinNum, MaxNum):

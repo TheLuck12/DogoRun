@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmt35ikos033c"]
+[gd_scene load_steps=9 format=3 uid="uid://cmt35ikos033c"]
 
 [ext_resource type="Script" uid="uid://dbp8ld5egia1r" path="res://Scripts/menu.gd" id="1_2uedd"]
+[ext_resource type="PackedScene" uid="uid://bh0xbbgibhbu3" path="res://Escena/pantalla_de_carga.tscn" id="2_fipl3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cmf4a"]
 
@@ -24,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2uedd")
+PantallaCarga = ExtResource("2_fipl3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
