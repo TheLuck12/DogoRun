@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://boi68xbn2si2g"]
+[gd_scene load_steps=8 format=3 uid="uid://boi68xbn2si2g"]
 
 [ext_resource type="Script" uid="uid://dga3rrib50wht" path="res://Scripts/ObjetoTirable.gd" id="1_8mlit"]
 [ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="2_5li0w"]
+[ext_resource type="PackedScene" uid="uid://bh0xbbgibhbu3" path="res://Escena/pantalla_de_carga.tscn" id="2_dsybr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7ycqp"]
 
@@ -29,6 +30,7 @@ collision_layer = 2
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_7ycqp")
 script = ExtResource("1_8mlit")
+PantallaCarga = ExtResource("2_dsybr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.25, 0.375)

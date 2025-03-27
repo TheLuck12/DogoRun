@@ -49,7 +49,7 @@ func InstanciarPantalla():
 	Global.FinNivel = false
 	add_child(InsPantalla)
 	$PantallaDeCarga/Carga.value = 100
-	
+
 func MostrarTodo():
 	Global.enJuego = true
 	$Interfaz.visible = true

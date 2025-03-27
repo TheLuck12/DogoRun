@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djnfgbyrp0knr"]
+[gd_scene load_steps=6 format=3 uid="uid://djnfgbyrp0knr"]
 
 [ext_resource type="Script" uid="uid://cdlfqftnkcqvs" path="res://Scripts/obstaculo_3.gd" id="1_ojfb1"]
 [ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="2_bwtfc"]
+[ext_resource type="PackedScene" uid="uid://bh0xbbgibhbu3" path="res://Escena/pantalla_de_carga.tscn" id="2_teloe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u5a67"]
 animations = [{
@@ -20,6 +21,7 @@ radius = 33.0
 [node name="Obstaculo3" type="Area2D" groups=["Enemigo3"]]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_ojfb1")
+PantallaCarga = ExtResource("2_teloe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.625, 0.625)

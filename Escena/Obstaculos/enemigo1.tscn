@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlkxpwy0sdxy8"]
+[gd_scene load_steps=9 format=3 uid="uid://dlkxpwy0sdxy8"]
 
 [ext_resource type="Script" uid="uid://cy0j88ip65ljb" path="res://Scripts/enemigo.gd" id="1_1o23q"]
 [ext_resource type="Texture2D" uid="uid://cm5rdp15ihl3r" path="res://Arte/CANGREJITO caminata3.png" id="1_k4ee2"]
 [ext_resource type="PackedScene" uid="uid://boi68xbn2si2g" path="res://Escena/Obstaculos/ObjetoTirable.tscn" id="2_5ulp1"]
 [ext_resource type="Texture2D" uid="uid://b6u878rr62gfw" path="res://Arte/CANGREJITO caminata 1.png" id="2_vrpao"]
 [ext_resource type="Texture2D" uid="uid://b6wqfh813dgn0" path="res://Arte/CANGREJITO caminata 2.png" id="3_aq3ox"]
+[ext_resource type="PackedScene" uid="uid://bh0xbbgibhbu3" path="res://Escena/pantalla_de_carga.tscn" id="3_hyhyx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r2tdg"]
 radius = 32.0
@@ -30,6 +31,7 @@ animations = [{
 [node name="Enemigo1" type="Area2D" groups=["Enemigo"]]
 script = ExtResource("1_1o23q")
 objetoTirable = ExtResource("2_5ulp1")
+PantallaCarga = ExtResource("3_hyhyx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
