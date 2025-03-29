@@ -4,9 +4,8 @@ extends CanvasLayer
 func _process(_delta: float) -> void:
 	DetenerTimer()
 func _on_timer_timeout() -> void:
-	Global.timer += 1
 	Barra.value += 1
-	print(Global.timer)
+
 	
 func TiempoBarra():
 	if Global.Nivel <= 5: 

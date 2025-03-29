@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dso2lp2f733xt"]
+[gd_scene load_steps=18 format=3 uid="uid://dso2lp2f733xt"]
 
 [ext_resource type="Texture2D" uid="uid://f4j5hrwf0bd4" path="res://Arte/TilePlataformaSuelo.png" id="1_6ytlt"]
 [ext_resource type="Script" uid="uid://bnvyd0ckmyyab" path="res://Scripts/nivel.gd" id="1_ij3rq"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://c6f738v8okaqr" path="res://Escena/Niveles/nivel_4.tscn" id="5_u8566"]
 [ext_resource type="PackedScene" uid="uid://dm0qm1sbi1xw1" path="res://Escena/Niveles/nivel_5.tscn" id="6_3bw6a"]
 [ext_resource type="PackedScene" uid="uid://blbrhdkmb00ge" path="res://Escena/interfaz.tscn" id="10_nuv4m"]
+[ext_resource type="Texture2D" uid="uid://ctswnlbot5bdu" path="res://Arte/BarraDeProgreso/obelisco.png" id="11_eaggu"]
+[ext_resource type="Texture2D" uid="uid://bplsenseby637" path="res://Arte/BarraDeProgreso/BackGround1.png" id="11_yfcfl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmxtv"]
 texture = ExtResource("1_6ytlt")
@@ -41,6 +43,28 @@ sources/0 = SubResource("TileSetAtlasSource_kmxtv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1rjw"]
 size = Vector2(29231, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68pkn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_eaggu")
+}],
+"loop": true,
+"name": &"Obelisco",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfcfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_yfcfl")
+}],
+"loop": true,
+"name": &"Obelisco",
+"speed": 5.0
+}]
 
 [node name="Nivel" type="Node2D" groups=["Nivel"]]
 script = ExtResource("1_ij3rq")
@@ -87,5 +111,29 @@ limit_smoothed = true
 position_smoothing_speed = 3.5
 
 [node name="Interfaz" parent="." instance=ExtResource("10_nuv4m")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2(2, 2)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(264, 0)
+motion_scale = Vector2(0.002, 0.002)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(376, 288)
+scale = Vector2(0.567014, 0.788889)
+sprite_frames = SubResource("SpriteFrames_68pkn")
+animation = &"Obelisco"
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-9.53674e-07, 136)
+scale = Vector2(1, 0.577778)
+sprite_frames = SubResource("SpriteFrames_yfcfl")
+animation = &"Obelisco"
+centered = false
 
 [connection signal="body_entered" from="DetectarObjTirable" to="." method="ActivarTimer"]
