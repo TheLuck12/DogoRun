@@ -8,6 +8,7 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("Colectivo")
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	#Detecta si hay contacto con el jugador y termina el nivel.
 	if area.is_in_group("PJ"):
 		Global.enJuego = false
 		Global.FinNivel = true

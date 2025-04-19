@@ -21,6 +21,7 @@ func Gravedad(Masa):
 		velocity += get_gravity() * Masa
 
 func Movimiento():
+	#
 	Saltar()
 	Caida()
 func Saltar():
@@ -28,7 +29,6 @@ func Saltar():
 		velocity.y += -fuerzaSalto
 		salte = 1
 		
-
 
 func Mover():
 	velocity.x = 500
@@ -43,9 +43,7 @@ func Caida():
 	elif salte != 2 and not is_on_floor():
 		salte = 1
 		Animaciones()
-		
-		
-		
+	
 
 func Animaciones():
 	if salte == 0:

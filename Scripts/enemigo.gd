@@ -16,6 +16,7 @@ func IntanciarObjeto() -> void:
 	TirarBotella()
 
 func _on_area_entered(area: Area2D) -> void:
+	#Detecta si hay contacto con el jugador y termina el nivel.
 	if area.is_in_group("PJ"):
 		Global.enJuego = false
 		Global.FinNivel = true

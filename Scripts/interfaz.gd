@@ -15,9 +15,7 @@ func TiempoBarra():
 		Barra.max_value = 60
 		Animacion.speed_scale = 1
 func DetenerTimer():
-	if Barra.value == 60:
-		$Timer.stop()
-		Animacion.pause()
-	elif Global.enJuego == false:
+	#Detiene la Timer para la barra de progreso.
+	if Barra.value == 60 or Global.enJuego == false :
 		$Timer.stop()
 		Animacion.pause()
