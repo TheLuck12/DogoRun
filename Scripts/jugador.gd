@@ -14,14 +14,13 @@ func _physics_process(delta: float) -> void:
 		Mover()
 		move_and_slide()
 	else:
-		$AnimationPlayer.stop()
+		animacion.stop()
 
 func Gravedad(Masa):
 	if not is_on_floor():
 		velocity += get_gravity() * Masa
 
 func Movimiento():
-	#
 	Saltar()
 	Caida()
 func Saltar():

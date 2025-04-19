@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dso2lp2f733xt"]
+[gd_scene load_steps=19 format=3 uid="uid://dso2lp2f733xt"]
 
 [ext_resource type="Texture2D" uid="uid://f4j5hrwf0bd4" path="res://Arte/TilePlataformaSuelo.png" id="1_6ytlt"]
 [ext_resource type="Script" uid="uid://bnvyd0ckmyyab" path="res://Scripts/nivel.gd" id="1_ij3rq"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c6f738v8okaqr" path="res://Escena/Niveles/nivel_4.tscn" id="5_u8566"]
 [ext_resource type="PackedScene" uid="uid://dm0qm1sbi1xw1" path="res://Escena/Niveles/nivel_5.tscn" id="6_3bw6a"]
 [ext_resource type="PackedScene" uid="uid://blbrhdkmb00ge" path="res://Escena/interfaz.tscn" id="10_nuv4m"]
+[ext_resource type="PackedScene" uid="uid://cvbf30v0vj27b" path="res://Escena/pantalla_de_paus.tscn" id="11_68pkn"]
 [ext_resource type="Texture2D" uid="uid://ctswnlbot5bdu" path="res://Arte/BarraDeProgreso/obelisco.png" id="11_eaggu"]
 [ext_resource type="Texture2D" uid="uid://bplsenseby637" path="res://Arte/BarraDeProgreso/BackGround1.png" id="11_yfcfl"]
 
@@ -111,6 +112,17 @@ limit_smoothed = true
 position_smoothing_speed = 3.5
 
 [node name="Interfaz" parent="." instance=ExtResource("10_nuv4m")]
+
+[node name="Pausa" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PantallaDePaus" parent="Pausa" instance=ExtResource("11_68pkn")]
+offset_left = 489.0
+offset_top = 149.0
+offset_right = 489.0
+offset_bottom = 149.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2(2, 2)

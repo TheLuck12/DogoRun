@@ -10,8 +10,8 @@ func _ready() -> void:
 	InstanciarPantalla()
 
 
-func _physics_process(_delta: float) -> void:
-	pass
+func _process(_delta: float) -> void:
+	PausarJuego()
 
 func VariarPiso():
 	if Global.enJuego == false:
@@ -62,3 +62,14 @@ func MostrarTodo():
 func OcultarTodo():
 	$Interfaz.visible = false
 	$Jugador.visible = false
+
+func PausarJuego():
+	if Input.is_action_just_pressed("ui_cancel") and Global.enJuego == true:
+		$Pausa.visible = true
+		Global.enJuego = false
+	elif Input.is_action_just_pressed("ui_cancel") and Global.enJuego == false:
+		$Pausa.visible = false
+		Global.enJuego = true
+		$Jugador.animacion.play("Correr")
+		$Interfaz/Timer.start()
+		$Interfaz/AnimationPlayer.play("Barra")

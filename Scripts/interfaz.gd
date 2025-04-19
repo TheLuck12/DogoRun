@@ -4,7 +4,7 @@ extends CanvasLayer
 func _process(_delta: float) -> void:
 	DetenerTimer()
 func _on_timer_timeout() -> void:
-	Barra.value += 1
+	Barra.value += 1.5
 
 	
 func TiempoBarra():
