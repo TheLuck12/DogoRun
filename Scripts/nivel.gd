@@ -1,6 +1,7 @@
 extends Node2D
 #variables para instanciar Niveles
 @export var PantallaCarga : PackedScene
+@export var PantallaPausa: PackedScene
 @export var nivel1 : PackedScene
 @export var nivel2 : PackedScene
 @export var nivel3 : PackedScene
@@ -11,7 +12,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	PausarJuego()
+	pass
 
 func VariarPiso():
 	if Global.enJuego == false:
@@ -31,7 +32,8 @@ func CrearNivel():
 		InstanciarNivel(nivel4)
 	elif Global.Nivel == 5:
 		InstanciarNivel(nivel5)
-
+	else:
+		return 
 func InstanciarNivel(Nivel):
 	var InsNivel = Nivel.instantiate()
 	InsNivel.global_position = Vector2.ZERO
@@ -63,12 +65,15 @@ func OcultarTodo():
 	$Interfaz.visible = false
 	$Jugador.visible = false
 
+func InstanciarPausa():
+	var InsPantalla = PantallaPausa.instantiate()
+	add_child(InsPantalla)
+	PausarJuego()
+	
 func PausarJuego():
-	if Input.is_action_just_pressed("ui_cancel") and Global.enJuego == true:
-		$Pausa.visible = true
+	if Global.enJuego == true:
 		Global.enJuego = false
-	elif Input.is_action_just_pressed("ui_cancel") and Global.enJuego == false:
-		$Pausa.visible = false
+	elif Global.enJuego == false:
 		Global.enJuego = true
 		$Jugador.animacion.play("Correr")
 		$Interfaz/Timer.start()

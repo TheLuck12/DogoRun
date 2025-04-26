@@ -19,3 +19,10 @@ func DetenerTimer():
 	if Barra.value == 60 or Global.enJuego == false :
 		$Timer.stop()
 		Animacion.pause()
+
+
+func PonerPausa() -> void:
+	if Global.enJuego == true:
+		get_tree().call_group("Nivel", "InstanciarPausa")
+		$Pausa.visible = false
+	

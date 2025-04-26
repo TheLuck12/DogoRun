@@ -97,4 +97,13 @@ position = Vector2(39, 569)
 texture_normal = ExtResource("6_l3x6v")
 action = "Caer"
 
+[node name="Pausa" type="Button" parent="."]
+offset_left = 29.0
+offset_top = 13.0
+offset_right = 165.0
+offset_bottom = 149.0
+icon = ExtResource("6_l3x6v")
+flat = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="Pausa" to="." method="PonerPausa"]

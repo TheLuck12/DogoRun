@@ -70,7 +70,6 @@ animations = [{
 [node name="Nivel" type="Node2D" groups=["Nivel"]]
 script = ExtResource("1_ij3rq")
 PantallaCarga = ExtResource("2_i5cxq")
-PantallaPausa = ExtResource("11_68pkn")
 nivel1 = ExtResource("2_nuv4m")
 nivel2 = ExtResource("3_c0pia")
 nivel3 = ExtResource("4_2sfly")
@@ -113,6 +112,19 @@ limit_smoothed = true
 position_smoothing_speed = 3.5
 
 [node name="Interfaz" parent="." instance=ExtResource("10_nuv4m")]
+
+[node name="Pausa" type="CanvasLayer" parent="."]
+
+[node name="PantallaDePaus" parent="Pausa" instance=ExtResource("11_68pkn")]
+offset_left = 489.0
+offset_top = 149.0
+offset_right = 489.0
+offset_bottom = 149.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PosicionMenuP" type="Marker2D" parent="Pausa"]
+position = Vector2(489, 149)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2(2, 2)

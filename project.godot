@@ -29,10 +29,14 @@ window/stretch/mode="canvas_items"
 [file_customization]
 
 folder_colors={
-"res://Arte/": "orange",
-"res://Documentación/": "purple",
-"res://Escena/": "red",
-"res://Scripts/": "green"
+"res://VersiónFinal/": "red",
+"res://VersiónFinal/Assets/": "green",
+"res://VersiónFinal/Assets/Menu/": "red",
+"res://VersiónFinal/Assets/Menu/Botones/": "orange",
+"res://VersiónFinal/Codigos/": "yellow",
+"res://VersiónFinal/Codigos/Menues/": "red",
+"res://VersiónFinal/Escenas/": "orange",
+"res://VersiónFinal/Escenas/Menues/": "red"
 }
 
 [global_group]
