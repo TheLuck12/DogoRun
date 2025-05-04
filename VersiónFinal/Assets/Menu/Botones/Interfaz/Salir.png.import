@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uu2fgpx4h2cv"
-path="res://.godot/imported/DogoArgentino.png-90ebbf211d8c432560b668c1e5a745b9.ctex"
+uid="uid://xbiy12tq51fe"
+path="res://.godot/imported/Salir.png-eda0e99a5cbbdb1cf7e95fa90b8810c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arte/Dogo/DogoArgentino.png"
-dest_files=["res://.godot/imported/DogoArgentino.png-90ebbf211d8c432560b668c1e5a745b9.ctex"]
+source_file="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Salir.png"
+dest_files=["res://.godot/imported/Salir.png-eda0e99a5cbbdb1cf7e95fa90b8810c4.ctex"]
 
 [params]
 

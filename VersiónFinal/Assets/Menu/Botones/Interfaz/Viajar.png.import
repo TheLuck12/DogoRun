@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqywms820jdbi"
-path="res://.godot/imported/Titulo.png-e8536772026583569702d990a2714983.ctex"
+uid="uid://clb828x8opsjj"
+path="res://.godot/imported/Viajar.png-010ee4c2896b2317ad10cb187c565237.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Menu/Titulo.png"
-dest_files=["res://.godot/imported/Titulo.png-e8536772026583569702d990a2714983.ctex"]
+source_file="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Viajar.png"
+dest_files=["res://.godot/imported/Viajar.png-010ee4c2896b2317ad10cb187c565237.ctex"]
 
 [params]
 

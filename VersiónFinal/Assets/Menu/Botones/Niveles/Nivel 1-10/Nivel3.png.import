@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxs3earojur0q"
-path="res://.godot/imported/Play.png-b491c016b50eacba43282025902593a7.ctex"
+uid="uid://cw6yq6sdpcpu0"
+path="res://.godot/imported/Nivel3.png-3ef90c13262c00711439ed74d7b30e25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Menu/Botones/Play.png"
-dest_files=["res://.godot/imported/Play.png-b491c016b50eacba43282025902593a7.ctex"]
+source_file="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel3.png"
+dest_files=["res://.godot/imported/Nivel3.png-3ef90c13262c00711439ed74d7b30e25.ctex"]
 
 [params]
 

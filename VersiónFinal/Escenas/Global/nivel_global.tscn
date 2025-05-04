@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7ho1g8nl4pgv"]
+
+[ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
+
+[sub_resource type="TileSet" id="TileSet_mt6xh"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+
+[node name="NivelGlobal" type="Node2D"]
+
+[node name="Piso" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_mt6xh")
+format = 2
+
+[node name="Controles" parent="." instance=ExtResource("1_d827q")]

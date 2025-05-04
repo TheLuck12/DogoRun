@@ -1,0 +1,139 @@
+[gd_scene load_steps=14 format=3 uid="uid://brgh33nqayhfo"]
+
+[ext_resource type="Texture2D" uid="uid://blwguh1o0iycg" path="res://VersiónFinal/Assets/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png" id="1_4ef2m"]
+[ext_resource type="Script" uid="uid://b2iq8p1mclyld" path="res://VersiónFinal/Codigos/Menues/menu_niveles.gd" id="1_d6loi"]
+[ext_resource type="Texture2D" uid="uid://d1k83087js0fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Flecha.png" id="2_uij0q"]
+[ext_resource type="Texture2D" uid="uid://1oy7qq773v8o" path="res://VersiónFinal/Assets/pngtree-map-of-falkland-islands-png-image_4624649.png" id="3_v70ud"]
+[ext_resource type="Texture2D" uid="uid://clb828x8opsjj" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Viajar.png" id="4_v70ud"]
+[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="5_nw48q"]
+[ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="6_nw48q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6loi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v70ud"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nw48q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h41ce"]
+
+[sub_resource type="FontVariation" id="FontVariation_nw48q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h41ce"]
+font_size = 86
+outline_size = 40
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MenuNiveles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d6loi")
+
+[node name="MapaArg" type="Sprite2D" parent="."]
+position = Vector2(615, 637)
+scale = Vector2(0.3725, 0.360546)
+texture = ExtResource("1_4ef2m")
+
+[node name="Pngtree-map-of-falkland-islands-png-image4624649" type="Sprite2D" parent="."]
+modulate = Color(0.119367, 0.596452, 0.570306, 1)
+position = Vector2(709, 1528)
+scale = Vector2(0.773786, 0.763158)
+texture = ExtResource("3_v70ud")
+
+[node name="BuenosAires" type="Marker2D" parent="."]
+position = Vector2(810, 367)
+
+[node name="Misiones" type="Marker2D" parent="."]
+position = Vector2(1140, -245)
+
+[node name="Jujuy" type="Marker2D" parent="."]
+position = Vector2(464, -515)
+
+[node name="Mendoza" type="Marker2D" parent="."]
+position = Vector2(260, 232)
+
+[node name="Chubut" type="Marker2D" parent="."]
+position = Vector2(282, 894)
+
+[node name="TierraDelFuego" type="Marker2D" parent="."]
+position = Vector2(332, 1784)
+
+[node name="Cordoba" type="Marker2D" parent="."]
+position = Vector2(599, 104)
+
+[node name="MoverDeProvincia" type="CanvasLayer" parent="."]
+
+[node name="Adelante" type="Button" parent="MoverDeProvincia"]
+offset_left = 1275.15
+offset_top = 459.233
+offset_right = 1783.15
+offset_bottom = 767.233
+rotation = 1.57204
+scale = Vector2(0.44719, 0.60939)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d6loi")
+icon = ExtResource("2_uij0q")
+flat = true
+
+[node name="Atras" type="Button" parent="MoverDeProvincia"]
+offset_left = 2.14817
+offset_top = 691.233
+offset_right = 510.148
+offset_bottom = 999.233
+rotation = -1.57144
+scale = Vector2(0.453157, 0.648155)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v70ud")
+icon = ExtResource("2_uij0q")
+flat = true
+
+[node name="Viajar" type="Button" parent="MoverDeProvincia"]
+offset_left = 481.0
+offset_top = 564.0
+offset_right = 989.0
+offset_bottom = 872.0
+scale = Vector2(0.596506, 0.452805)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nw48q")
+icon = ExtResource("4_v70ud")
+flat = true
+
+[node name="Volver" type="Button" parent="MoverDeProvincia"]
+offset_left = 52.0
+offset_top = 39.0
+offset_right = 160.0
+offset_bottom = 147.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h41ce")
+icon = ExtResource("6_nw48q")
+flat = true
+
+[node name="Provincia" type="Label" parent="MoverDeProvincia"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -287.0
+offset_top = 48.0
+offset_right = 334.0
+offset_bottom = 206.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = SubResource("FontVariation_nw48q")
+theme_override_font_sizes/font_size = 81
+text = "PROVINCIA"
+label_settings = SubResource("LabelSettings_h41ce")
+horizontal_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(810, 366)
+texture = ExtResource("5_nw48q")
+
+[node name="Camera2D" type="Camera2D" parent="Icon"]
+position = Vector2(0, 1)
+limit_left = 0
+position_smoothing_enabled = true
+
+[connection signal="button_down" from="MoverDeProvincia/Adelante" to="." method="ProvSig"]
+[connection signal="button_down" from="MoverDeProvincia/Atras" to="." method="ProvAnt"]
+[connection signal="button_down" from="MoverDeProvincia/Viajar" to="." method="IrANiveles"]
+[connection signal="button_down" from="MoverDeProvincia/Volver" to="." method="VolMenuPrin"]

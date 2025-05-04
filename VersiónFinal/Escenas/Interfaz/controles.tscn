@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm1anxrfsfvis"]
+
+[ext_resource type="Texture2D" uid="uid://d1k83087js0fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Flecha.png" id="1_7widw"]
+[ext_resource type="Script" uid="uid://4yvetjqbf6pr" path="res://VersiónFinal/Codigos/Interfaces/controles.gd" id="1_n4bg8"]
+[ext_resource type="Texture2D" uid="uid://cp8lojqj1c1xv" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Pause.png" id="2_bcs6g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4bg8"]
+
+[node name="Controles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n4bg8")
+
+[node name="Saltar" type="TouchScreenButton" parent="."]
+position = Vector2(55, 545)
+scale = Vector2(0.266637, 0.393206)
+texture_normal = ExtResource("1_7widw")
+action = "Saltar"
+
+[node name="Bajar" type="TouchScreenButton" parent="."]
+position = Vector2(1216, 656)
+rotation = 3.14159
+scale = Vector2(0.266637, 0.393206)
+texture_normal = ExtResource("1_7widw")
+action = "Caer"
+
+[node name="Pausa" type="Button" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 40.0
+offset_right = 157.0
+offset_bottom = 148.0
+scale = Vector2(0.626984, 0.632)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n4bg8")
+icon = ExtResource("2_bcs6g")
+flat = true

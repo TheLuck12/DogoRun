@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xbiy12tq51fe"
-path="res://.godot/imported/Salir.png-e85b4ea6b16c27e731480e5192b6e178.ctex"
+uid="uid://cqywms820jdbi"
+path="res://.godot/imported/Titulo.png-e92bf89265b2efbd7aaa50f8f8ad902c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Menu/Botones/Salir.png"
-dest_files=["res://.godot/imported/Salir.png-e85b4ea6b16c27e731480e5192b6e178.ctex"]
+source_file="res://VersiónFinal/Assets/Titulo.png"
+dest_files=["res://.godot/imported/Titulo.png-e92bf89265b2efbd7aaa50f8f8ad902c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp8lojqj1c1xv"
-path="res://.godot/imported/Pause.png-67768c94120b74386bf544b64e3829af.ctex"
+uid="uid://blwguh1o0iycg"
+path="res://.godot/imported/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png-bc2e3a5b93defbbfdb2a125756e6105a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Menu/Botones/Pause.png"
-dest_files=["res://.godot/imported/Pause.png-67768c94120b74386bf544b64e3829af.ctex"]
+source_file="res://VersiónFinal/Assets/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png"
+dest_files=["res://.godot/imported/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png-bc2e3a5b93defbbfdb2a125756e6105a.ctex"]
 
 [params]
 

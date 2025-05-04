@@ -1,0 +1,142 @@
+[gd_scene load_steps=15 format=3 uid="uid://da0esqxctr70e"]
+
+[ext_resource type="Script" uid="uid://b35l57j03tvap" path="res://VersiónFinal/Codigos/Menues/nivel_1_10.gd" id="1_b2gyf"]
+[ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="1_g4sko"]
+[ext_resource type="Texture2D" uid="uid://b1bb81hwqolk3" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel1.png" id="2_tfxdi"]
+[ext_resource type="Texture2D" uid="uid://bmspywotcb827" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel2.png" id="3_tibru"]
+[ext_resource type="Texture2D" uid="uid://cw6yq6sdpcpu0" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel3.png" id="4_q6jlr"]
+[ext_resource type="Texture2D" uid="uid://mcbsnaa5uncw" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel4.png" id="5_cobrd"]
+[ext_resource type="Texture2D" uid="uid://00uimm0ngyy7" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel5.png" id="6_5kh4r"]
+[ext_resource type="Texture2D" uid="uid://j6qqqrv4bu4l" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel6.png" id="7_v51lr"]
+[ext_resource type="Texture2D" uid="uid://fms08auwdvc6" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel7.png" id="8_o2rd4"]
+[ext_resource type="Texture2D" uid="uid://bsksgsds01njb" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel8.png" id="9_53tch"]
+[ext_resource type="Texture2D" uid="uid://coko1vj7nwjtc" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel9.png" id="10_ylu0r"]
+[ext_resource type="Texture2D" uid="uid://d0et70hufjnes" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel10.png" id="11_sm3xu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2gyf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_10ntc"]
+font_size = 81
+outline_size = 40
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Nivel1-10" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b2gyf")
+
+[node name="N1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 166.0
+offset_right = 580.0
+offset_bottom = 474.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("2_tfxdi")
+
+[node name="N2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 166.0
+offset_right = 817.0
+offset_bottom = 474.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("3_tibru")
+
+[node name="N3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 166.0
+offset_right = 1056.0
+offset_bottom = 474.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("4_q6jlr")
+
+[node name="N4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 166.0
+offset_right = 1293.0
+offset_bottom = 474.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("5_cobrd")
+
+[node name="N5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1023.0
+offset_top = 166.0
+offset_right = 1531.0
+offset_bottom = 474.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("6_5kh4r")
+
+[node name="N6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 343.0
+offset_right = 677.0
+offset_bottom = 651.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("7_v51lr")
+
+[node name="N7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 343.0
+offset_right = 929.0
+offset_bottom = 651.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("8_o2rd4")
+
+[node name="N8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 343.0
+offset_right = 1187.0
+offset_bottom = 651.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("9_53tch")
+
+[node name="N9" type="Button" parent="."]
+layout_mode = 0
+offset_left = 934.0
+offset_top = 343.0
+offset_right = 1442.0
+offset_bottom = 651.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("10_ylu0r")
+
+[node name="N10" type="Button" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 525.0
+offset_right = 1056.0
+offset_bottom = 833.0
+scale = Vector2(0.402789, 0.418459)
+icon = ExtResource("11_sm3xu")
+
+[node name="Volver" type="Button" parent="."]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 29.0
+offset_right = 150.0
+offset_bottom = 137.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b2gyf")
+icon = ExtResource("1_g4sko")
+flat = true
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 34.0
+offset_right = 950.0
+offset_bottom = 192.0
+text = "BUENOS AIRES"
+label_settings = SubResource("LabelSettings_10ntc")
+horizontal_alignment = 1
+
+[connection signal="button_down" from="Volver" to="." method="VolverMapa"]

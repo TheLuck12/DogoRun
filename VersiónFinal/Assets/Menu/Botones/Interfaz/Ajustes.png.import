@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brd1hop6nuax5"
-path="res://.godot/imported/Ajustes.png-a2bc739b5678c1806bbb5df08a5fe980.ctex"
+path="res://.godot/imported/Ajustes.png-463774709bbbede55dfdba939daff11d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Menu/Botones/Ajustes.png"
-dest_files=["res://.godot/imported/Ajustes.png-a2bc739b5678c1806bbb5df08a5fe980.ctex"]
+source_file="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Ajustes.png"
+dest_files=["res://.godot/imported/Ajustes.png-463774709bbbede55dfdba939daff11d.ctex"]
 
 [params]
 
