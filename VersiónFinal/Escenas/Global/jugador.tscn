@@ -1,0 +1,295 @@
+[gd_scene load_steps=8 format=3 uid="uid://cipkx2i3clfl3"]
+
+[ext_resource type="Texture2D" uid="uid://uu2fgpx4h2cv" path="res://VersiónFinal/Assets/Personajes/DogoArgentino.png" id="1_eq3m3"]
+[ext_resource type="Script" uid="uid://q2c5f1qtrwe1" path="res://VersiónFinal/Escenas/Global/jugador.gd" id="1_wecjo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wecjo"]
+radius = 58.0
+height = 712.0
+
+[sub_resource type="Animation" id="Animation_eq3m3"]
+resource_name = "Correr"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torso/PataDD:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.845047, 0.741644]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torso/PataID:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.689284, 0.590081]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torso/Cola:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.678694]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Torso/PataDT:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.908396, -0.00296336]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Torso/PataIT:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.23961, 0.101756]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Torso/Cabeza:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-240, -105), Vector2(-241, -99)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Torso/Cabeza:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.072529]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Torso:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, -9)]
+}
+
+[sub_resource type="Animation" id="Animation_wecjo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torso/PataID:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torso/PataDD:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Torso/Cola:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Torso/PataDT:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Torso/PataIT:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.101756]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Torso/Cabeza:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-241, -99)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Torso/Cabeza:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Torso:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_etuoq"]
+_data = {
+&"Correr": SubResource("Animation_eq3m3"),
+&"RESET": SubResource("Animation_wecjo")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etuoq"]
+size = Vector2(594, 341)
+
+[node name="Jugador" type="CharacterBody2D" groups=["PJ"]]
+scale = Vector2(-0.2, 0.2)
+script = ExtResource("1_wecjo")
+metadata/_edit_horizontal_guides_ = [313.0]
+
+[node name="Torso" type="Polygon2D" parent="."]
+offset = Vector2(-379, -540)
+texture = ExtResource("1_eq3m3")
+polygon = PackedVector2Array(29.8681, 481.055, 185.595, 394.996, 729.274, 481.739, 741.568, 651.809, 74.264, 663.42)
+uv = PackedVector2Array(29.8681, 481.055, 185.595, 394.996, 729.274, 481.739, 741.568, 651.809, 74.264, 663.42)
+
+[node name="PataDD" type="Polygon2D" parent="Torso"]
+z_index = -1
+position = Vector2(-151, 65)
+offset = Vector2(-930, -74)
+texture = ExtResource("1_eq3m3")
+polygon = PackedVector2Array(899.767, 22.3217, 853.182, 96.8578, 878.471, 313.811, 970.31, 313.811, 996.93, 32.9697)
+uv = PackedVector2Array(899.767, 22.3217, 853.182, 96.8578, 878.471, 313.811, 970.31, 313.811, 996.93, 32.9697)
+
+[node name="PataID" type="Polygon2D" parent="Torso"]
+position = Vector2(-212, 77)
+offset = Vector2(-903, -415)
+texture = ExtResource("1_eq3m3")
+polygon = PackedVector2Array(829.711, 360.147, 979.092, 370.593, 946.709, 670.399, 831.801, 655.774)
+uv = PackedVector2Array(829.711, 360.147, 979.092, 370.593, 946.709, 670.399, 831.801, 655.774)
+
+[node name="Cola" type="Polygon2D" parent="Torso"]
+z_index = -1
+position = Vector2(302, -18)
+offset = Vector2(-550, -190)
+texture = ExtResource("1_eq3m3")
+polygon = PackedVector2Array(510.347, 168.362, 657.046, 353.285, 776.885, 333.656, 824.407, 274.77, 531.009, 147.7)
+uv = PackedVector2Array(510.347, 168.362, 657.046, 353.285, 776.885, 333.656, 824.407, 274.77, 531.009, 147.7)
+
+[node name="Cabeza" type="Polygon2D" parent="Torso"]
+position = Vector2(-241, -99)
+offset = Vector2(-327, -311)
+texture = ExtResource("1_eq3m3")
+polygon = PackedVector2Array(228.313, 378.079, -20.6615, 233.446, 209.718, 107.409, 484.52, 308.862, 268.604, 386.344)
+uv = PackedVector2Array(228.313, 378.079, -20.6615, 233.446, 209.718, 107.409, 484.52, 308.862, 268.604, 386.344)
+
+[node name="PataDT" type="Polygon2D" parent="Torso"]
+z_index = -1
+position = Vector2(280, 31)
+offset = Vector2(-1078, -86)
+texture = ExtResource("1_eq3m3")
+polygon = PackedVector2Array(993.55, 72.2842, 1198.1, 316.094, 1263.19, 282.002, 1130.95, 29.9275)
+uv = PackedVector2Array(993.55, 72.2842, 1198.1, 316.094, 1263.19, 282.002, 1130.95, 29.9275)
+
+[node name="PataIT" type="Polygon2D" parent="Torso"]
+position = Vector2(257, 19)
+rotation = 0.101756
+offset = Vector2(-1068, -388)
+texture = ExtResource("1_eq3m3")
+polygon = PackedVector2Array(977.305, 355.351, 1142.6, 310.928, 1289.3, 640.484, 1210.78, 694.205)
+uv = PackedVector2Array(977.305, 355.351, 1142.6, 310.928, 1289.3, 640.484, 1210.78, 694.205)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(66, 254)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wecjo")
+
+[node name="Animacion" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_etuoq")
+}
+speed_scale = 4.0
+
+[node name="Perder" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
+position = Vector2(10, 82.5)
+shape = SubResource("RectangleShape2D_etuoq")
+
+[node name="Camara" type="Camera2D" parent="."]
+position = Vector2(-1310, 0)
+limit_left = 0
+limit_bottom = 720

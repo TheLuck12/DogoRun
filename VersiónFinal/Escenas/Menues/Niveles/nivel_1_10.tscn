@@ -139,4 +139,5 @@ text = "BUENOS AIRES"
 label_settings = SubResource("LabelSettings_10ntc")
 horizontal_alignment = 1
 
+[connection signal="button_down" from="N1" to="." method="InstanciarN1"]
 [connection signal="button_down" from="Volver" to="." method="VolverMapa"]

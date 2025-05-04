@@ -16,13 +16,13 @@ grow_vertical = 2
 script = ExtResource("1_n4bg8")
 
 [node name="Saltar" type="TouchScreenButton" parent="."]
-position = Vector2(55, 545)
+position = Vector2(56, 344)
 scale = Vector2(0.266637, 0.393206)
 texture_normal = ExtResource("1_7widw")
 action = "Saltar"
 
 [node name="Bajar" type="TouchScreenButton" parent="."]
-position = Vector2(1216, 656)
+position = Vector2(1216, 456)
 rotation = 3.14159
 scale = Vector2(0.266637, 0.393206)
 texture_normal = ExtResource("1_7widw")
@@ -30,10 +30,10 @@ action = "Caer"
 
 [node name="Pausa" type="Button" parent="."]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 40.0
-offset_right = 157.0
-offset_bottom = 148.0
+offset_left = 608.0
+offset_top = 16.0
+offset_right = 716.0
+offset_bottom = 124.0
 scale = Vector2(0.626984, 0.632)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_n4bg8")
 icon = ExtResource("2_bcs6g")
