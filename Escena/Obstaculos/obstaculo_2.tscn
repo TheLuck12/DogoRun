@@ -60,7 +60,7 @@ size = Vector2(13.3333, 503.857)
 
 [node name="Obstaculo2" type="StaticBody2D"]
 position = Vector2(0, -2.38419e-07)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.4, 0.4)
 physics_material_override = SubResource("PhysicsMaterial_jovj6")
 script = ExtResource("1_oll4i")
 PantallaCarga = ExtResource("2_bd1lg")
@@ -81,6 +81,6 @@ shape = SubResource("RectangleShape2D_uk0x7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-590, -219)
-polygon = PackedVector2Array(67.8947, -67.3158, 1145.79, -67.3158, 1263.68, -33.6316, -52.8572, -32.4286)
+polygon = PackedVector2Array(67.8947, -67.3158, 1145.79, -67.3158, 1263.68, -33.6316, -45, 8.99998, -27.5, -36)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

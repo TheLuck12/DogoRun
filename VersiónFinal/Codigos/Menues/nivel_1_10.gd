@@ -1,14 +1,21 @@
 extends Control
 
+func _ready() -> void:
+	OcultarMostrar()
 
 func VolverMapa() -> void:
-	get_tree().change_scene_to_file("res://VersiónFinal/Escenas/Menues/menu_niveles.tscn")
+	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_niveles.tscn"
+	$PantallaCarga.ActPantalla()
 
 func IrANivel():
-	get_tree().change_scene_to_file("res://VersiónFinal/Escenas/Global/nivel_global.tscn")
+	$PantallaCarga.ActPantalla()
  
-
 
 func InstanciarN1() -> void:
 	Global.Nivel = 1 #ColocarElNivelDiseñado
-	IrANivel()
+	
+func OcultarMostrar():
+	if Global.barraP == 100:
+		$Interfaz.visible = false
+	elif Global.barraP == 0:
+		$Interfaz.visible = true

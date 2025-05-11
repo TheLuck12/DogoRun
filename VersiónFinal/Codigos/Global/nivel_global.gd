@@ -1,12 +1,14 @@
 extends Node2D
 @export var N1 :PackedScene
+@export var N2 :PackedScene
+@export var N3 :PackedScene
+@export var N4 :PackedScene
+@export var N5 :PackedScene
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ElegirNivel()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 

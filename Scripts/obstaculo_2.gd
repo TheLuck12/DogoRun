@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 func _process(_delta: float) -> void:
-	if Global.enJuego == false:
+	if Global.vivo == false:
 		$AnimatedSprite2D.stop()
 
 func _ready() -> void:

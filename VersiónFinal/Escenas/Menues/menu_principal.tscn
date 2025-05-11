@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlb158ow8u3l3"]
+[gd_scene load_steps=8 format=3 uid="uid://dlb158ow8u3l3"]
 
 [ext_resource type="Script" uid="uid://b0i33ejyflr1v" path="res://VersiónFinal/Codigos/Menues/menu.gd" id="1_ghthh"]
 [ext_resource type="Texture2D" uid="uid://bxs3earojur0q" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Play.png" id="2_ty8ne"]
 [ext_resource type="Texture2D" uid="uid://xbiy12tq51fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Salir.png" id="3_5th1b"]
 [ext_resource type="Texture2D" uid="uid://brd1hop6nuax5" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Ajustes.png" id="4_f04ce"]
 [ext_resource type="Texture2D" uid="uid://cqywms820jdbi" path="res://VersiónFinal/Assets/Menu/Sprites/Titulo.png" id="5_66b3q"]
+[ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="6_7fq04"]
 
-[node name="MenuPrincipal" type="Control"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fq04"]
+
+[node name="MenuPrincipal" type="Control" groups=["Menu"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,34 +27,40 @@ offset_bottom = 36.0
 scale = Vector2(32.2857, 18.1622)
 color = Color(0.201091, 5.77569e-06, 0.860341, 1)
 
-[node name="BotonNivel" type="Button" parent="."]
+[node name="Botones" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotonNivel" type="Button" parent="Botones"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -59.0
-offset_top = 57.0
-offset_right = 49.0
-offset_bottom = 165.0
+offset_left = 561.0
+offset_top = 397.0
+offset_right = 669.0
+offset_bottom = 505.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.9505, 1.82178)
 icon = ExtResource("2_ty8ne")
 flat = true
 
-[node name="BotonSalir" type="Button" parent="."]
+[node name="BotonSalir" type="Button" parent="Botones"]
 layout_mode = 1
 offset_left = 14.0
 offset_top = 8.0
 offset_right = 122.0
 offset_bottom = 116.0
 scale = Vector2(1.02082, 1.01109)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7fq04")
 icon = ExtResource("3_5th1b")
 flat = true
 
-[node name="BotonAjustes" type="Button" parent="."]
+[node name="BotonAjustes" type="Button" parent="Botones"]
 layout_mode = 1
 offset_left = 854.0
 offset_top = 475.0
@@ -66,6 +75,15 @@ position = Vector2(892, 259)
 scale = Vector2(2.026, 1.63333)
 texture = ExtResource("5_66b3q")
 
-[connection signal="button_down" from="BotonNivel" to="." method="IrMenuNiveles"]
-[connection signal="button_down" from="BotonSalir" to="." method="SalirDelJuego"]
-[connection signal="button_down" from="BotonAjustes" to="." method="IrMenuAjustes"]
+[node name="PantallaCarga" parent="." instance=ExtResource("6_7fq04")]
+visible = false
+
+[node name="IrA" type="Timer" parent="."]
+wait_time = 1.2
+one_shot = true
+
+[connection signal="button_down" from="Botones/BotonNivel" to="." method="IrMenuNiveles"]
+[connection signal="button_down" from="Botones/BotonSalir" to="." method="SalirDelJuego"]
+[connection signal="button_down" from="Botones/BotonAjustes" to="." method="IrMenuAjustes"]
+[connection signal="ready" from="PantallaCarga" to="." method="_on_pantalla_carga_ready"]
+[connection signal="timeout" from="IrA" to="." method="_on_ir_a_timeout"]

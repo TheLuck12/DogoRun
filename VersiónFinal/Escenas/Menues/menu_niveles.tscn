@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://brgh33nqayhfo"]
+[gd_scene load_steps=15 format=3 uid="uid://brgh33nqayhfo"]
 
 [ext_resource type="Texture2D" uid="uid://blwguh1o0iycg" path="res://VersiónFinal/Assets/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png" id="1_4ef2m"]
 [ext_resource type="Script" uid="uid://b2iq8p1mclyld" path="res://VersiónFinal/Codigos/Menues/menu_niveles.gd" id="1_d6loi"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://clb828x8opsjj" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Viajar.png" id="4_v70ud"]
 [ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="5_nw48q"]
 [ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="6_nw48q"]
+[ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="8_h41ce"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6loi"]
 
@@ -23,7 +24,7 @@ font_size = 86
 outline_size = 40
 outline_color = Color(0, 0, 0, 1)
 
-[node name="MenuNiveles" type="Control"]
+[node name="MenuNiveles" type="Control" groups=["Menu"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -132,6 +133,8 @@ texture = ExtResource("5_nw48q")
 position = Vector2(0, 1)
 limit_left = 0
 position_smoothing_enabled = true
+
+[node name="PantallaCarga" parent="." instance=ExtResource("8_h41ce")]
 
 [connection signal="button_down" from="MoverDeProvincia/Adelante" to="." method="ProvSig"]
 [connection signal="button_down" from="MoverDeProvincia/Atras" to="." method="ProvAnt"]

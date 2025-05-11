@@ -44,6 +44,8 @@ folder_colors={
 Nivel=""
 Enemigo=""
 PJ=""
+Interfaz=""
+Menu=""
 
 [input]
 

@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://tbovlcygn17y" path="res://Escena/meta.tscn" id="4_dfqce"]
 
 [node name="Nivel1" type="Node2D"]
-metadata/_edit_vertical_guides_ = [15216.0]
-metadata/_edit_horizontal_guides_ = [552.0]
+metadata/_edit_vertical_guides_ = [15205.0]
+metadata/_edit_horizontal_guides_ = [685.0]
 
 [node name="Colectivo" type="Node2D" parent="."]
-position = Vector2(64, 32)
+position = Vector2(64, 116)
 
 [node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_jmg74")]
 position = Vector2(2573, 430)

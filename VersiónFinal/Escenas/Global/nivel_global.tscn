@@ -1,21 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=8 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
-[ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Escenas/Global/nivel_global.gd" id="1_vtksu"]
+[ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
 [ext_resource type="PackedScene" uid="uid://cipkx2i3clfl3" path="res://VersiónFinal/Escenas/Global/jugador.tscn" id="2_b8ggm"]
-[ext_resource type="PackedScene" uid="uid://bs3c03h3v5l6a" path="res://Escena/Niveles/nivel_1.tscn" id="2_qo3xd"]
+[ext_resource type="PackedScene" uid="uid://bs3c03h3v5l6a" path="res://VersiónFinal/Escenas/Niveles/1-10/nivel_1.tscn" id="2_qo3xd"]
 [ext_resource type="Texture2D" uid="uid://d30krpkks2b" path="res://VersiónFinal/Assets/Pisos/PisoBsAs.png" id="3_tmtgu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
-size = Vector2(1281, 20)
+size = Vector2(15214, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qo3xd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tmtgu")
+}],
+"loop": true,
+"name": &"BsAs",
+"speed": 5.0
+}]
 
 [node name="NivelGlobal" type="Node2D"]
 script = ExtResource("1_vtksu")
 N1 = ExtResource("2_qo3xd")
+metadata/_edit_horizontal_guides_ = [684.488, 623.0]
+metadata/_edit_vertical_guides_ = [15206.0]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Interfaz" type="CanvasLayer" parent="."]
 
-[node name="Controles" parent="CanvasLayer" instance=ExtResource("1_d827q")]
+[node name="Controles" parent="Interfaz" instance=ExtResource("1_d827q")]
 
 [node name="Jugador" parent="." instance=ExtResource("2_b8ggm")]
 position = Vector2(134, 572)
@@ -23,7 +36,7 @@ position = Vector2(134, 572)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(638.5, 647)
+position = Vector2(7605, 636)
 shape = SubResource("RectangleShape2D_vtksu")
 
 [node name="Piso" type="ParallaxBackground" parent="."]
@@ -31,7 +44,8 @@ shape = SubResource("RectangleShape2D_vtksu")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Piso"]
 motion_mirroring = Vector2(1280, 0)
 
-[node name="PisoBsAs" type="Sprite2D" parent="Piso/ParallaxLayer"]
+[node name="Pisos" type="AnimatedSprite2D" parent="Piso/ParallaxLayer"]
 position = Vector2(635.5, 426)
 scale = Vector2(2.566, 3)
-texture = ExtResource("3_tmtgu")
+sprite_frames = SubResource("SpriteFrames_qo3xd")
+animation = &"BsAs"
