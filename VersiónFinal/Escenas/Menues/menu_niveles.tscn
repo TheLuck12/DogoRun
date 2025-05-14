@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://brgh33nqayhfo"]
 
-[ext_resource type="Texture2D" uid="uid://blwguh1o0iycg" path="res://VersiónFinal/Assets/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png" id="1_4ef2m"]
+[ext_resource type="Texture2D" uid="uid://blwguh1o0iycg" path="res://VersiónFinal/Assets/Mapa/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png" id="1_4ef2m"]
 [ext_resource type="Script" uid="uid://b2iq8p1mclyld" path="res://VersiónFinal/Codigos/Menues/menu_niveles.gd" id="1_d6loi"]
 [ext_resource type="Texture2D" uid="uid://d1k83087js0fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Flecha.png" id="2_uij0q"]
-[ext_resource type="Texture2D" uid="uid://1oy7qq773v8o" path="res://VersiónFinal/Assets/pngtree-map-of-falkland-islands-png-image_4624649.png" id="3_v70ud"]
+[ext_resource type="Texture2D" uid="uid://1oy7qq773v8o" path="res://VersiónFinal/Assets/Mapa/pngtree-map-of-falkland-islands-png-image_4624649.png" id="3_v70ud"]
 [ext_resource type="Texture2D" uid="uid://clb828x8opsjj" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Viajar.png" id="4_v70ud"]
 [ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="5_nw48q"]
 [ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="6_nw48q"]

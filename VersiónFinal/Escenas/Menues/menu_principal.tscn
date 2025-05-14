@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlb158ow8u3l3"]
+[gd_scene load_steps=10 format=3 uid="uid://dlb158ow8u3l3"]
 
 [ext_resource type="Script" uid="uid://b0i33ejyflr1v" path="res://VersiónFinal/Codigos/Menues/menu.gd" id="1_ghthh"]
 [ext_resource type="Texture2D" uid="uid://bxs3earojur0q" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Play.png" id="2_ty8ne"]
@@ -7,7 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://cqywms820jdbi" path="res://VersiónFinal/Assets/Menu/Sprites/Titulo.png" id="5_66b3q"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="6_7fq04"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64w14"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fq04"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_41jgc"]
 
 [node name="MenuPrincipal" type="Control" groups=["Menu"]]
 layout_mode = 3
@@ -46,6 +50,7 @@ offset_bottom = 505.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.9505, 1.82178)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_64w14")
 icon = ExtResource("2_ty8ne")
 flat = true
 
@@ -67,6 +72,7 @@ offset_top = 475.0
 offset_right = 962.0
 offset_bottom = 583.0
 scale = Vector2(1.02082, 1.01109)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_41jgc")
 icon = ExtResource("4_f04ce")
 flat = true
 

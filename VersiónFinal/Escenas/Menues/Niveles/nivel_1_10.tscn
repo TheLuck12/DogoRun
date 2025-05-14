@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://da0esqxctr70e"]
+[gd_scene load_steps=19 format=3 uid="uid://da0esqxctr70e"]
 
 [ext_resource type="Script" uid="uid://b35l57j03tvap" path="res://VersiónFinal/Codigos/Menues/nivel_1_10.gd" id="1_b2gyf"]
 [ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="1_g4sko"]
@@ -14,6 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://d0et70hufjnes" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel10.png" id="11_sm3xu"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="13_q6jlr"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6jlr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cobrd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kh4r"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2gyf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_10ntc"]
@@ -28,6 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(780, -488)
 script = ExtResource("1_b2gyf")
 
 [node name="Niveles" type="Control" parent="."]
@@ -42,6 +49,7 @@ offset_top = 166.0
 offset_right = 580.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q6jlr")
 icon = ExtResource("2_tfxdi")
 
 [node name="N2" type="Button" parent="Niveles"]
@@ -51,6 +59,7 @@ offset_top = 166.0
 offset_right = 817.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cobrd")
 icon = ExtResource("3_tibru")
 
 [node name="N3" type="Button" parent="Niveles"]
@@ -60,6 +69,7 @@ offset_top = 166.0
 offset_right = 1056.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("4_q6jlr")
 
 [node name="N4" type="Button" parent="Niveles"]
@@ -69,6 +79,7 @@ offset_top = 166.0
 offset_right = 1293.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("5_cobrd")
 
 [node name="N5" type="Button" parent="Niveles"]
@@ -78,6 +89,7 @@ offset_top = 166.0
 offset_right = 1531.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("6_5kh4r")
 
 [node name="N6" type="Button" parent="Niveles"]
@@ -87,6 +99,7 @@ offset_top = 343.0
 offset_right = 677.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("7_v51lr")
 
 [node name="N7" type="Button" parent="Niveles"]
@@ -96,6 +109,7 @@ offset_top = 343.0
 offset_right = 929.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("8_o2rd4")
 
 [node name="N8" type="Button" parent="Niveles"]
@@ -105,6 +119,7 @@ offset_top = 343.0
 offset_right = 1187.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("9_53tch")
 
 [node name="N9" type="Button" parent="Niveles"]
@@ -114,6 +129,7 @@ offset_top = 343.0
 offset_right = 1442.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("10_ylu0r")
 
 [node name="N10" type="Button" parent="Niveles"]
@@ -123,6 +139,7 @@ offset_top = 525.0
 offset_right = 1056.0
 offset_bottom = 833.0
 scale = Vector2(0.402789, 0.418459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
 icon = ExtResource("11_sm3xu")
 
 [node name="Interfaz" type="Control" parent="."]
@@ -153,4 +170,8 @@ horizontal_alignment = 1
 [node name="PantallaCarga" parent="." instance=ExtResource("13_q6jlr")]
 
 [connection signal="button_down" from="Niveles/N1" to="." method="InstanciarN1"]
+[connection signal="button_down" from="Niveles/N2" to="." method="InstanciarN2"]
+[connection signal="button_down" from="Niveles/N3" to="." method="InstanciarN3"]
+[connection signal="button_down" from="Niveles/N4" to="." method="InstanciarN4"]
+[connection signal="button_down" from="Niveles/N5" to="." method="InstanciarN5"]
 [connection signal="button_down" from="Interfaz/Volver" to="." method="VolverMapa"]

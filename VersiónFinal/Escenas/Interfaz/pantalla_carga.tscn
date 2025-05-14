@@ -1,7 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cdw076q2tb178"]
 
 [ext_resource type="Script" uid="uid://cbrie8fgddbik" path="res://VersiónFinal/Codigos/Interfaces/pantalla_carga.gd" id="1_u35eo"]
-[ext_resource type="Texture2D" uid="uid://b1v465p8fftsf" path="res://Arte/BarraDeProgreso/Atras.png" id="2_psq00"]
 
 [sub_resource type="Animation" id="Animation_guxg4"]
 resource_name = "Entrar"
@@ -85,6 +84,9 @@ _data = {
 &"Salir": SubResource("Animation_psq00")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u35eo"]
+load_path = "res://.godot/imported/Atras.png-777a2f9ae7dfc1d4d1df0431a12b07ef.ctex"
+
 [node name="PantallaCarga" type="CanvasLayer"]
 script = ExtResource("1_u35eo")
 
@@ -98,4 +100,4 @@ offset_left = -37.0
 offset_right = 1243.0
 offset_bottom = 720.0
 scale = Vector2(1.07547, 1.06291)
-texture_progress = ExtResource("2_psq00")
+texture_progress = SubResource("CompressedTexture2D_u35eo")

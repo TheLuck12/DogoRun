@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=13 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
 [ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
 [ext_resource type="PackedScene" uid="uid://cipkx2i3clfl3" path="res://VersiónFinal/Escenas/Global/jugador.tscn" id="2_b8ggm"]
-[ext_resource type="PackedScene" uid="uid://bs3c03h3v5l6a" path="res://VersiónFinal/Escenas/Niveles/1-10/nivel_1.tscn" id="2_qo3xd"]
+[ext_resource type="PackedScene" uid="uid://bs3c03h3v5l6a" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_1.tscn" id="2_s2igb"]
+[ext_resource type="PackedScene" uid="uid://piqe1xe4i55h" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_2.tscn" id="3_juonu"]
 [ext_resource type="Texture2D" uid="uid://d30krpkks2b" path="res://VersiónFinal/Assets/Pisos/PisoBsAs.png" id="3_tmtgu"]
+[ext_resource type="PackedScene" uid="uid://cba5wu185d5o1" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_3.tscn" id="4_s2pmu"]
+[ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="4_uqcue"]
+[ext_resource type="PackedScene" uid="uid://c6f738v8okaqr" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_4.tscn" id="5_yh41c"]
+[ext_resource type="PackedScene" uid="uid://dm0qm1sbi1xw1" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_5.tscn" id="6_w4vyl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
 size = Vector2(15214, 20)
@@ -20,15 +25,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="NivelGlobal" type="Node2D"]
+[node name="NivelGlobal" type="Node2D" groups=["Menu"]]
 script = ExtResource("1_vtksu")
-N1 = ExtResource("2_qo3xd")
+N1 = ExtResource("2_s2igb")
+N2 = ExtResource("3_juonu")
+N3 = ExtResource("4_s2pmu")
+N4 = ExtResource("5_yh41c")
+N5 = ExtResource("6_w4vyl")
 metadata/_edit_horizontal_guides_ = [684.488, 623.0]
 metadata/_edit_vertical_guides_ = [15206.0]
 
 [node name="Interfaz" type="CanvasLayer" parent="."]
 
 [node name="Controles" parent="Interfaz" instance=ExtResource("1_d827q")]
+
+[node name="PantallaCarga" parent="Interfaz" instance=ExtResource("4_uqcue")]
 
 [node name="Jugador" parent="." instance=ExtResource("2_b8ggm")]
 position = Vector2(134, 572)
