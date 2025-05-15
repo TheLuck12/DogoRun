@@ -6,7 +6,6 @@ extends Node2D
 @export var N5 :PackedScene
 
 func _ready() -> void:
-	print("estamos en el nivel: ", Global.Nivel)
 	ElegirNivel()
 	OcultarMostrar()
 
@@ -29,9 +28,15 @@ func ElegirNivel():
 		InstanciarNivel(N4)
 	if Global.Nivel == 5:
 		InstanciarNivel(N5)
-	
+	print("estamos en el nivel: ", Global.Nivel)
+
 func OcultarMostrar():
 	if Global.barraP == 100:
 		$Interfaz.visible = false
 	elif Global.barraP == 0:
 		$Interfaz.visible = true
+
+func CambiarSprite(Provincia):
+	if Provincia == 0:
+		$Parallax/Monumentos/Monumentos.play("Obelisco")
+		$Parallax/Piso/Pisos.play("BsAs")

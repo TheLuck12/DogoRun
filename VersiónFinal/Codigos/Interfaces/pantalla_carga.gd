@@ -12,7 +12,6 @@ func ActPantalla():
 	elif Global.barraP == 100:
 		$Animacion.play("Salir")
 
-
 func FinAnimacion():
 	Global.barraP = $Pantalla.value
 	if Global.barraP == 0:

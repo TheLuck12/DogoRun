@@ -17,13 +17,14 @@ func Mover():
 		velocity.x = 500
 
 func Saltar():
-	if is_on_floor() && Input.is_action_just_pressed("Saltar") && salto == 0:
+	if salto == 1:
+		$Animacion.play("Saltar")
+	if Input.is_action_just_pressed("Saltar") && salto == 0:
 		velocity.y = FSALTO
 		salto = 1
-		$Animacion.play("Saltar")
 	elif !is_on_floor() && salto == 1:
 		salto = 2 
-	elif Input.is_action_just_pressed("Caer"):
+	elif !is_on_floor() && Input.is_action_just_pressed("Caer"):
 		velocity.y = FCAIDA
 		salto = 2 
 	elif is_on_floor() == true && salto == 2:
