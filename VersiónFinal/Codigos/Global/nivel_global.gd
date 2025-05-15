@@ -40,3 +40,9 @@ func CambiarSprite(Provincia):
 	if Provincia == 0:
 		$Parallax/Monumentos/Monumentos.play("Obelisco")
 		$Parallax/Piso/Pisos.play("BsAs")
+		if Global.Nivel <= 5:
+			$Parallax/Dia.play("Dia")
+			$Parallax/Cielo/NubEst.play("Nubes")
+		elif Global.Nivel >= 6:
+			$Parallax/Dia.play("Noche")
+			$Parallax/Cielo/NubEst.play("Estrellas")

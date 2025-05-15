@@ -118,7 +118,7 @@ shape = SubResource("RectangleShape2D_vtksu")
 
 [node name="Parallax" type="ParallaxBackground" parent="."]
 
-[node name="Cielo2" type="AnimatedSprite2D" parent="Parallax"]
+[node name="Dia" type="AnimatedSprite2D" parent="Parallax"]
 position = Vector2(632, 354)
 sprite_frames = SubResource("SpriteFrames_w4vyl")
 animation = &"Noche"

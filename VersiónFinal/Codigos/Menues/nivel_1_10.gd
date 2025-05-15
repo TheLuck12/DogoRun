@@ -35,3 +35,18 @@ func InstanciarN4() -> void:
 
 func InstanciarN5() -> void:
 	PrepararNivel(5)
+
+func InstanciarN6() -> void:
+	PrepararNivel(6)
+
+func InstanciarN7() -> void:
+	PrepararNivel(7)
+	
+func InstanciarN8() -> void:
+	PrepararNivel(8)
+	
+func InstanciarN9() -> void:
+	PrepararNivel(9)
+	
+func InstanciarN10() -> void:
+	PrepararNivel(10)
