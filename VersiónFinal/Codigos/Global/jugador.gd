@@ -1,13 +1,13 @@
 extends CharacterBody2D
-const FSALTO = -600
-const FCAIDA = 350
+const FSALTO = -650
+const FCAIDA = 250
 var salto = 0
 func _ready() -> void:
 	EmpezaraJugar()
 
 
 func _physics_process(delta: float) -> void:
-	if Global.vivo:
+	if Global.vivo == true:
 		Saltar()
 		Mover()
 		Gravedad(delta)
@@ -40,3 +40,7 @@ func EmpezaraJugar():
 	if Global.barraP == 0:
 		$Animacion.play("Correr")
 		Global.vivo = true
+
+func Perder():
+	Global.vivo = false
+	$Animacion.stop()

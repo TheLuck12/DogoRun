@@ -318,6 +318,7 @@ _data = {
 size = Vector2(594, 341)
 
 [node name="Jugador" type="CharacterBody2D" groups=["PJ"]]
+z_index = 7
 scale = Vector2(-0.165, 0.165)
 script = ExtResource("1_wecjo")
 metadata/_edit_horizontal_guides_ = [313.0]
@@ -369,7 +370,6 @@ uv = PackedVector2Array(977.305, 355.351, 1142.6, 310.928, 1289.3, 640.484, 1210
 [node name="Cola" type="Polygon2D" parent="Torso"]
 z_index = -1
 position = Vector2(302, -18)
-scale = Vector2(1, 1)
 offset = Vector2(-550, -190)
 texture = ExtResource("1_eq3m3")
 polygon = PackedVector2Array(510.347, 168.362, 657.046, 353.285, 776.885, 333.656, 824.407, 274.77, 531.009, 147.7)

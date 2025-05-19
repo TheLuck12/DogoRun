@@ -119,7 +119,7 @@ shape = SubResource("RectangleShape2D_vtksu")
 [node name="Parallax" type="ParallaxBackground" parent="."]
 
 [node name="Dia" type="AnimatedSprite2D" parent="Parallax"]
-position = Vector2(632, 354)
+position = Vector2(642, 354)
 sprite_frames = SubResource("SpriteFrames_w4vyl")
 animation = &"Noche"
 
@@ -143,7 +143,7 @@ sprite_frames = SubResource("SpriteFrames_s2pmu")
 animation = &"Obelisco"
 
 [node name="Medio" type="ParallaxLayer" parent="Parallax"]
-motion_scale = Vector2(0.635, 1)
+motion_scale = Vector2(0.495, 1)
 motion_mirroring = Vector2(2103.96, 0)
 
 [node name="Medio" type="AnimatedSprite2D" parent="Parallax/Medio"]

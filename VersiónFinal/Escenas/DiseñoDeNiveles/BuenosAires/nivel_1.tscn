@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bs3c03h3v5l6a"]
+[gd_scene load_steps=2 format=3 uid="uid://bs3c03h3v5l6a"]
+
+[ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="1_out0g"]
 
 [node name="Nivel1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [15205.0]
@@ -6,6 +8,9 @@ metadata/_edit_horizontal_guides_ = [685.0]
 
 [node name="Colectivo" type="Node2D" parent="."]
 position = Vector2(64, 116)
+
+[node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_out0g")]
+position = Vector2(2984, 424)
 
 [node name="Ciruja" type="Node2D" parent="."]
 
