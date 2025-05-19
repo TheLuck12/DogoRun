@@ -1,6 +1,6 @@
 extends CharacterBody2D
 const FSALTO = -650
-const FCAIDA = 250
+const FCAIDA = 450
 var salto = 0
 func _ready() -> void:
 	EmpezaraJugar()
@@ -24,10 +24,10 @@ func Saltar():
 		salto = 1
 	elif !is_on_floor() && salto == 1:
 		salto = 2 
-	elif !is_on_floor() && Input.is_action_just_pressed("Caer"):
+	elif salto == 2 and !is_on_floor() && Input.is_action_just_pressed("Caer"):
 		velocity.y = FCAIDA
-		salto = 2 
-	elif is_on_floor() == true && salto == 2:
+		salto = 3
+	elif is_on_floor() == true && salto == 2 or is_on_floor() and salto == 3:
 		$Animacion.play("Correr")
 		salto = 0
 

@@ -376,8 +376,7 @@ polygon = PackedVector2Array(510.347, 168.362, 657.046, 353.285, 776.885, 333.65
 uv = PackedVector2Array(510.347, 168.362, 657.046, 353.285, 776.885, 333.656, 824.407, 274.77, 531.009, 147.7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(66, 254)
+position = Vector2(66.6667, 224.242)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_wecjo")
 
