@@ -1,14 +1,37 @@
-[gd_scene load_steps=18 format=3 uid="uid://dlb158ow8u3l3"]
+[gd_scene load_steps=24 format=3 uid="uid://dlb158ow8u3l3"]
 
 [ext_resource type="Script" uid="uid://b0i33ejyflr1v" path="res://VersiónFinal/Codigos/Menues/menu.gd" id="1_ghthh"]
+[ext_resource type="Texture2D" uid="uid://6dkr4ooquisg" path="res://VersiónFinal/Assets/Cielo/Dia.png" id="2_bgnk5"]
 [ext_resource type="Texture2D" uid="uid://bxs3earojur0q" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Play.png" id="2_ty8ne"]
 [ext_resource type="Texture2D" uid="uid://xbiy12tq51fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Salir.png" id="3_5th1b"]
+[ext_resource type="Texture2D" uid="uid://duras7iy31qc7" path="res://VersiónFinal/Assets/Cielo/Noche.png" id="3_u4ads"]
 [ext_resource type="Texture2D" uid="uid://brd1hop6nuax5" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Ajustes.png" id="4_f04ce"]
 [ext_resource type="Texture2D" uid="uid://cqywms820jdbi" path="res://VersiónFinal/Assets/Menu/Sprites/Titulo.png" id="5_66b3q"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="6_7fq04"]
+[ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="6_c5wa5"]
+[ext_resource type="Texture2D" uid="uid://cjj74o5wkxf2k" path="res://VersiónFinal/Assets/Cielo/Nubes.png" id="7_2titj"]
 [ext_resource type="PackedScene" uid="uid://cipkx2i3clfl3" path="res://VersiónFinal/Escenas/Global/jugador.tscn" id="7_64w14"]
 [ext_resource type="Texture2D" uid="uid://d30krpkks2b" path="res://VersiónFinal/Assets/Pisos/PisoBsAs.png" id="8_41jgc"]
 [ext_resource type="Texture2D" uid="uid://cb3v1qoj14yuu" path="res://VersiónFinal/Assets/Monumentos/BsAs.png" id="8_hraw3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vewsi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bgnk5")
+}],
+"loop": true,
+"name": &"Dia",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u4ads")
+}],
+"loop": true,
+"name": &"Noche",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hraw3"]
 animations = [{
@@ -18,6 +41,25 @@ animations = [{
 }],
 "loop": true,
 "name": &"BsAs",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_llwfy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_c5wa5")
+}],
+"loop": true,
+"name": &"Estrellas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2titj")
+}],
+"loop": true,
+"name": &"Nubes",
 "speed": 5.0
 }]
 
@@ -85,14 +127,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ghthh")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 35.0
-offset_bottom = 36.0
-scale = Vector2(32.2857, 18.1622)
-color = Color(0.201091, 5.77569e-06, 0.860341, 1)
+[node name="Dia" type="AnimatedSprite2D" parent="."]
+position = Vector2(642, 354)
+sprite_frames = SubResource("SpriteFrames_vewsi")
+animation = &"Dia"
 
 [node name="Animacion" type="Node2D" parent="."]
 
@@ -107,6 +145,18 @@ position = Vector2(1921, 426)
 scale = Vector2(2.566, 3)
 sprite_frames = SubResource("SpriteFrames_hraw3")
 animation = &"BsAs"
+
+[node name="NubEst" type="AnimatedSprite2D" parent="Animacion"]
+position = Vector2(1920, 214)
+scale = Vector2(1, 0.636111)
+sprite_frames = SubResource("SpriteFrames_llwfy")
+animation = &"Nubes"
+
+[node name="NubEst2" type="AnimatedSprite2D" parent="Animacion"]
+position = Vector2(639, 214)
+scale = Vector2(1, 0.636111)
+sprite_frames = SubResource("SpriteFrames_llwfy")
+animation = &"Nubes"
 
 [node name="Medio" type="AnimatedSprite2D" parent="Animacion"]
 position = Vector2(638, 152)
@@ -124,6 +174,11 @@ animation = &"BsAs"
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Jugador" parent="Botones" instance=ExtResource("7_64w14")]
+position = Vector2(174, 575)
+rotation = 3.14159
+scale = Vector2(0.165, -0.165)
 
 [node name="BotonNivel" type="Button" parent="Botones"]
 layout_mode = 1
@@ -172,13 +227,11 @@ visible = false
 wait_time = 1.2
 one_shot = true
 
-[node name="Jugador" parent="." instance=ExtResource("7_64w14")]
-position = Vector2(174, 575)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_y2rmw")
 }
+speed_scale = 0.5
 
 [node name="Titulo" type="Sprite2D" parent="."]
 position = Vector2(892, 259)

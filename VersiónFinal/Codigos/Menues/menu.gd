@@ -2,7 +2,8 @@ extends Control
 
 func _ready() -> void:
 	OcultarMostrar()
-	$Jugador/Animacion.play("Correr")
+	Global.Nivel = 0
+	$Botones/Jugador/Animacion.play("Correr")
 	$AnimationPlayer.play("MoverPiso")
 
 func SalirDelJuego() -> void:
