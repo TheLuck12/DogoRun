@@ -37,7 +37,7 @@ func Gravedad(Masa):
 		velocity += get_gravity() * Masa
 
 func EmpezaraJugar():
-	if Global.barraP == 0:
+	if Global.barraP == 0 && Global.Nivel > 0:
 		$Animacion.play("Correr")
 		Global.vivo = true
 

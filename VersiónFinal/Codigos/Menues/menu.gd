@@ -2,6 +2,8 @@ extends Control
 
 func _ready() -> void:
 	OcultarMostrar()
+	$Jugador/Animacion.play("Correr")
+	$AnimationPlayer.play("MoverPiso")
 
 func SalirDelJuego() -> void:
 	get_tree().quit()
