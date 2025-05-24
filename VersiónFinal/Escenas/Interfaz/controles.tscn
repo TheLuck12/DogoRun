@@ -38,3 +38,5 @@ scale = Vector2(0.626984, 0.632)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_n4bg8")
 icon = ExtResource("2_bcs6g")
 flat = true
+
+[connection signal="button_down" from="Pausa" to="." method="_on_pausa_button_down"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt8evi32fvylc"]
+
+[ext_resource type="Script" uid="uid://y2m06f6xfebo" path="res://VersiónFinal/Codigos/Menues/menu_pausa.gd" id="1_27eaq"]
+
+[node name="MenuPausa" type="Control" groups=["Interfaz"]]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_27eaq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 39.0
+scale = Vector2(7.56, 9.02)
+size_flags_horizontal = 4
+color = Color(0.909728, 0, 0.122048, 1)
+
+[node name="MenuNiveles" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 240.0
+offset_right = 118.0
+offset_bottom = 271.0
+size_flags_horizontal = 4
+text = "MenuNiveles"
+
+[node name="Mapa" type="Button" parent="."]
+offset_left = 219.0
+offset_top = 236.0
+offset_right = 271.0
+offset_bottom = 267.0
+size_flags_horizontal = 4
+text = "Mapa"
+
+[node name="Menu" type="Button" parent="."]
+offset_left = 130.0
+offset_top = 290.0
+offset_right = 183.0
+offset_bottom = 321.0
+size_flags_horizontal = 4
+text = "Menu"
+
+[node name="Reiniciar" type="Button" parent="."]
+offset_left = 118.0
+offset_top = 195.0
+offset_right = 194.0
+offset_bottom = 226.0
+size_flags_horizontal = 4
+text = "Reiniciar"
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 115.0
+offset_top = 118.0
+offset_right = 197.0
+offset_bottom = 173.0
+size_flags_horizontal = 4
+text = "Volver "
+
+[node name="Label" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 1.52588e-05
+offset_right = 118.0
+offset_bottom = 23.0
+scale = Vector2(3, 3.7)
+size_flags_horizontal = 4
+text = "PAUSA"
+
+[connection signal="button_down" from="Volver" to="." method="SacarMenuP"]

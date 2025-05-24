@@ -47,3 +47,14 @@ func CambiarSprite(Provincia):
 		elif Global.Nivel >= 6:
 			$Parallax/Dia.play("Noche")
 			$Parallax/Cielo/NubEst.play("Estrellas")
+
+func MostrarMenuP():
+	if Global.pausa == true:
+		$Interfaz/MenuPausa.global_position = $PosicionP.global_position  
+		$Interfaz/MenuPausa.visible = true
+		$Interfaz/Controles.visible = false
+		get_tree().call_group("PJ","Perder")
+	elif Global.pausa == false:
+		$Interfaz/MenuPausa.visible = false
+		$Interfaz/Controles.visible = true
+		get_tree().call_group("PJ","EmpezaraJugar")

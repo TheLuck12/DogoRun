@@ -1,7 +1,5 @@
 extends Control
 
-
-
-func _on_pausa_button_down() -> void:
-	Global.pausa = true
+func SacarMenuP():
+	Global.pausa = false
 	get_tree().call_group("Menu", "MostrarMenuP")

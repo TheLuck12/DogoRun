@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if Global.vivo == true:
+	if Global.vivo == true && Global.pausa == false:
 		Saltar()
 		Mover()
 		Gravedad(delta)
