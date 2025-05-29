@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://coko1vj7nwjtc" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel9.png" id="10_ylu0r"]
 [ext_resource type="Texture2D" uid="uid://d0et70hufjnes" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel10.png" id="11_sm3xu"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="13_q6jlr"]
-[ext_resource type="Texture2D" uid="uid://duidxlu18b0p1" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Candado.png" id="14_cobrd"]
+[ext_resource type="Texture2D" uid="uid://duidxlu18b0p1" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Candado.png" id="14_cobrd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6jlr"]
 
