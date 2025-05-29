@@ -5,7 +5,7 @@ extends Control
 func _ready() -> void:
 	OcultarMostrar()
 	IrProvincia()
-	
+	$Icon/AnimationPlayer.play("Idle")
 func ProvSig() -> void: 
 	if Global.provincia == 6:
 		Global.provincia = 0

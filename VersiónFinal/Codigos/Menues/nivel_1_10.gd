@@ -2,6 +2,7 @@ extends Control
 
 func _ready() -> void:
 	OcultarMostrar()
+	DesbloquearNiveles()
 
 func VolverMapa() -> void:
 	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_niveles.tscn"
@@ -50,3 +51,43 @@ func InstanciarN9() -> void:
 	
 func InstanciarN10() -> void:
 	PrepararNivel(10)
+
+func DesbloquearNiveles():
+	if Global.NivelesCompletados >= 1:
+		$Candado.visible = false
+		$Niveles/N2.disabled = false
+	if Global.NivelesCompletados >= 2:
+		$Candado2.visible = false
+		$Niveles/N3.disabled = false
+	if Global.NivelesCompletados >= 3:
+		$Candado3.visible = false
+		$Niveles/N4.disabled = false
+	if Global.NivelesCompletados >= 4:
+		$Candado4.visible = false
+		$Niveles/N5.disabled = false
+	if Global.NivelesCompletados >= 5:
+		$Candado5.visible = false
+		$Niveles/N6.disabled = false
+	if Global.NivelesCompletados >= 6:
+		$Candado6.visible = false
+		$Niveles/N7.disabled = false
+	if Global.NivelesCompletados >= 7:
+		$Candado7.visible = false
+		$Niveles/N8.disabled = false
+	if Global.NivelesCompletados >= 8:
+		$Candado8.visible = false
+		$Niveles/N9.disabled = false
+	if Global.NivelesCompletados >= 9:
+		$Candado9.visible = false
+		$Niveles/N10.disabled = false
+	if Global.NivelesCompletados == 0:
+		$Niveles/N2.disabled = true
+		$Niveles/N3.disabled = true
+		$Niveles/N4.disabled = true
+		$Niveles/N5.disabled = true
+		$Niveles/N6.disabled = true
+		$Niveles/N7.disabled = true
+		$Niveles/N8.disabled = true
+		$Niveles/N9.disabled = true
+		$Niveles/N10.disabled = true
+		

@@ -33,17 +33,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hraw3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_41jgc")
-}],
-"loop": true,
-"name": &"BsAs",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_llwfy"]
 animations = [{
 "frames": [{
@@ -68,6 +57,17 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("8_hraw3")
+}],
+"loop": true,
+"name": &"BsAs",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hraw3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_41jgc")
 }],
 "loop": true,
 "name": &"BsAs",
@@ -134,18 +134,6 @@ animation = &"Dia"
 
 [node name="Animacion" type="Node2D" parent="."]
 
-[node name="Pisos" type="AnimatedSprite2D" parent="Animacion"]
-position = Vector2(638, 426)
-scale = Vector2(2.566, 3)
-sprite_frames = SubResource("SpriteFrames_hraw3")
-animation = &"BsAs"
-
-[node name="Pisos2" type="AnimatedSprite2D" parent="Animacion"]
-position = Vector2(1921, 426)
-scale = Vector2(2.566, 3)
-sprite_frames = SubResource("SpriteFrames_hraw3")
-animation = &"BsAs"
-
 [node name="NubEst" type="AnimatedSprite2D" parent="Animacion"]
 position = Vector2(1920, 214)
 scale = Vector2(1, 0.636111)
@@ -159,15 +147,27 @@ sprite_frames = SubResource("SpriteFrames_llwfy")
 animation = &"Nubes"
 
 [node name="Medio" type="AnimatedSprite2D" parent="Animacion"]
-position = Vector2(638, 152)
-scale = Vector2(1, 1.264)
+position = Vector2(638, 405.24)
+scale = Vector2(1, 0.884)
 sprite_frames = SubResource("SpriteFrames_y2rmw")
 animation = &"BsAs"
 
 [node name="Medio2" type="AnimatedSprite2D" parent="Animacion"]
-position = Vector2(1920, 152)
-scale = Vector2(1, 1.264)
+position = Vector2(1920, 405.24)
+scale = Vector2(1, 0.884)
 sprite_frames = SubResource("SpriteFrames_y2rmw")
+animation = &"BsAs"
+
+[node name="Pisos" type="AnimatedSprite2D" parent="Animacion"]
+position = Vector2(638, 426)
+scale = Vector2(2.566, 3)
+sprite_frames = SubResource("SpriteFrames_hraw3")
+animation = &"BsAs"
+
+[node name="Pisos2" type="AnimatedSprite2D" parent="Animacion"]
+position = Vector2(1921, 426)
+scale = Vector2(2.566, 3)
+sprite_frames = SubResource("SpriteFrames_hraw3")
 animation = &"BsAs"
 
 [node name="Botones" type="Control" parent="."]

@@ -1,13 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://brgh33nqayhfo"]
+[gd_scene load_steps=26 format=3 uid="uid://brgh33nqayhfo"]
 
 [ext_resource type="Texture2D" uid="uid://blwguh1o0iycg" path="res://VersiónFinal/Assets/Mapa/vecteezy_doodle-freehand-drawing-of-argentina-map_14607047.png" id="1_4ef2m"]
 [ext_resource type="Script" uid="uid://b2iq8p1mclyld" path="res://VersiónFinal/Codigos/Menues/menu_niveles.gd" id="1_d6loi"]
+[ext_resource type="Texture2D" uid="uid://db1qhir2lbq40" path="res://VersiónFinal/Assets/Mapa/Oceano.jpg" id="2_65fx6"]
 [ext_resource type="Texture2D" uid="uid://d1k83087js0fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Flecha.png" id="2_uij0q"]
 [ext_resource type="Texture2D" uid="uid://1oy7qq773v8o" path="res://VersiónFinal/Assets/Mapa/pngtree-map-of-falkland-islands-png-image_4624649.png" id="3_v70ud"]
 [ext_resource type="Texture2D" uid="uid://clb828x8opsjj" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Viajar.png" id="4_v70ud"]
-[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="5_nw48q"]
+[ext_resource type="Texture2D" uid="uid://cs0x8mn5k70mj" path="res://VersiónFinal/Assets/Personajes/CarpinchoPRototipo.png" id="5_ea61d"]
 [ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="6_nw48q"]
+[ext_resource type="PackedScene" uid="uid://cipkx2i3clfl3" path="res://VersiónFinal/Escenas/Global/jugador.tscn" id="7_h41ce"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="8_h41ce"]
+[ext_resource type="Texture2D" uid="uid://by8e8o72hp8do" path="res://VersiónFinal/Assets/Personajes/AlienPrototipo.png" id="9_ylpg5"]
+[ext_resource type="Texture2D" uid="uid://cs6vhjaa4aa3t" path="res://VersiónFinal/Assets/Personajes/JaguarPrototipo.png" id="11_ylpg5"]
+[ext_resource type="Texture2D" uid="uid://c0xwrdorjplhj" path="res://VersiónFinal/Assets/Personajes/VicuñaPrototipo.png" id="12_naxgt"]
+[ext_resource type="Texture2D" uid="uid://ckscn6by06fag" path="res://VersiónFinal/Assets/Personajes/armadilloPrototipo.png" id="13_y78p2"]
+[ext_resource type="Texture2D" uid="uid://sjwdllu8tm3w" path="res://VersiónFinal/Assets/Personajes/flamencoPrototipo.png" id="15_3xxoq"]
+[ext_resource type="Texture2D" uid="uid://5bkxrkt1s4em" path="res://VersiónFinal/Assets/Personajes/zorroColorado.png" id="16_y78p2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6loi"]
 
@@ -24,6 +32,43 @@ font_size = 86
 outline_size = 40
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_h41ce"]
+resource_name = "Idle"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jugador:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -6)]
+}
+
+[sub_resource type="Animation" id="Animation_65fx6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jugador:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n00al"]
+_data = {
+&"Idle": SubResource("Animation_h41ce"),
+&"RESET": SubResource("Animation_65fx6")
+}
+
 [node name="MenuNiveles" type="Control" groups=["Menu"]]
 layout_mode = 3
 anchors_preset = 15
@@ -32,6 +77,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d6loi")
+
+[node name="Oceano" type="Sprite2D" parent="."]
+modulate = Color(0.804404, 0.892499, 1, 0.643137)
+position = Vector2(773, 623.5)
+scale = Vector2(2.21224, 3.61735)
+texture = ExtResource("2_65fx6")
 
 [node name="MapaArg" type="Sprite2D" parent="."]
 position = Vector2(615, 637)
@@ -48,22 +99,29 @@ texture = ExtResource("3_v70ud")
 position = Vector2(810, 367)
 
 [node name="Misiones" type="Marker2D" parent="."]
-position = Vector2(1140, -245)
+position = Vector2(1103, -236)
 
 [node name="Jujuy" type="Marker2D" parent="."]
-position = Vector2(464, -515)
+position = Vector2(455, -529)
 
 [node name="Mendoza" type="Marker2D" parent="."]
-position = Vector2(260, 232)
+position = Vector2(310, 230)
 
 [node name="Chubut" type="Marker2D" parent="."]
 position = Vector2(282, 894)
 
 [node name="TierraDelFuego" type="Marker2D" parent="."]
-position = Vector2(332, 1784)
+position = Vector2(394, 1784)
 
 [node name="Cordoba" type="Marker2D" parent="."]
-position = Vector2(599, 104)
+position = Vector2(581, -6)
+
+[node name="CarpinchoPRototipo" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(899, 280)
+rotation = 3.14159
+scale = Vector2(0.217344, -0.226562)
+texture = ExtResource("5_ea61d")
 
 [node name="MoverDeProvincia" type="CanvasLayer" parent="."]
 
@@ -125,16 +183,122 @@ text = "PROVINCIA"
 label_settings = SubResource("LabelSettings_h41ce")
 horizontal_alignment = 1
 
+[node name="PantallaCarga" parent="." instance=ExtResource("8_h41ce")]
+
+[node name="AlienPrototipo" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(650.375, 109.5)
+scale = Vector2(0.0948275, 0.0851563)
+texture = ExtResource("9_ylpg5")
+
+[node name="JaguarPrototipo" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1186, -317)
+scale = Vector2(-0.30811, 0.227207)
+texture = ExtResource("11_ylpg5")
+
+[node name="VicuñaPrototipo" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(517, -464)
+scale = Vector2(0.073125, 0.0738752)
+texture = ExtResource("12_naxgt")
+
+[node name="FlamencoPrototipo" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(442, 841)
+scale = Vector2(0.111168, 0.117317)
+texture = ExtResource("15_3xxoq")
+
+[node name="ArmadilloPrototipo" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(396, 288)
+scale = Vector2(0.182451, 0.156558)
+texture = ExtResource("13_y78p2")
+
+[node name="ZorroColorado" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(497, 1792)
+scale = Vector2(0.142599, 0.142599)
+texture = ExtResource("16_y78p2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 252.0
+offset_right = 1104.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 31
+text = "????"
+
+[node name="w" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1155.0
+offset_top = -333.0
+offset_right = 1374.0
+offset_bottom = -210.0
+theme_override_font_sizes/font_size = 31
+text = "????"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 91.0
+offset_right = 847.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 31
+text = "????"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = -481.0
+offset_right = 715.0
+offset_bottom = -358.0
+theme_override_font_sizes/font_size = 31
+text = "????"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 267.0
+offset_right = 586.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 31
+text = "????"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 819.0
+offset_right = 630.0
+offset_bottom = 942.0
+theme_override_font_sizes/font_size = 31
+text = "????"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 471.0
+offset_top = 1774.0
+offset_right = 690.0
+offset_bottom = 1897.0
+theme_override_font_sizes/font_size = 31
+text = "????"
+
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(810, 366)
-texture = ExtResource("5_nw48q")
 
 [node name="Camera2D" type="Camera2D" parent="Icon"]
-position = Vector2(0, 1)
+position = Vector2(5, -4)
 limit_left = 0
 position_smoothing_enabled = true
 
-[node name="PantallaCarga" parent="." instance=ExtResource("8_h41ce")]
+[node name="Jugador" parent="Icon" instance=ExtResource("7_h41ce")]
+scale = Vector2(-0.102209, 0.119168)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Icon"]
+libraries = {
+&"": SubResource("AnimationLibrary_n00al")
+}
+speed_scale = 2.0
 
 [connection signal="button_down" from="MoverDeProvincia/Adelante" to="." method="ProvSig"]
 [connection signal="button_down" from="MoverDeProvincia/Atras" to="." method="ProvAnt"]

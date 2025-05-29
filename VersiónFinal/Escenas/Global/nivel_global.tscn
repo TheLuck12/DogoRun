@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=25 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
 [ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="11_pe66g"]
 [ext_resource type="Texture2D" uid="uid://cb3v1qoj14yuu" path="res://VersiónFinal/Assets/Monumentos/BsAs.png" id="11_s2pmu"]
 [ext_resource type="Texture2D" uid="uid://cjj74o5wkxf2k" path="res://VersiónFinal/Assets/Cielo/Nubes.png" id="12_mdodi"]
+[ext_resource type="Texture2D" uid="uid://chxp6pd1s8kdn" path="res://VersiónFinal/Assets/Monumentos/conjunto_edificios.png" id="16_yp322"]
 [ext_resource type="PackedScene" uid="uid://bt8evi32fvylc" path="res://VersiónFinal/Escenas/Interfaz/menu_pausa.tscn" id="17_dcodd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
@@ -74,10 +75,18 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("16_yp322")
+}],
+"loop": true,
+"name": &"BsAsBDia",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_s2pmu")
 }],
 "loop": true,
-"name": &"BsAs",
+"name": &"BsAsBNoche",
 "speed": 5.0
 }]
 
@@ -114,22 +123,14 @@ offset_right = -790.0
 offset_bottom = -471.0
 grow_horizontal = 2
 
-[node name="MenuPausa2" parent="Interfaz" instance=ExtResource("17_dcodd")]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -790.0
-offset_top = -471.0
-offset_right = -790.0
-offset_bottom = -471.0
-grow_horizontal = 2
-
 [node name="Controles" parent="Interfaz" instance=ExtResource("1_d827q")]
 
 [node name="PantallaCarga" parent="Interfaz" instance=ExtResource("4_uqcue")]
+visible = false
 
 [node name="Jugador" parent="." instance=ExtResource("2_b8ggm")]
 position = Vector2(134, 572)
+metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -165,13 +166,13 @@ animation = &"Obelisco"
 
 [node name="Medio" type="ParallaxLayer" parent="Parallax"]
 motion_scale = Vector2(0.495, 1)
-motion_mirroring = Vector2(2103.96, 0)
+motion_mirroring = Vector2(2488.98, 0)
 
 [node name="Medio" type="AnimatedSprite2D" parent="Parallax/Medio"]
-position = Vector2(1051, 159)
-scale = Vector2(1.66641, 1.26389)
+position = Vector2(1295, 434)
+scale = Vector2(1, 0.720833)
 sprite_frames = SubResource("SpriteFrames_juonu")
-animation = &"BsAs"
+animation = &"BsAsBDia"
 
 [node name="Piso" type="ParallaxLayer" parent="Parallax"]
 motion_scale = Vector2(1.29, 1)

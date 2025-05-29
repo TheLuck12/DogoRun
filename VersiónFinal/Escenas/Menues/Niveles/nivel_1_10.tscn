@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://da0esqxctr70e"]
+[gd_scene load_steps=20 format=3 uid="uid://da0esqxctr70e"]
 
 [ext_resource type="Script" uid="uid://b35l57j03tvap" path="res://VersiónFinal/Codigos/Menues/nivel_1_10.gd" id="1_b2gyf"]
 [ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="1_g4sko"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://coko1vj7nwjtc" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel9.png" id="10_ylu0r"]
 [ext_resource type="Texture2D" uid="uid://d0et70hufjnes" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel10.png" id="11_sm3xu"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="13_q6jlr"]
+[ext_resource type="Texture2D" uid="uid://duidxlu18b0p1" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Candado.png" id="14_cobrd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6jlr"]
 
@@ -60,6 +61,7 @@ offset_right = 817.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cobrd")
+disabled = true
 icon = ExtResource("3_tibru")
 
 [node name="N3" type="Button" parent="Niveles"]
@@ -70,6 +72,7 @@ offset_right = 1056.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("4_q6jlr")
 
 [node name="N4" type="Button" parent="Niveles"]
@@ -80,6 +83,7 @@ offset_right = 1293.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("5_cobrd")
 
 [node name="N5" type="Button" parent="Niveles"]
@@ -90,6 +94,7 @@ offset_right = 1531.0
 offset_bottom = 474.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("6_5kh4r")
 
 [node name="N6" type="Button" parent="Niveles"]
@@ -100,6 +105,7 @@ offset_right = 677.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("7_v51lr")
 
 [node name="N7" type="Button" parent="Niveles"]
@@ -110,6 +116,7 @@ offset_right = 929.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("8_o2rd4")
 
 [node name="N8" type="Button" parent="Niveles"]
@@ -120,6 +127,7 @@ offset_right = 1187.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("9_53tch")
 
 [node name="N9" type="Button" parent="Niveles"]
@@ -130,6 +138,7 @@ offset_right = 1442.0
 offset_bottom = 651.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("10_ylu0r")
 
 [node name="N10" type="Button" parent="Niveles"]
@@ -140,6 +149,7 @@ offset_right = 1056.0
 offset_bottom = 833.0
 scale = Vector2(0.402789, 0.418459)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5kh4r")
+disabled = true
 icon = ExtResource("11_sm3xu")
 
 [node name="Interfaz" type="Control" parent="."]
@@ -168,6 +178,52 @@ label_settings = SubResource("LabelSettings_10ntc")
 horizontal_alignment = 1
 
 [node name="PantallaCarga" parent="." instance=ExtResource("13_q6jlr")]
+visible = false
+
+[node name="Candado" type="Sprite2D" parent="."]
+position = Vector2(410.5, 230.5)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado2" type="Sprite2D" parent="."]
+position = Vector2(651, 231)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado3" type="Sprite2D" parent="."]
+position = Vector2(888.5, 230.5)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado4" type="Sprite2D" parent="."]
+position = Vector2(1129, 231)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado5" type="Sprite2D" parent="."]
+position = Vector2(271.5, 407.5)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado6" type="Sprite2D" parent="."]
+position = Vector2(524, 408)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado7" type="Sprite2D" parent="."]
+position = Vector2(783, 407)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado8" type="Sprite2D" parent="."]
+position = Vector2(1038, 408)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
+
+[node name="Candado9" type="Sprite2D" parent="."]
+position = Vector2(651, 589)
+scale = Vector2(0.161719, 0.181944)
+texture = ExtResource("14_cobrd")
 
 [connection signal="button_down" from="Niveles/N1" to="." method="InstanciarN1"]
 [connection signal="button_down" from="Niveles/N2" to="." method="InstanciarN2"]
