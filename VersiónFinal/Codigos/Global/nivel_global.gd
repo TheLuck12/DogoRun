@@ -43,7 +43,6 @@ func CambiarSprite(Provincia):
 		$Parallax/Piso/Pisos.play("BsAs")
 		if Global.Nivel <= 5:
 			$Parallax/Dia.play("Dia")
-			 
 			$Parallax/Cielo/NubEst.play("Nubes")
 		elif Global.Nivel >= 6:
 			$Parallax/Dia.play("Noche")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duidxlu18b0p1"
-path="res://.godot/imported/Candado.png-8c674e9dcbf9a07f99580393f48c1456.ctex"
+path="res://.godot/imported/Candado.png-cbf6f0344d1d951661ac4181d1aadd1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Menu/Botones/Niveles/Candado.png"
-dest_files=["res://.godot/imported/Candado.png-8c674e9dcbf9a07f99580393f48c1456.ctex"]
+source_file="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Candado.png"
+dest_files=["res://.godot/imported/Candado.png-cbf6f0344d1d951661ac4181d1aadd1a.ctex"]
 
 [params]
 
