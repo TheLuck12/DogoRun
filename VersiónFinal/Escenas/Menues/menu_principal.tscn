@@ -1,10 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://dlb158ow8u3l3"]
+[gd_scene load_steps=21 format=3 uid="uid://dlb158ow8u3l3"]
 
 [ext_resource type="Script" uid="uid://b0i33ejyflr1v" path="res://VersiónFinal/Codigos/Menues/menu.gd" id="1_ghthh"]
-[ext_resource type="Texture2D" uid="uid://6dkr4ooquisg" path="res://VersiónFinal/Assets/Cielo/Dia.png" id="2_bgnk5"]
 [ext_resource type="Texture2D" uid="uid://bxs3earojur0q" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Play.png" id="2_ty8ne"]
 [ext_resource type="Texture2D" uid="uid://xbiy12tq51fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Salir.png" id="3_5th1b"]
-[ext_resource type="Texture2D" uid="uid://duras7iy31qc7" path="res://VersiónFinal/Assets/Cielo/Noche.png" id="3_u4ads"]
 [ext_resource type="Texture2D" uid="uid://brd1hop6nuax5" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Ajustes.png" id="4_f04ce"]
 [ext_resource type="Texture2D" uid="uid://cqywms820jdbi" path="res://VersiónFinal/Assets/Menu/Sprites/Titulo.png" id="5_66b3q"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="6_7fq04"]
@@ -13,25 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://cipkx2i3clfl3" path="res://VersiónFinal/Escenas/Global/jugador.tscn" id="7_64w14"]
 [ext_resource type="Texture2D" uid="uid://d30krpkks2b" path="res://VersiónFinal/Assets/Pisos/PisoBsAs.png" id="8_41jgc"]
 [ext_resource type="Texture2D" uid="uid://cb3v1qoj14yuu" path="res://VersiónFinal/Assets/Monumentos/BsAs.png" id="8_hraw3"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vewsi"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_bgnk5")
-}],
-"loop": true,
-"name": &"Dia",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_u4ads")
-}],
-"loop": true,
-"name": &"Noche",
-"speed": 5.0
-}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_llwfy"]
 animations = [{
@@ -127,20 +106,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ghthh")
 
-[node name="Dia" type="AnimatedSprite2D" parent="."]
-position = Vector2(642, 354)
-sprite_frames = SubResource("SpriteFrames_vewsi")
-animation = &"Dia"
+[node name="Cielo" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 42.0
+offset_bottom = 38.0
+scale = Vector2(32.1451, 18.1875)
+color = Color(0.372549, 0.701961, 0.858824, 1)
 
 [node name="Animacion" type="Node2D" parent="."]
 
 [node name="NubEst" type="AnimatedSprite2D" parent="Animacion"]
+modulate = Color(1, 1, 1, 0.717647)
 position = Vector2(1920, 214)
 scale = Vector2(1, 0.636111)
 sprite_frames = SubResource("SpriteFrames_llwfy")
 animation = &"Nubes"
 
 [node name="NubEst2" type="AnimatedSprite2D" parent="Animacion"]
+modulate = Color(1, 1, 1, 0.717647)
 position = Vector2(639, 214)
 scale = Vector2(1, 0.636111)
 sprite_frames = SubResource("SpriteFrames_llwfy")

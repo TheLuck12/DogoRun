@@ -4,6 +4,7 @@ extends Control
 
 func _ready() -> void:
 	OcultarMostrar()
+	AbrirProvincia()
 	IrProvincia()
 	$Icon/AnimationPlayer.play("Idle")
 func ProvSig() -> void: 
@@ -21,32 +22,33 @@ func ProvAnt() -> void:
 	IrProvincia()
  
 func IrProvincia():
+	AbrirProvincia()
 	if Global.provincia == 0:
-		Jugador.global_position = $BuenosAires.global_position
+		Jugador.global_position = $Provincias/BuenosAires.global_position
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_1_10.tscn"
 		$MoverDeProvincia/Provincia.text = str("BUENOS AIRES")
 	elif Global.provincia == 1:
-		Jugador.global_position = $Misiones.global_position
+		Jugador.global_position = $Provincias/Misiones.global_position
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_11_20.tscn"
 		$MoverDeProvincia/Provincia.text = str("MISIONES")
 	elif Global.provincia == 2:
-		Jugador.global_position = $Jujuy.global_position
+		Jugador.global_position = $Provincias/Jujuy.global_position
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_21_30.tscn"
 		$MoverDeProvincia/Provincia.text = str("JUJUY")
 	elif Global.provincia == 3:
-		Jugador.global_position = $Mendoza.global_position
+		Jugador.global_position = $Provincias/Mendoza.global_position
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_31_40.tscn"
 		$MoverDeProvincia/Provincia.text = str("MENDOZA")
 	elif Global.provincia == 4:
-		Jugador.global_position = $Chubut.global_position
+		Jugador.global_position = $Provincias/Chubut.global_position
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_41_50.tscn"
 		$MoverDeProvincia/Provincia.text = str("CHUBUT")
 	elif Global.provincia == 5:
-		Jugador.global_position = $TierraDelFuego.global_position
+		Jugador.global_position = $Provincias/TierraDelFuego.global_position
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_51_60.tscn"
 		$MoverDeProvincia/Provincia.text = str("TIERRA DEL FUEGO")
 	elif Global.provincia == 6:
-		Jugador.global_position = $Cordoba.global_position
+		Jugador.global_position = $Provincias/Cordoba.global_position
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_61_70.tscn"
 		$MoverDeProvincia/Provincia.text = str("CORDOBA")
 	else:
@@ -64,3 +66,21 @@ func OcultarMostrar():
 		$MoverDeProvincia.visible = false
 	elif Global.barraP == 0:
 		$MoverDeProvincia.visible = true
+
+func AbrirProvincia():
+	if Global.provincia == 0:
+		$MoverDeProvincia/Viajar.visible = true
+	elif Global.NivelesCompletados >= 10 and Global.provincia == 1:
+		$MoverDeProvincia/Viajar.visible = true
+	elif Global.NivelesCompletados >= 20 and Global.provincia == 3:
+		$MoverDeProvincia/Viajar.visible = true
+	elif Global.NivelesCompletados >= 30 and Global.provincia == 2:
+		$MoverDeProvincia/Viajar.visible = true
+	elif Global.NivelesCompletados >= 40 and Global.provincia == 4:
+		$MoverDeProvincia/Viajar.visible = true
+	elif Global.NivelesCompletados >= 50 and Global.provincia == 5:
+		$MoverDeProvincia/Viajar.visible = true
+	elif Global.NivelesCompletados >= 60 and Global.provincia == 6:
+		$MoverDeProvincia/Viajar.visible = true
+	else:
+		$MoverDeProvincia/Viajar.visible = false

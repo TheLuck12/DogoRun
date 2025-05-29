@@ -7,6 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	ElegirNivel()
+	print(Global.provincia)
 	OcultarMostrar()
 	CambiarSprite(Global.provincia)
 
@@ -42,11 +43,15 @@ func CambiarSprite(Provincia):
 		$Parallax/Monumentos/Monumentos.play("Obelisco")
 		$Parallax/Piso/Pisos.play("BsAs")
 		if Global.Nivel <= 5:
-			$Parallax/Dia.play("Dia")
+			$Parallax/Fondo.modulate = "5FB3DB"
 			$Parallax/Cielo/NubEst.play("Nubes")
+			$Parallax/Medio/Medio.play("BsAsBDia")
+			$Parallax/Cielo/NubEst.modulate = "ffffffb7"
 		elif Global.Nivel >= 6:
-			$Parallax/Dia.play("Noche")
+			$Parallax/Fondo.modulate = "07101D"
+			$Parallax/Medio/Medio.play("BsAsBNoche")
 			$Parallax/Cielo/NubEst.play("Estrellas")
+			$Parallax/Cielo/NubEst.modulate = "ffffff"
 func MostrarMenuP():
 	if Global.pausa == true:
 		$Interfaz/MenuPausa.global_position = $PosicionP.global_position  
