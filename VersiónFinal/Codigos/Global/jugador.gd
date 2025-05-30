@@ -40,6 +40,7 @@ func EmpezaraJugar():
 	if Global.barraP == 0 && Global.Nivel > 0:
 		$Animacion.play("Correr")
 		Global.vivo = true
+		Global.pausa = false
 
 func Perder():
 	Global.vivo = false

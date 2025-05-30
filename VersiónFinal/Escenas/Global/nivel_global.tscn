@@ -151,8 +151,8 @@ motion_scale = Vector2(0.495, 1)
 motion_mirroring = Vector2(2488.98, 0)
 
 [node name="Medio" type="AnimatedSprite2D" parent="Parallax/Medio"]
-position = Vector2(1295, 434)
-scale = Vector2(1, 0.720833)
+position = Vector2(1295, 468.75)
+scale = Vector2(1, 0.624305)
 sprite_frames = SubResource("SpriteFrames_juonu")
 animation = &"BsAsBNoche"
 

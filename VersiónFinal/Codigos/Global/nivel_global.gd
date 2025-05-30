@@ -10,7 +10,6 @@ func _ready() -> void:
 	print(Global.provincia)
 	OcultarMostrar()
 	CambiarSprite(Global.provincia)
-
 func _process(_delta: float) -> void:
 	pass
 
