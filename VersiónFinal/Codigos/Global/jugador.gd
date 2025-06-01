@@ -48,3 +48,4 @@ func Perder():
 	Global.vivo = false
 	$Sonidos/Llorando.play()
 	$Animacion.stop()
+	ControlMusica.PararMusica()

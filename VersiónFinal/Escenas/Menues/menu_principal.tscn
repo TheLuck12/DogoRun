@@ -195,6 +195,7 @@ icon = ExtResource("3_5th1b")
 flat = true
 
 [node name="BotonAjustes" type="Button" parent="Botones"]
+visible = false
 layout_mode = 1
 offset_left = 854.0
 offset_top = 475.0
