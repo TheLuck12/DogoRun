@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bro00b373nxme"]
+[gd_scene load_steps=11 format=3 uid="uid://bro00b373nxme"]
 
 [ext_resource type="Script" uid="uid://di1is5owagx1e" path="res://VersiónFinal/Codigos/Obtaculos/obstaculo_1.gd" id="1_6a48y"]
 [ext_resource type="Texture2D" uid="uid://ci7mq4u0gkfb4" path="res://VersiónFinal/Assets/Obstaculos/BsAs/Colectivo/Colectivo.png" id="1_x67o4"]
 [ext_resource type="Texture2D" uid="uid://yd6j0sta746d" path="res://VersiónFinal/Assets/Obstaculos/BsAs/Colectivo/rueda.png" id="2_6a48y"]
+[ext_resource type="AudioStream" uid="uid://cdgh1bfr3b8y0" path="res://VersiónFinal/Sonidos/Colectivo/BocinaColectivo.wav" id="4_u17l4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u17l4"]
 animations = [{
@@ -67,7 +68,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 6.28319]
+"values": [6.28319, 0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -79,7 +80,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 6.28319]
+"values": [6.28319, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -103,22 +104,26 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x67o4"]
 size = Vector2(20, 259)
 
-[node name="Obstaculo1" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejc7c"]
+size = Vector2(696, 512)
+
+[node name="Obstaculo1" type="Node2D" groups=["Enemigo"]]
 script = ExtResource("1_6a48y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u17l4")
 animation = &"Colectivo"
+flip_h = true
 
 [node name="Rueda" type="Sprite2D" parent="."]
-position = Vector2(-223, 122.659)
-scale = Vector2(0.246875, 0.237731)
+position = Vector2(-310, 123)
+scale = Vector2(-0.247, 0.237731)
 texture = ExtResource("2_6a48y")
 offset = Vector2(19, -55)
 
 [node name="Rueda2" type="Sprite2D" parent="."]
-position = Vector2(312, 123)
-scale = Vector2(0.246875, 0.237731)
+position = Vector2(223, 124)
+scale = Vector2(-0.247, 0.237731)
 texture = ExtResource("2_6a48y")
 offset = Vector2(19, -55)
 
@@ -128,15 +133,26 @@ libraries = {
 }
 
 [node name="Perder" type="Area2D" parent="."]
-position = Vector2(-536, 0)
+position = Vector2(-479, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
 position = Vector2(-2, 22)
 shape = SubResource("RectangleShape2D_x67o4")
 
 [node name="Techo" type="StaticBody2D" parent="."]
+position = Vector2(57, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Techo"]
 polygon = PackedVector2Array(-559, -107, -521, -129, 467, -128, 479, -103)
 
-[connection signal="area_entered" from="Perder" to="." method="Perder"]
+[node name="TocarBocina" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_u17l4")
+
+[node name="DetectarPJ" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectarPJ"]
+position = Vector2(-771, -79)
+shape = SubResource("RectangleShape2D_ejc7c")
+
+[connection signal="body_entered" from="Perder" to="." method="_on_perder_body_entered"]
+[connection signal="body_entered" from="DetectarPJ" to="." method="DetectarJugador"]

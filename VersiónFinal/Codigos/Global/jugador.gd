@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 		Mover()
 		Gravedad(delta)
 		move_and_slide()
-	else:
+	elif Global.vivo == false and Global.Nivel > 0 or Global.pausa == true and Global.Nivel > 0:
 		$Animacion.stop()
 func Mover():
 		velocity.x = 500

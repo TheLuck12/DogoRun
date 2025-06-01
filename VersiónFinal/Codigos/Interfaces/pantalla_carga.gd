@@ -18,6 +18,6 @@ func FinAnimacion():
 		visible = false
 		get_tree().call_group("Menu","OcultarMostrar")
 		get_tree().call_group("PJ","EmpezaraJugar")
-
+		get_tree().call_group("Enemigo","ComenzarNivel")
 	elif Global.barraP == 100:
 		get_tree().change_scene_to_file(Global.menu)

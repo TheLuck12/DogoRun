@@ -30,7 +30,7 @@ func ElegirNivel():
 		InstanciarNivel(N4)
 	if Global.Nivel == 5:
 		InstanciarNivel(N5)
-	print("estamos en el nivel: ", Global.Nivel)
+
 
 func OcultarMostrar():
 	if Global.barraP == 100:
@@ -56,7 +56,6 @@ func MostrarMenuP():
 	if Global.pausa == true:
 		$Interfaz/MenuPausa.visible = true
 		$Interfaz/Controles.visible = false
-		Global.pausa = true
 	elif Global.pausa == false:
 		$Interfaz/MenuPausa.visible = false
 		$Interfaz/Controles.visible = true

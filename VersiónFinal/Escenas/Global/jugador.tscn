@@ -389,7 +389,6 @@ libraries = {
 speed_scale = 5.0
 
 [node name="Perder" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
 position = Vector2(10, 82.5)
@@ -412,4 +411,3 @@ pitch_scale = 1.11
 stream = ExtResource("4_hxo7l")
 volume_db = -7.704
 pitch_scale = 0.8
-max_polyphony = 2
