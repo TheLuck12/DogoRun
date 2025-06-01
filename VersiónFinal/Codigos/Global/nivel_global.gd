@@ -7,7 +7,8 @@ extends Node2D
 
 func _ready() -> void:
 	ElegirNivel()
-	print(Global.provincia)
+	$Interfaz/MenuPausa.global_position = $PosicionDeMenu/PosicionP.global_position  
+	$Interfaz/MenuConfirmar.global_position = $PosicionDeMenu/PosicionC.global_position  
 	OcultarMostrar()
 	CambiarSprite(Global.provincia)
 func _process(_delta: float) -> void:
@@ -53,7 +54,6 @@ func CambiarSprite(Provincia):
 			$Parallax/Cielo/NubEst.modulate = "ffffff"
 func MostrarMenuP():
 	if Global.pausa == true:
-		$Interfaz/MenuPausa.global_position = $PosicionP.global_position  
 		$Interfaz/MenuPausa.visible = true
 		$Interfaz/Controles.visible = false
 		get_tree().call_group("PJ","Perder")

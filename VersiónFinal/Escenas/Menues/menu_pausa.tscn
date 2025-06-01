@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt8evi32fvylc"]
+[gd_scene load_steps=2 format=3 uid="uid://bt8evi32fvylc"]
 
 [ext_resource type="Script" uid="uid://y2m06f6xfebo" path="res://VersiónFinal/Codigos/Menues/menu_pausa.gd" id="1_27eaq"]
-[ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="2_ny58r"]
 
 [node name="MenuPausa" type="Control" groups=["Interfaz"]]
 layout_mode = 3
@@ -71,9 +70,6 @@ offset_bottom = 23.0
 scale = Vector2(3, 3.7)
 size_flags_horizontal = 4
 text = "PAUSA"
-
-[node name="PantallaCarga" parent="." instance=ExtResource("2_ny58r")]
-visible = false
 
 [connection signal="button_down" from="MenuNiveles" to="." method="IrMenuNi"]
 [connection signal="button_down" from="Mapa" to="." method="IrMapa"]

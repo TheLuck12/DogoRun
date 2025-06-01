@@ -87,7 +87,7 @@ _data = {
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u35eo"]
 load_path = "res://.godot/imported/Atras.png-777a2f9ae7dfc1d4d1df0431a12b07ef.ctex"
 
-[node name="PantallaCarga" type="CanvasLayer"]
+[node name="PantallaCarga" type="CanvasLayer" groups=["Interfaz"]]
 script = ExtResource("1_u35eo")
 
 [node name="Animacion" type="AnimationPlayer" parent="."]

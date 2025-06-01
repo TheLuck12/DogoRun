@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=23 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
 [ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
@@ -10,12 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="4_uqcue"]
 [ext_resource type="PackedScene" uid="uid://c6f738v8okaqr" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_4.tscn" id="5_yh41c"]
 [ext_resource type="PackedScene" uid="uid://dm0qm1sbi1xw1" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_5.tscn" id="6_w4vyl"]
+[ext_resource type="PackedScene" uid="uid://yutivv3wig48" path="res://VersiónFinal/Escenas/Menues/menu_confirmar.tscn" id="7_dcodd"]
 [ext_resource type="Texture2D" uid="uid://cbg7kthe1pqav" path="res://VersiónFinal/Assets/Monumentos/Obelisco.png" id="10_juonu"]
 [ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="11_pe66g"]
 [ext_resource type="Texture2D" uid="uid://cjj74o5wkxf2k" path="res://VersiónFinal/Assets/Cielo/Nubes.png" id="12_mdodi"]
 [ext_resource type="Texture2D" uid="uid://w5st416wce7e" path="res://VersiónFinal/Assets/Edificios/conjunto edificios noche.png" id="15_mdodi"]
 [ext_resource type="Texture2D" uid="uid://chxp6pd1s8kdn" path="res://VersiónFinal/Assets/Monumentos/conjunto_edificios.png" id="16_yp322"]
-[ext_resource type="PackedScene" uid="uid://bt8evi32fvylc" path="res://VersiónFinal/Escenas/Interfaz/menu_pausa.tscn" id="17_dcodd"]
+[ext_resource type="PackedScene" uid="uid://bt8evi32fvylc" path="res://VersiónFinal/Escenas/Menues/menu_pausa.tscn" id="17_dcodd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
 size = Vector2(15214, 20)
@@ -93,6 +94,7 @@ metadata/_edit_vertical_guides_ = [15206.0]
 [node name="Interfaz" type="CanvasLayer" parent="."]
 
 [node name="MenuPausa" parent="Interfaz" instance=ExtResource("17_dcodd")]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -101,6 +103,13 @@ offset_top = -471.0
 offset_right = -790.0
 offset_bottom = -471.0
 grow_horizontal = 2
+
+[node name="MenuConfirmar" parent="Interfaz" instance=ExtResource("7_dcodd")]
+visible = false
+offset_left = 5.0
+offset_top = -242.0
+offset_right = 5.0
+offset_bottom = -242.0
 
 [node name="Controles" parent="Interfaz" instance=ExtResource("1_d827q")]
 
@@ -166,5 +175,10 @@ scale = Vector2(2.566, 3)
 sprite_frames = SubResource("SpriteFrames_qo3xd")
 animation = &"BsAs"
 
-[node name="PosicionP" type="Marker2D" parent="."]
+[node name="PosicionDeMenu" type="Node2D" parent="."]
+
+[node name="PosicionP" type="Marker2D" parent="PosicionDeMenu"]
 position = Vector2(497, 207)
+
+[node name="PosicionC" type="Marker2D" parent="PosicionDeMenu"]
+position = Vector2(407, 261)
