@@ -133,7 +133,7 @@ libraries = {
 }
 
 [node name="Perder" type="Area2D" parent="."]
-position = Vector2(-479, 0)
+position = Vector2(-467, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
 position = Vector2(-2, 22)
@@ -143,7 +143,8 @@ shape = SubResource("RectangleShape2D_x67o4")
 position = Vector2(57, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Techo"]
-polygon = PackedVector2Array(-559, -107, -521, -129, 467, -128, 479, -103)
+position = Vector2(9, 0)
+polygon = PackedVector2Array(-553, -106, -521, -129, 467, -128, 479, -103)
 
 [node name="TocarBocina" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_u17l4")
