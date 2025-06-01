@@ -12,7 +12,8 @@ func _physics_process(delta: float) -> void:
 		Mover()
 		Gravedad(delta)
 		move_and_slide()
-	
+	else:
+		$Animacion.stop()
 func Mover():
 		velocity.x = 500
 
@@ -38,10 +39,12 @@ func Gravedad(Masa):
 
 func EmpezaraJugar():
 	if Global.barraP == 0 && Global.Nivel > 0:
+		$Sonidos/Ladrido.play()
 		$Animacion.play("Correr")
 		Global.vivo = true
 		Global.pausa = false
 
 func Perder():
 	Global.vivo = false
+	$Sonidos/Llorando.play()
 	$Animacion.stop()

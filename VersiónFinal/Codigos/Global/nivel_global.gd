@@ -56,7 +56,7 @@ func MostrarMenuP():
 	if Global.pausa == true:
 		$Interfaz/MenuPausa.visible = true
 		$Interfaz/Controles.visible = false
-		get_tree().call_group("PJ","Perder")
+		Global.pausa = true
 	elif Global.pausa == false:
 		$Interfaz/MenuPausa.visible = false
 		$Interfaz/Controles.visible = true

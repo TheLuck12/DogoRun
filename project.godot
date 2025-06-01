@@ -30,13 +30,15 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://VersiónFinal/": "red",
-"res://VersiónFinal/Assets/": "red",
-"res://VersiónFinal/Assets/Menu/": "red",
-"res://VersiónFinal/Assets/Menu/Botones/": "red",
+"res://VersiónFinal/Assets/": "purple",
+"res://VersiónFinal/Assets/Menu/": "purple",
+"res://VersiónFinal/Assets/Menu/Botones/": "purple",
 "res://VersiónFinal/Codigos/": "yellow",
 "res://VersiónFinal/Codigos/Menues/": "yellow",
 "res://VersiónFinal/Escenas/": "green",
-"res://VersiónFinal/Escenas/Menues/": "green"
+"res://VersiónFinal/Escenas/Menues/": "green",
+"res://VersiónFinal/Musica/": "gray",
+"res://VersiónFinal/Sonidos/": "blue"
 }
 
 [global_group]

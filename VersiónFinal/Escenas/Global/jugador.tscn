@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cipkx2i3clfl3"]
+[gd_scene load_steps=11 format=3 uid="uid://cipkx2i3clfl3"]
 
 [ext_resource type="Texture2D" uid="uid://uu2fgpx4h2cv" path="res://VersiónFinal/Assets/Personajes/DogoArgentino.png" id="1_eq3m3"]
 [ext_resource type="Script" uid="uid://q2c5f1qtrwe1" path="res://VersiónFinal/Codigos/Global/jugador.gd" id="1_wecjo"]
+[ext_resource type="AudioStream" uid="uid://b4kswqnlj1qe4" path="res://VersiónFinal/Sonidos/Perro/PerroLadrando.wav" id="3_etuoq"]
+[ext_resource type="AudioStream" uid="uid://dj2cfavo8vtdf" path="res://VersiónFinal/Sonidos/Perro/PerroLlorando.wav" id="4_hxo7l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wecjo"]
 radius = 58.0
@@ -398,3 +400,16 @@ position = Vector2(-2012.12, 0)
 limit_left = 0
 limit_top = 0
 limit_bottom = 720
+
+[node name="Sonidos" type="Node" parent="."]
+
+[node name="Ladrido" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource("3_etuoq")
+volume_db = -7.704
+pitch_scale = 1.11
+
+[node name="Llorando" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource("4_hxo7l")
+volume_db = -7.704
+pitch_scale = 0.8
+max_polyphony = 2
