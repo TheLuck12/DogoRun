@@ -11,6 +11,7 @@ func VolverMapa() -> void:
 func IrANivel():
 	$PantallaCarga.ActPantalla()
 	Global.menu = "res://VersiónFinal/Escenas/Global/nivel_global.tscn"
+	
 
 func OcultarMostrar():
 	if Global.barraP == 100:

@@ -5,6 +5,8 @@ func _ready() -> void:
 	Global.Nivel = 0
 	$Botones/Jugador/Animacion.play("Correr")
 	$AnimationPlayer.play("MoverPiso")
+	ControlMusica.EmpezarMusica()
+
 
 func SalirDelJuego() -> void:
 	get_tree().quit()

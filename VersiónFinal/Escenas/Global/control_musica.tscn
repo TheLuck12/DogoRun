@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb3daxpice76s"]
+
+[ext_resource type="Script" uid="uid://b8f5bj17v0yk1" path="res://VersiónFinal/Codigos/Global/control_musica.gd" id="1_q5u58"]
+[ext_resource type="AudioStream" uid="uid://d183m8j6f8eva" path="res://VersiónFinal/Musica/No shortcut .wav" id="2_y17sc"]
+[ext_resource type="AudioStream" uid="uid://qjvu8iinq35p" path="res://VersiónFinal/Musica/Night Rockus.wav" id="3_y17sc"]
+
+[node name="ControlMusica" type="Node"]
+script = ExtResource("1_q5u58")
+
+[node name="MMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_y17sc")
+volume_db = -20.917
+
+[node name="MInGame" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_y17sc")
+volume_db = -20.917
+
+[connection signal="finished" from="MMenu" to="." method="EmpezarMusica"]
+[connection signal="finished" from="MInGame" to="." method="EmpezarMusica"]

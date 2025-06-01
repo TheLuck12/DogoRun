@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://VersiónFinal/Codigos/Global/global.gd"
+ControlMusica="*res://VersiónFinal/Escenas/Global/control_musica.tscn"
 
 [display]
 

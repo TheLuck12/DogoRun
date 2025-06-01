@@ -6,10 +6,12 @@ func SacarMenuP():
 func IrMenuPr():
 	LlamarPantallaConfirmacion()
 	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_principal.tscn"
+
 func IrMenuNi():
 	LlamarPantallaConfirmacion()
 	if Global.provincia == 0:
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_1_10.tscn"
+
 func IrMapa():
 	LlamarPantallaConfirmacion()
 	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_niveles.tscn"

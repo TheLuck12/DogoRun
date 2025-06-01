@@ -6,6 +6,7 @@ extends Node2D
 @export var N5 :PackedScene
 
 func _ready() -> void:
+	ControlMusica.PararMusica()
 	ElegirNivel()
 	$Interfaz/MenuPausa.global_position = $PosicionDeMenu/PosicionP.global_position  
 	$Interfaz/MenuConfirmar.global_position = $PosicionDeMenu/PosicionC.global_position  
