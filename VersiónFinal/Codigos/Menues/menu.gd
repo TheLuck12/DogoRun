@@ -17,7 +17,8 @@ func IrMenuNiveles() -> void:
 	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_niveles.tscn"
 
 func IrMenuAjustes() -> void:
-	get_tree().change_scene_to_file("")
+	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_creditos.tscn"
+	$PantallaCarga.ActPantalla()
 
 func OcultarMostrar():
 	if Global.barraP == 100:

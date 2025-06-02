@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chxp6pd1s8kdn"
-path="res://.godot/imported/conjunto_edificios.png-ea8378d3a0e7782a9b6f13e68ce95a72.ctex"
+uid="uid://bt54ttqlifxnk"
+path="res://.godot/imported/Instagram.png-21422d409b1224692888ed1746c51662.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Monumentos/conjunto_edificios.png"
-dest_files=["res://.godot/imported/conjunto_edificios.png-ea8378d3a0e7782a9b6f13e68ce95a72.ctex"]
+source_file="res://VersiónFinal/Assets/Creditos/Instagram.png"
+dest_files=["res://.godot/imported/Instagram.png-21422d409b1224692888ed1746c51662.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb3v1qoj14yuu"
-path="res://.godot/imported/BsAs.png-42d2be538245f5e7ad72ff46c8654c73.ctex"
+uid="uid://hw83emlpv73"
+path="res://.godot/imported/Itch.jpg-50e3e74a7c7ae5409b29590387502c70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Monumentos/BsAs.png"
-dest_files=["res://.godot/imported/BsAs.png-42d2be538245f5e7ad72ff46c8654c73.ctex"]
+source_file="res://VersiónFinal/Assets/Creditos/Itch.jpg"
+dest_files=["res://.godot/imported/Itch.jpg-50e3e74a7c7ae5409b29590387502c70.ctex"]
 
 [params]
 

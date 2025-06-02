@@ -1,0 +1,193 @@
+[gd_scene load_steps=12 format=3 uid="uid://cx6osx6yp1yxy"]
+
+[ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="1_18o5s"]
+[ext_resource type="Script" uid="uid://b2d7e77upgog6" path="res://VersiónFinal/Codigos/Menues/menu_creditos.gd" id="1_lsqmi"]
+[ext_resource type="Texture2D" uid="uid://cb3v1qoj14yuu" path="res://VersiónFinal/Assets/Edificios/BsAs.png" id="2_lsqmi"]
+[ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="4_50bn3"]
+[ext_resource type="Texture2D" uid="uid://bt54ttqlifxnk" path="res://VersiónFinal/Assets/Creditos/Instagram.png" id="5_50bn3"]
+[ext_resource type="Texture2D" uid="uid://hw83emlpv73" path="res://VersiónFinal/Assets/Creditos/Itch.jpg" id="6_qbp2v"]
+[ext_resource type="Texture2D" uid="uid://dvljjx7yb8vpf" path="res://VersiónFinal/Assets/Creditos/Argie01_PNG.png" id="7_bb3ow"]
+[ext_resource type="Texture2D" uid="uid://dak1w0xyrbnoc" path="res://VersiónFinal/Assets/Creditos/1742779626779.jpeg" id="8_n86r2"]
+[ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="10_qbp2v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c274l"]
+font_size = 146
+outline_size = 30
+outline_color = Color(0.0862745, 0, 0.556863, 0.996078)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qbp2v"]
+
+[node name="MenuCreditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lsqmi")
+metadata/_edit_horizontal_guides_ = [475.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 35.0
+offset_bottom = 36.0
+scale = Vector2(32.285, 18.2759)
+color = Color(0.027451, 0.0627451, 0.113725, 1)
+
+[node name="Estrellas" type="Sprite2D" parent="."]
+position = Vector2(644.5, 264)
+scale = Vector2(1.00703, 1)
+texture = ExtResource("1_18o5s")
+
+[node name="BsAs" type="Sprite2D" parent="."]
+position = Vector2(647, 762)
+scale = Vector2(1.00781, 0.875694)
+texture = ExtResource("2_lsqmi")
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 17.0
+offset_right = 997.0
+offset_bottom = 420.0
+text = "CREDITOS
+"
+label_settings = SubResource("LabelSettings_c274l")
+horizontal_alignment = 1
+
+[node name="Titulos" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -5.0
+offset_top = 386.0
+offset_right = 35.0
+offset_bottom = 426.0
+
+[node name="Musica" type="Label" parent="Titulos"]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 2.0
+offset_right = 1264.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 26
+text = "Musica:
+MONSIEUR FRED"
+horizontal_alignment = 1
+
+[node name="Lucas" type="Label" parent="Titulos"]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 0.315674
+offset_right = 660.0
+offset_bottom = 117.316
+theme_override_font_sizes/font_size = 26
+text = "DESAROLLADOR:
+JUMILLA LUCAS "
+horizontal_alignment = 1
+
+[node name="Argie" type="Label" parent="Titulos"]
+layout_mode = 0
+offset_left = 641.0
+offset_right = 970.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 26
+text = "EQUIPO:
+ARGIE GAMES"
+horizontal_alignment = 1
+
+[node name="Lucia" type="Label" parent="Titulos"]
+layout_mode = 0
+offset_right = 329.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 26
+text = "ARTISTA:
+LUCIA PILAR CARRANZA"
+horizontal_alignment = 1
+
+[node name="Botones" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Volver" type="Button" parent="Botones"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 33.0
+offset_right = 147.0
+offset_bottom = 141.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qbp2v")
+icon = ExtResource("4_50bn3")
+flat = true
+
+[node name="LuciaIG" type="Button" parent="Botones"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 474.0
+offset_right = 1311.0
+offset_bottom = 1682.0
+scale = Vector2(0.0914931, 0.0897189)
+icon = ExtResource("5_50bn3")
+flat = true
+
+[node name="LucasIG" type="Button" parent="Botones"]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 473.0
+offset_right = 1562.0
+offset_bottom = 1681.0
+scale = Vector2(0.0914931, 0.0897189)
+icon = ExtResource("5_50bn3")
+flat = true
+
+[node name="ArgieIG" type="Button" parent="Botones"]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 475.0
+offset_right = 1886.0
+offset_bottom = 1683.0
+scale = Vector2(0.0914931, 0.0897189)
+icon = ExtResource("5_50bn3")
+flat = true
+
+[node name="LucasItch" type="Button" parent="Botones"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 476.0
+offset_right = 1404.0
+offset_bottom = 1384.0
+scale = Vector2(0.119916, 0.114303)
+icon = ExtResource("6_qbp2v")
+flat = true
+
+[node name="ArgieItch" type="Button" parent="Botones"]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 476.0
+offset_right = 1728.0
+offset_bottom = 1384.0
+scale = Vector2(0.119916, 0.114303)
+icon = ExtResource("6_qbp2v")
+flat = true
+
+[node name="Imagenes" type="Node2D" parent="."]
+
+[node name="Argie01Png" type="Sprite2D" parent="Imagenes"]
+position = Vector2(800, 295)
+scale = Vector2(0.0908046, 0.086758)
+texture = ExtResource("7_bb3ow")
+
+[node name="1742779626779" type="Sprite2D" parent="Imagenes"]
+position = Vector2(488, 301.316)
+scale = Vector2(0.36542, 0.350406)
+texture = ExtResource("8_n86r2")
+
+[node name="PantallaCarga" parent="." instance=ExtResource("10_qbp2v")]
+visible = false
+
+[connection signal="button_down" from="Botones/Volver" to="." method="VolverMenu"]
+[connection signal="button_down" from="Botones/LuciaIG" to="." method="InsLucia"]
+[connection signal="button_down" from="Botones/LucasIG" to="." method="InsLucas"]
+[connection signal="button_down" from="Botones/ArgieIG" to="." method="InsArgie"]
+[connection signal="button_down" from="Botones/LucasItch" to="." method="ItchLucas"]
+[connection signal="button_down" from="Botones/ArgieItch" to="." method="ItchArgie"]

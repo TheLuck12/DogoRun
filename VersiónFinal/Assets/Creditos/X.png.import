@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7fq5kixx4pcp"
-path="res://.godot/imported/BsAsDia.png-442cf634cfc53ee7fc1771ba680ec2b3.ctex"
+uid="uid://bqhmqpy7q63xa"
+path="res://.godot/imported/X.png-40252241e9d22757ce714705eb87e971.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VersiónFinal/Assets/Monumentos/BsAsDia.png"
-dest_files=["res://.godot/imported/BsAsDia.png-442cf634cfc53ee7fc1771ba680ec2b3.ctex"]
+source_file="res://VersiónFinal/Assets/Creditos/X.png"
+dest_files=["res://.godot/imported/X.png-40252241e9d22757ce714705eb87e971.ctex"]
 
 [params]
 

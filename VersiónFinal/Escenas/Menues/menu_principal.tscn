@@ -1,16 +1,16 @@
-[gd_scene load_steps=21 format=3 uid="uid://dlb158ow8u3l3"]
+[gd_scene load_steps=22 format=3 uid="uid://dlb158ow8u3l3"]
 
 [ext_resource type="Script" uid="uid://b0i33ejyflr1v" path="res://VersiónFinal/Codigos/Menues/menu.gd" id="1_ghthh"]
 [ext_resource type="Texture2D" uid="uid://bxs3earojur0q" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Play.png" id="2_ty8ne"]
 [ext_resource type="Texture2D" uid="uid://xbiy12tq51fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Salir.png" id="3_5th1b"]
-[ext_resource type="Texture2D" uid="uid://brd1hop6nuax5" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Ajustes.png" id="4_f04ce"]
+[ext_resource type="Texture2D" uid="uid://c7fq5kixx4pcp" path="res://VersiónFinal/Assets/Edificios/BsAsDia.png" id="4_4crre"]
 [ext_resource type="Texture2D" uid="uid://cqywms820jdbi" path="res://VersiónFinal/Assets/Menu/Sprites/Titulo.png" id="5_66b3q"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="6_7fq04"]
 [ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="6_c5wa5"]
 [ext_resource type="Texture2D" uid="uid://cjj74o5wkxf2k" path="res://VersiónFinal/Assets/Cielo/Nubes.png" id="7_2titj"]
 [ext_resource type="PackedScene" uid="uid://cipkx2i3clfl3" path="res://VersiónFinal/Escenas/Global/jugador.tscn" id="7_64w14"]
 [ext_resource type="Texture2D" uid="uid://d30krpkks2b" path="res://VersiónFinal/Assets/Pisos/PisoBsAs.png" id="8_41jgc"]
-[ext_resource type="Texture2D" uid="uid://cb3v1qoj14yuu" path="res://VersiónFinal/Assets/Monumentos/BsAs.png" id="8_hraw3"]
+[ext_resource type="Texture2D" uid="uid://bj600tkop84ki" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/menu.png" id="9_4crre"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_llwfy"]
 animations = [{
@@ -35,7 +35,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_hraw3")
+"texture": ExtResource("4_4crre")
 }],
 "loop": true,
 "name": &"BsAs",
@@ -97,6 +97,11 @@ _data = {
 &"RESET": SubResource("Animation_hraw3")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_4crre"]
+font_size = 51
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
 [node name="MenuPrincipal" type="Control" groups=["Menu"]]
 layout_mode = 3
 anchors_preset = 15
@@ -138,16 +143,18 @@ sprite_frames = SubResource("SpriteFrames_y2rmw")
 animation = &"BsAs"
 
 [node name="Medio2" type="AnimatedSprite2D" parent="Animacion"]
-position = Vector2(1920, 405.24)
+position = Vector2(1916.55, 405)
 scale = Vector2(1, 0.884)
 sprite_frames = SubResource("SpriteFrames_y2rmw")
 animation = &"BsAs"
+frame_progress = 0.983812
 
 [node name="Pisos" type="AnimatedSprite2D" parent="Animacion"]
 position = Vector2(638, 426)
-scale = Vector2(2.566, 3)
+scale = Vector2(2.57056, 3)
 sprite_frames = SubResource("SpriteFrames_hraw3")
 animation = &"BsAs"
+frame_progress = 0.882393
 
 [node name="Pisos2" type="AnimatedSprite2D" parent="Animacion"]
 position = Vector2(1921, 426)
@@ -172,9 +179,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 561.0
+offset_left = 671.0
 offset_top = 397.0
-offset_right = 669.0
+offset_right = 779.0
 offset_bottom = 505.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -195,16 +202,16 @@ icon = ExtResource("3_5th1b")
 flat = true
 
 [node name="BotonAjustes" type="Button" parent="Botones"]
-visible = false
 layout_mode = 1
-offset_left = 854.0
-offset_top = 475.0
-offset_right = 962.0
-offset_bottom = 583.0
-scale = Vector2(1.02082, 1.01109)
+offset_left = 944.0
+offset_top = 491.0
+offset_right = 1297.0
+offset_bottom = 599.0
+scale = Vector2(0.658771, 0.649985)
+theme_override_font_sizes/font_size = 56
 theme_override_styles/focus = SubResource("StyleBoxEmpty_41jgc")
-icon = ExtResource("4_f04ce")
-flat = true
+text = "Creditos "
+icon = ExtResource("9_4crre")
 
 [node name="PantallaCarga" parent="." instance=ExtResource("6_7fq04")]
 visible = false
@@ -223,6 +230,16 @@ speed_scale = 0.5
 position = Vector2(892, 259)
 scale = Vector2(2.026, 1.63333)
 texture = ExtResource("5_66b3q")
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 656.0
+offset_right = 1254.0
+offset_bottom = 799.0
+theme_override_font_sizes/font_size = 51
+text = "DEMO "
+label_settings = SubResource("LabelSettings_4crre")
 
 [connection signal="button_down" from="Botones/BotonNivel" to="." method="IrMenuNiveles"]
 [connection signal="button_down" from="Botones/BotonSalir" to="." method="SalirDelJuego"]

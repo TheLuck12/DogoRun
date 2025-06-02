@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="11_pe66g"]
 [ext_resource type="Texture2D" uid="uid://cjj74o5wkxf2k" path="res://VersiónFinal/Assets/Cielo/Nubes.png" id="12_mdodi"]
 [ext_resource type="Texture2D" uid="uid://w5st416wce7e" path="res://VersiónFinal/Assets/Edificios/conjunto edificios noche.png" id="15_mdodi"]
-[ext_resource type="Texture2D" uid="uid://chxp6pd1s8kdn" path="res://VersiónFinal/Assets/Monumentos/conjunto_edificios.png" id="16_yp322"]
+[ext_resource type="Texture2D" uid="uid://chxp6pd1s8kdn" path="res://VersiónFinal/Assets/Edificios/conjunto_edificios.png" id="16_yp322"]
 [ext_resource type="PackedScene" uid="uid://bt8evi32fvylc" path="res://VersiónFinal/Escenas/Menues/menu_pausa.tscn" id="17_dcodd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
