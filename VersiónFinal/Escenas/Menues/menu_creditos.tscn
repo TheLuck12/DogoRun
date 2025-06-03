@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cx6osx6yp1yxy"]
+[gd_scene load_steps=13 format=3 uid="uid://cx6osx6yp1yxy"]
 
 [ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="1_18o5s"]
 [ext_resource type="Script" uid="uid://b2d7e77upgog6" path="res://VersiónFinal/Codigos/Menues/menu_creditos.gd" id="1_lsqmi"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://hw83emlpv73" path="res://VersiónFinal/Assets/Creditos/Itch.jpg" id="6_qbp2v"]
 [ext_resource type="Texture2D" uid="uid://dvljjx7yb8vpf" path="res://VersiónFinal/Assets/Creditos/Argie01_PNG.png" id="7_bb3ow"]
 [ext_resource type="Texture2D" uid="uid://dak1w0xyrbnoc" path="res://VersiónFinal/Assets/Creditos/1742779626779.jpeg" id="8_n86r2"]
+[ext_resource type="Texture2D" uid="uid://cjpjg28037irs" path="res://VersiónFinal/Assets/Creditos/LUCIA.jpg" id="9_qbp2v"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="10_qbp2v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c274l"]
@@ -181,6 +182,11 @@ texture = ExtResource("7_bb3ow")
 position = Vector2(488, 301.316)
 scale = Vector2(0.36542, 0.350406)
 texture = ExtResource("8_n86r2")
+
+[node name="1742779626780" type="Sprite2D" parent="Imagenes"]
+position = Vector2(156, 294)
+scale = Vector2(0.145522, 0.139543)
+texture = ExtResource("9_qbp2v")
 
 [node name="PantallaCarga" parent="." instance=ExtResource("10_qbp2v")]
 visible = false
