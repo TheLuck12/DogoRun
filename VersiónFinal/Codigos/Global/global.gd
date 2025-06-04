@@ -8,6 +8,8 @@ var vivo = false
 var pausa = false
 var menu : String
 var barraP : int
+var finNivel : bool
+
 func Randomizar(MinNum, MaxNum):
 	rng.randomize()
 	return rng.randi_range(MinNum, MaxNum)

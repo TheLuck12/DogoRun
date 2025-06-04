@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=24 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
 [ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://w5st416wce7e" path="res://VersiónFinal/Assets/Edificios/conjunto edificios noche.png" id="15_mdodi"]
 [ext_resource type="Texture2D" uid="uid://chxp6pd1s8kdn" path="res://VersiónFinal/Assets/Edificios/conjunto_edificios.png" id="16_yp322"]
 [ext_resource type="PackedScene" uid="uid://bt8evi32fvylc" path="res://VersiónFinal/Escenas/Menues/menu_pausa.tscn" id="17_dcodd"]
+[ext_resource type="PackedScene" uid="uid://bha7dt506gu7a" path="res://VersiónFinal/Escenas/Global/meta.tscn" id="18_yp322"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
 size = Vector2(15214, 20)
@@ -182,3 +183,6 @@ position = Vector2(497, 207)
 
 [node name="PosicionC" type="Marker2D" parent="PosicionDeMenu"]
 position = Vector2(407, 261)
+
+[node name="Meta" parent="." instance=ExtResource("18_yp322")]
+position = Vector2(15207, 549)

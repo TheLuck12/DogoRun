@@ -7,13 +7,14 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if Global.vivo == true && Global.pausa == false:
+	if Global.vivo == true && Global.pausa == false && Global.finNivel == false:
 		Saltar()
 		Mover()
 		Gravedad(delta)
 		move_and_slide()
-	elif Global.vivo == false and Global.Nivel > 0 or Global.pausa == true and Global.Nivel > 0:
-		$Animacion.stop()
+	elif Global.Nivel > 0:
+		if Global.vivo == false or Global.pausa == true:
+			$Animacion.stop()
 func Mover():
 		velocity.x = 500
 
@@ -43,9 +44,15 @@ func EmpezaraJugar():
 		$Animacion.play("Correr")
 		Global.vivo = true
 		Global.pausa = false
+		Global.finNivel = false
 
 func Perder():
 	Global.vivo = false
 	$Sonidos/Llorando.play()
 	$Animacion.stop()
+	ControlMusica.PararMusica()
+
+func NivelCompletado():
+	$Animacion.stop()
+	Global.finNivel = true
 	ControlMusica.PararMusica()

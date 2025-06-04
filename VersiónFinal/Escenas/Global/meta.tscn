@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bha7dt506gu7a"]
+
+[ext_resource type="Script" uid="uid://ibk0usnf1fck" path="res://VersiónFinal/Codigos/Global/meta.gd" id="1_7yyiv"]
+[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_nxspb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yyiv"]
+size = Vector2(125, 125)
+
+[node name="Meta" type="Node2D"]
+script = ExtResource("1_7yyiv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nxspb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_7yyiv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
