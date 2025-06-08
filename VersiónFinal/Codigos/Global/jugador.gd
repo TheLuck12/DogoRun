@@ -26,7 +26,7 @@ func Saltar():
 		salto = 1
 	elif !is_on_floor() && salto == 1:
 		salto = 2 
-	elif salto == 2 and !is_on_floor() && Input.is_action_just_pressed("Caer"):
+	elif salto == 2 and !is_on_floor() && Input.is_action_just_pressed("Caer") or !is_on_floor() && Input.is_action_just_pressed("Caer"):
 		velocity.y = FCAIDA
 		salto = 3
 	elif is_on_floor() == true && salto == 2 or is_on_floor() and salto == 3:
@@ -62,3 +62,4 @@ func DetectoEnemigo(area: Area2D) -> void:
 		Perder()
 		get_tree().call_group("Enemigo","ComenzarNivel")
 		get_tree().call_group("Menu","Ocultar")
+		get_tree().call_group("Enemigo","Fin")

@@ -22,16 +22,17 @@ texture = ExtResource("2_ya516")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo"]
 shape = SubResource("CircleShape2D_aqvto")
 
-[node name="MoverAr" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MoverAr"]
-position = Vector2(0, -244)
-shape = SubResource("RectangleShape2D_gkepg")
-
 [node name="MoverAb" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoverAb"]
-position = Vector2(0, 234)
+position = Vector2(0, -478)
+shape = SubResource("RectangleShape2D_gkepg")
+
+[node name="MoverAr" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoverAr"]
+position = Vector2(0, 450)
 shape = SubResource("RectangleShape2D_mrhhn")
 
-[connection signal="body_entered" from="Enemigo" to="." method="_on_enemigo_body_entered"]
+[connection signal="area_entered" from="MoverAb" to="." method="MoverAbajo"]
+[connection signal="area_entered" from="MoverAr" to="." method="MoverArriba"]

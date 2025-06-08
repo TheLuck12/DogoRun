@@ -11,13 +11,13 @@ metadata/_edit_horizontal_guides_ = [685.0, 713.0]
 position = Vector2(-5, 116)
 
 [node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_out0g")]
-position = Vector2(2423, 424)
+position = Vector2(2110, 424)
 
 [node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_out0g")]
-position = Vector2(4707, 424)
+position = Vector2(4683, 424)
 
 [node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_out0g")]
-position = Vector2(7756, 424)
+position = Vector2(5988, 424)
 
 [node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_out0g")]
 position = Vector2(10501, 424)
@@ -31,4 +31,9 @@ position = Vector2(13470, 424)
 position = Vector2(72, 32)
 
 [node name="Obstaculo2" parent="Dron" instance=ExtResource("2_w8l6g")]
-position = Vector2(1229, 501)
+position = Vector2(9778, 389)
+direccion = "Arriba"
+
+[node name="Obstaculo3" parent="Dron" instance=ExtResource("2_w8l6g")]
+position = Vector2(13981, 410)
+direccion = "Abajo"
