@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs3c03h3v5l6a"]
+[gd_scene load_steps=3 format=3 uid="uid://bs3c03h3v5l6a"]
 
 [ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="1_out0g"]
+[ext_resource type="PackedScene" uid="uid://hxb6cwgttwie" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_2.tscn" id="2_w8l6g"]
 
 [node name="Nivel1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [15205.0]
@@ -10,10 +11,10 @@ metadata/_edit_horizontal_guides_ = [685.0, 713.0]
 position = Vector2(-5, 116)
 
 [node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_out0g")]
-position = Vector2(2984, 424)
+position = Vector2(2423, 424)
 
 [node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_out0g")]
-position = Vector2(5243, 424)
+position = Vector2(4707, 424)
 
 [node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_out0g")]
 position = Vector2(7756, 424)
@@ -28,3 +29,6 @@ position = Vector2(13470, 424)
 
 [node name="Dron" type="Node2D" parent="."]
 position = Vector2(72, 32)
+
+[node name="Obstaculo2" parent="Dron" instance=ExtResource("2_w8l6g")]
+position = Vector2(1229, 501)

@@ -70,6 +70,7 @@ func OcultarMostrar():
 func AbrirProvincia():
 	if Global.provincia == 0:
 		$MoverDeProvincia/Viajar.visible = true
+		$MoverDeProvincia/Proximamente.visible = false
 	elif Global.NivelesCompletados >= 10 and Global.provincia == 1:
 		$MoverDeProvincia/Viajar.visible = true
 	elif Global.NivelesCompletados >= 20 and Global.provincia == 3:
@@ -84,3 +85,4 @@ func AbrirProvincia():
 		$MoverDeProvincia/Viajar.visible = true
 	else:
 		$MoverDeProvincia/Viajar.visible = false
+		$MoverDeProvincia/Proximamente.visible = true

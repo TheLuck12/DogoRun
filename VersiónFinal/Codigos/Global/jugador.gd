@@ -56,3 +56,9 @@ func NivelCompletado():
 	$Animacion.stop()
 	Global.finNivel = true
 	ControlMusica.PararMusica()
+
+func DetectoEnemigo(area: Area2D) -> void:
+	if area.is_in_group("Enemigo"):
+		Perder()
+		get_tree().call_group("Enemigo","ComenzarNivel")
+		get_tree().call_group("Menu","Ocultar")

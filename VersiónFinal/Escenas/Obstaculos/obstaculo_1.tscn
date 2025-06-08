@@ -133,7 +133,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_pultm")
 }
 
-[node name="Perder" type="Area2D" parent="."]
+[node name="Perder" type="Area2D" parent="." groups=["Enemigo"]]
 position = Vector2(-467, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]

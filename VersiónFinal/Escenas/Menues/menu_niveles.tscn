@@ -159,6 +159,23 @@ text = "PROVINCIA"
 label_settings = SubResource("LabelSettings_h41ce")
 horizontal_alignment = 1
 
+[node name="Proximamente" type="Label" parent="MoverDeProvincia"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -287.0
+offset_top = 531.0
+offset_right = 334.0
+offset_bottom = 689.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = SubResource("FontVariation_nw48q")
+theme_override_font_sizes/font_size = 81
+text = "PROXIMAMENTE"
+label_settings = SubResource("LabelSettings_h41ce")
+horizontal_alignment = 1
+
 [node name="PantallaCarga" parent="." instance=ExtResource("8_h41ce")]
 
 [node name="Icon" type="Sprite2D" parent="."]

@@ -411,3 +411,5 @@ pitch_scale = 1.11
 stream = ExtResource("4_hxo7l")
 volume_db = -7.704
 pitch_scale = 0.8
+
+[connection signal="area_entered" from="Perder" to="." method="DetectoEnemigo"]
