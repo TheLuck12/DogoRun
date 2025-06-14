@@ -1,8 +1,13 @@
 extends Control
 
+
+func TituloDeMenu(Titulo : String):
+	$Titulo.text = Titulo
+
 func SacarMenuP():
 	Global.pausa = false
 	get_tree().call_group("Menu", "MostrarMenuP")
+	get_tree().call_group( "Enemigo","ComenzarNivel")
 func IrMenuPr():
 	LlamarPantallaConfirmacion()
 	Global.Nivel = 0

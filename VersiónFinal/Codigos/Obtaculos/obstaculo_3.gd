@@ -2,7 +2,6 @@ extends Node2D
 
 @export var ObjTirable : PackedScene
 
-
 func InstanciarObj():
 	var Objeto = ObjTirable.instantiate()
 	add_child(Objeto)
@@ -15,3 +14,8 @@ func _on_ins_time_timeout() -> void:
 func Fin():
 	$PoInObjeto/InsTime.autostart = false
 	$PoInObjeto/InsTime.stop()
+
+func ComenzarNivel():
+	if Global.vivo == true:
+		$PoInObjeto/InsTime.start()
+		$PoInObjeto/InsTime.autostart = true

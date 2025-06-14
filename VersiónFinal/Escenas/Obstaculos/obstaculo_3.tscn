@@ -26,6 +26,5 @@ metadata/_edit_lock_ = true
 
 [node name="InsTime" type="Timer" parent="PoInObjeto"]
 wait_time = 1.2
-autostart = true
 
 [connection signal="timeout" from="PoInObjeto/InsTime" to="." method="_on_ins_time_timeout"]

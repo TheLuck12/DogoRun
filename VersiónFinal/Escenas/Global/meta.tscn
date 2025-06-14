@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bha7dt506gu7a"]
+[gd_scene load_steps=5 format=3 uid="uid://bha7dt506gu7a"]
 
 [ext_resource type="Script" uid="uid://ibk0usnf1fck" path="res://VersiónFinal/Codigos/Global/meta.gd" id="1_7yyiv"]
 [ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_nxspb"]
+[ext_resource type="AudioStream" uid="uid://da28quat2muj3" path="res://VersiónFinal/Sonidos/De-Vic/Victoria.wav" id="2_u6kyp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yyiv"]
 size = Vector2(137, 912)
 
 [node name="Meta" type="Node2D"]
 script = ExtResource("1_7yyiv")
+
+[node name="Victoria" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_u6kyp")
+volume_db = -13.481
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_nxspb")

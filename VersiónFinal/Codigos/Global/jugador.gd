@@ -66,3 +66,4 @@ func DetectoEnemigo(area: Area2D) -> void:
 		get_tree().call_group("Menu","Ocultar")
 		get_tree().call_group("Enemigo","Fin")
 		get_tree().call_group("Enemigo","DestruirObj")
+		get_tree().call_group("Menu", "MostrarMenuLose")

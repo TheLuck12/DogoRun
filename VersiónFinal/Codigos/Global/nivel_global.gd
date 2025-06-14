@@ -57,7 +57,14 @@ func MostrarMenuP():
 	if Global.pausa == true:
 		$Interfaz/MenuPausa.visible = true
 		$Interfaz/Controles.visible = false
+		get_tree().call_group("Interfaz", "TituloDeMenu", "PAUSA")
 	elif Global.pausa == false:
 		$Interfaz/MenuPausa.visible = false
 		$Interfaz/Controles.visible = true
 		get_tree().call_group("PJ","EmpezaraJugar")
+		
+func MostrarMenuLose():
+		$Interfaz/MenuPausa.visible = true
+		$Interfaz/Controles.visible = false
+		$Interfaz/MenuPausa/Volver.visible = false
+		get_tree().call_group("Interfaz", "TituloDeMenu", "GAME OVER")

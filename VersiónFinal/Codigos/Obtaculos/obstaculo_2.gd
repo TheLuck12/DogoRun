@@ -2,9 +2,10 @@ extends Node2D
 @export var direccion : String
 
 func _process(_delta: float) -> void:
-	Mover()
+	if Global.pausa == false:
+		ComenzarNivel()
 	
-func Mover():
+func ComenzarNivel():
 	if direccion == "Arriba":
 		$Enemigo.position.y -= 25
 	elif direccion == "Abajo":
@@ -22,4 +23,5 @@ func MoverAbajo(area: Area2D) -> void:
 		direccion = "Abajo"
 
 func Fin():
-	direccion = ""
+	if Global.vivo == false: 
+		direccion = ""

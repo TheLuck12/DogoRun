@@ -1,11 +1,51 @@
-[gd_scene format=3 uid="uid://piqe1xe4i55h"]
+[gd_scene load_steps=4 format=3 uid="uid://piqe1xe4i55h"]
+
+[ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="1_kn6ib"]
+[ext_resource type="PackedScene" uid="uid://hxb6cwgttwie" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_2.tscn" id="2_o38lv"]
+[ext_resource type="PackedScene" uid="uid://dersvgviljy5m" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_3.tscn" id="3_0idaj"]
 
 [node name="Nivel2" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [552.0]
+metadata/_edit_horizontal_guides_ = [627.0, 714.0]
 metadata/_edit_vertical_guides_ = [15216.0]
 
 [node name="Colectivo" type="Node2D" parent="."]
+position = Vector2(-10, 22)
+
+[node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(3360, 515)
+
+[node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(5690, 515)
+
+[node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(8669, 515)
+
+[node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(10182, 515)
+
+[node name="Obstaculo5" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(12987, 515)
+
+[node name="Dron" type="Node2D" parent="."]
+
+[node name="Obstaculo2" parent="Dron" instance=ExtResource("2_o38lv")]
+position = Vector2(4261, 351)
+direccion = "Arriba"
+
+[node name="Obstaculo3" parent="Dron" instance=ExtResource("2_o38lv")]
+position = Vector2(9386, 351)
+direccion = "Arriba"
 
 [node name="Ciruja" type="Node2D" parent="."]
 
-[node name="Dron" type="Node2D" parent="."]
+[node name="Obstaculo3" parent="Ciruja" instance=ExtResource("3_0idaj")]
+position = Vector2(1686, 602)
+
+[node name="Obstaculo4" parent="Ciruja" instance=ExtResource("3_0idaj")]
+position = Vector2(7271, 602)
+
+[node name="Obstaculo5" parent="Ciruja" instance=ExtResource("3_0idaj")]
+position = Vector2(11595, 602)
+
+[node name="Obstaculo6" parent="Ciruja" instance=ExtResource("3_0idaj")]
+position = Vector2(14372, 602)

@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt8evi32fvylc"]
+[gd_scene load_steps=3 format=3 uid="uid://bt8evi32fvylc"]
 
 [ext_resource type="Script" uid="uid://y2m06f6xfebo" path="res://VersiónFinal/Codigos/Menues/menu_pausa.gd" id="1_27eaq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s3pah"]
+font_size = 36
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
 
 [node name="MenuPausa" type="Control" groups=["Interfaz"]]
 layout_mode = 3
@@ -61,15 +66,18 @@ offset_bottom = 173.0
 size_flags_horizontal = 4
 text = "Volver "
 
-[node name="Label" type="Label" parent="."]
+[node name="Titulo" type="Label" parent="."]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 1.52588e-05
-offset_right = 118.0
-offset_bottom = 23.0
-scale = Vector2(3, 3.7)
+offset_left = 58.0
+offset_top = 32.0
+offset_right = 264.0
+offset_bottom = 82.0
+pivot_offset = Vector2(104, 24)
 size_flags_horizontal = 4
-text = "PAUSA"
+label_settings = SubResource("LabelSettings_s3pah")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [connection signal="button_down" from="MenuNiveles" to="." method="IrMenuNi"]
 [connection signal="button_down" from="Mapa" to="." method="IrMapa"]
