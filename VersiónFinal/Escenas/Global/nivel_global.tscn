@@ -89,7 +89,7 @@ N2 = ExtResource("3_juonu")
 N3 = ExtResource("4_s2pmu")
 N4 = ExtResource("5_yh41c")
 N5 = ExtResource("6_w4vyl")
-metadata/_edit_horizontal_guides_ = [684.488, 623.0]
+metadata/_edit_horizontal_guides_ = [684.488, 617.0]
 metadata/_edit_vertical_guides_ = [15206.0]
 
 [node name="Interfaz" type="CanvasLayer" parent="."]
@@ -118,8 +118,17 @@ offset_bottom = -242.0
 visible = false
 
 [node name="Jugador" parent="." instance=ExtResource("2_b8ggm")]
-position = Vector2(134, 572)
+position = Vector2(130, 571)
 metadata/_edit_group_ = true
+
+[node name="DetectoPiso" type="Area2D" parent="."]
+position = Vector2(0, -9)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectoPiso"]
+position = Vector2(7605, 636)
+shape = SubResource("RectangleShape2D_vtksu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

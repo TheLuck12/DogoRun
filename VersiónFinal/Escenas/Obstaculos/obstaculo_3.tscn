@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dersvgviljy5m"]
+
+[ext_resource type="Script" uid="uid://bttumesmu0cqr" path="res://VersiónFinal/Codigos/Obtaculos/obstaculo_3.gd" id="1_3qfs4"]
+[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_y5fyh"]
+[ext_resource type="PackedScene" uid="uid://83btf534xqes" path="res://VersiónFinal/Escenas/Obstaculos/obs_tirable.tscn" id="2_oohgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qfs4"]
+size = Vector2(112, 114)
+
+[node name="Obstaculo3" type="Node2D" groups=["Enemigo"]]
+scale = Vector2(0.455824, 0.560325)
+script = ExtResource("1_3qfs4")
+ObjTirable = ExtResource("2_oohgq")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemigo"]]
+
+[node name="Icon" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_y5fyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3qfs4")
+
+[node name="PoInObjeto" type="Marker2D" parent="."]
+position = Vector2(-72, -69)
+metadata/_edit_lock_ = true
+
+[node name="InsTime" type="Timer" parent="PoInObjeto"]
+wait_time = 1.2
+autostart = true
+
+[connection signal="timeout" from="PoInObjeto/InsTime" to="." method="_on_ins_time_timeout"]

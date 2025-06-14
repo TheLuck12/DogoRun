@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://83btf534xqes"]
+
+[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_5xkp4"]
+[ext_resource type="Script" uid="uid://dfcuf7qbgjd4k" path="res://VersiónFinal/Codigos/Obtaculos/obs_tirable.gd" id="1_pvykg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pvykg"]
+radius = 58.0086
+
+[node name="ObsTirable" type="RigidBody2D" groups=["Enemigo"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_pvykg")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.386036, 0.397601)
+texture = ExtResource("1_5xkp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.386036, 0.397601)
+shape = SubResource("CircleShape2D_pvykg")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemigo"]]
+scale = Vector2(0.43773, 0.449553)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pvykg")
+
+[connection signal="area_entered" from="Area2D" to="." method="DetectoPiso"]

@@ -19,11 +19,13 @@ func Mover():
 		velocity.x = 500
 
 func Saltar():
-	if salto == 1:
+	if !is_on_floor() && salto == 0:
+		salto = 1
 		$Animacion.play("Saltar")
-	if Input.is_action_just_pressed("Saltar") && salto == 0:
+	if Input.is_action_just_pressed("Saltar") && salto == 0 && is_on_floor():
 		velocity.y = FSALTO
 		salto = 1
+		$Animacion.play("Saltar")
 	elif !is_on_floor() && salto == 1:
 		salto = 2 
 	elif salto == 2 and !is_on_floor() && Input.is_action_just_pressed("Caer") or !is_on_floor() && Input.is_action_just_pressed("Caer"):
@@ -63,3 +65,4 @@ func DetectoEnemigo(area: Area2D) -> void:
 		get_tree().call_group("Enemigo","ComenzarNivel")
 		get_tree().call_group("Menu","Ocultar")
 		get_tree().call_group("Enemigo","Fin")
+		get_tree().call_group("Enemigo","DestruirObj")
