@@ -15,6 +15,7 @@ func Fin():
 	$PoInObjeto/InsTime.autostart = false
 	$PoInObjeto/InsTime.stop()
 
+
 func ComenzarNivel():
 	if Global.vivo == true:
 		$PoInObjeto/InsTime.start()

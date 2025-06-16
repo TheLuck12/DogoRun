@@ -1,11 +1,82 @@
-[gd_scene format=3 uid="uid://c6f738v8okaqr"]
+[gd_scene load_steps=4 format=3 uid="uid://c6f738v8okaqr"]
+
+[ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="1_sy3l6"]
+[ext_resource type="PackedScene" uid="uid://dersvgviljy5m" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_3.tscn" id="2_g73vn"]
+[ext_resource type="PackedScene" uid="uid://hxb6cwgttwie" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_2.tscn" id="3_vdopl"]
 
 [node name="Nivel4" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [625.0, 716.0]
+metadata/_edit_horizontal_guides_ = [619.0, 716.0]
 metadata/_edit_vertical_guides_ = [15216.0]
 
 [node name="Colectivo" type="Node2D" parent="."]
 
+[node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_sy3l6")]
+position = Vector2(2007, 540)
+
+[node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_sy3l6")]
+position = Vector2(4251, 540)
+
+[node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_sy3l6")]
+position = Vector2(6116, 540)
+
+[node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_sy3l6")]
+position = Vector2(8768, 540)
+
+[node name="Obstaculo5" parent="Colectivo" instance=ExtResource("1_sy3l6")]
+position = Vector2(10498, 540)
+
+[node name="Obstaculo6" parent="Colectivo" instance=ExtResource("1_sy3l6")]
+position = Vector2(12639, 540)
+
 [node name="Ciruja" type="Node2D" parent="."]
 
+[node name="Obstaculo3" parent="Ciruja" instance=ExtResource("2_g73vn")]
+position = Vector2(3745, 587)
+
+[node name="Obstaculo4" parent="Ciruja" instance=ExtResource("2_g73vn")]
+position = Vector2(3012, 587)
+
+[node name="Obstaculo5" parent="Ciruja" instance=ExtResource("2_g73vn")]
+position = Vector2(5502, 587)
+
+[node name="Obstaculo6" parent="Ciruja" instance=ExtResource("2_g73vn")]
+position = Vector2(8283, 587)
+
+[node name="Obstaculo7" parent="Ciruja" instance=ExtResource("2_g73vn")]
+position = Vector2(10022, 587)
+
+[node name="Obstaculo8" parent="Ciruja" instance=ExtResource("2_g73vn")]
+position = Vector2(11924, 587)
+
+[node name="Obstaculo9" parent="Ciruja" instance=ExtResource("2_g73vn")]
+position = Vector2(14166, 587)
+
 [node name="Dron" type="Node2D" parent="."]
+
+[node name="Obstaculo2" parent="Dron" instance=ExtResource("3_vdopl")]
+position = Vector2(1420, 372)
+direccion = "Arriba"
+
+[node name="Obstaculo4" parent="Dron" instance=ExtResource("3_vdopl")]
+position = Vector2(1420, 372)
+direccion = "Arriba"
+
+[node name="Obstaculo3" parent="Dron" instance=ExtResource("3_vdopl")]
+position = Vector2(2604, 372)
+direccion = "Arriba"
+
+[node name="Obstaculo5" parent="Dron" instance=ExtResource("3_vdopl")]
+position = Vector2(6635, 372)
+direccion = "Arriba"
+
+[node name="Obstaculo6" parent="Dron" instance=ExtResource("3_vdopl")]
+position = Vector2(7235, 372)
+direccion = "Abajo"
+
+[node name="Obstaculo7" parent="Dron" instance=ExtResource("3_vdopl")]
+position = Vector2(12087, 372)
+direccion = "Arriba"
+
+[node name="Obstaculo8" parent="Dron" instance=ExtResource("3_vdopl")]
+position = Vector2(13208, 372)
+direccion = "Abajo"

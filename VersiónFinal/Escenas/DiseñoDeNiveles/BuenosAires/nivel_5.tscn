@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dm0qm1sbi1xw1"]
 
 [node name="Nivel5" type="Node2D" groups=["Enemigo"]]
-metadata/_edit_horizontal_guides_ = [552.0]
+metadata/_edit_horizontal_guides_ = [617.0, 713.0]
 metadata/_edit_vertical_guides_ = [15216.0]
 
 [node name="Colectivo" type="Node2D" parent="."]
