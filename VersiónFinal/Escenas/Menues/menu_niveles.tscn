@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://brgh33nqayhfo"]
+[gd_scene load_steps=27 format=3 uid="uid://brgh33nqayhfo"]
 
 [ext_resource type="Texture2D" uid="uid://dmhl8afb17ru1" path="res://VersiónFinal/Assets/Mapa/MapaArg.png" id="1_4ef2m"]
 [ext_resource type="Script" uid="uid://b2iq8p1mclyld" path="res://VersiónFinal/Codigos/Menues/menu_niveles.gd" id="1_d6loi"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ckscn6by06fag" path="res://VersiónFinal/Assets/Personajes/armadilloPrototipo.png" id="13_y78p2"]
 [ext_resource type="Texture2D" uid="uid://sjwdllu8tm3w" path="res://VersiónFinal/Assets/Personajes/flamencoPrototipo.png" id="15_3xxoq"]
 [ext_resource type="Texture2D" uid="uid://5bkxrkt1s4em" path="res://VersiónFinal/Assets/Personajes/zorroColorado.png" id="16_y78p2"]
+[ext_resource type="Texture2D" uid="uid://cbg7kthe1pqav" path="res://VersiónFinal/Assets/Monumentos/Obelisco.png" id="17_3xxoq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6loi"]
 
@@ -319,6 +320,13 @@ offset_right = 708.5
 offset_bottom = 1701.5
 theme_override_font_sizes/font_size = 31
 text = "????"
+
+[node name="Monumentos" type="Node2D" parent="."]
+
+[node name="Obelisco" type="Sprite2D" parent="."]
+position = Vector2(858, 292)
+scale = Vector2(0.385, 0.37)
+texture = ExtResource("17_3xxoq")
 
 [connection signal="button_down" from="MoverDeProvincia/Adelante" to="." method="ProvSig"]
 [connection signal="button_down" from="MoverDeProvincia/Atras" to="." method="ProvAnt"]

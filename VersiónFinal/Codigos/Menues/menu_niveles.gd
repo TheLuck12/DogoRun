@@ -3,6 +3,7 @@ extends Control
 @onready var Jugador = $Icon
 
 func _ready() -> void:
+	OcMoAmigos()
 	OcultarMostrar()
 	AbrirProvincia()
 	IrProvincia()
@@ -86,3 +87,8 @@ func AbrirProvincia():
 	else:
 		$MoverDeProvincia/Viajar.visible = false
 		$MoverDeProvincia/Proximamente.visible = true
+
+func OcMoAmigos():
+	if Global.NivelesCompletados >=10:
+		$Provincias/Animales/CarpinchoPRototipo.modulate = "ffffff"
+		$Provincias/Animales/Label.queue_free()

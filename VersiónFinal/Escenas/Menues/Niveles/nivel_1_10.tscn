@@ -1,12 +1,19 @@
-[gd_scene load_steps=20 format=3 uid="uid://da0esqxctr70e"]
+[gd_scene load_steps=30 format=3 uid="uid://da0esqxctr70e"]
 
 [ext_resource type="Script" uid="uid://b35l57j03tvap" path="res://VersiónFinal/Codigos/Menues/nivel_1_10.gd" id="1_b2gyf"]
 [ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="1_g4sko"]
+[ext_resource type="Texture2D" uid="uid://cjj74o5wkxf2k" path="res://VersiónFinal/Assets/Cielo/Nubes.png" id="2_nuwwg"]
+[ext_resource type="Texture2D" uid="uid://cbg7kthe1pqav" path="res://VersiónFinal/Assets/Monumentos/Obelisco.png" id="2_sm3xu"]
 [ext_resource type="Texture2D" uid="uid://b1bb81hwqolk3" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel1.png" id="2_tfxdi"]
+[ext_resource type="Texture2D" uid="uid://ccxot6abir7q4" path="res://VersiónFinal/Assets/Edificios/edi5.png" id="3_d16m5"]
 [ext_resource type="Texture2D" uid="uid://bmspywotcb827" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel2.png" id="3_tibru"]
+[ext_resource type="Texture2D" uid="uid://cm8tcv6jqlad1" path="res://VersiónFinal/Assets/Edificios/edi6.png" id="4_iliiw"]
 [ext_resource type="Texture2D" uid="uid://cw6yq6sdpcpu0" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel3.png" id="4_q6jlr"]
 [ext_resource type="Texture2D" uid="uid://mcbsnaa5uncw" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel4.png" id="5_cobrd"]
+[ext_resource type="Texture2D" uid="uid://dtmtvmdxfi5c5" path="res://VersiónFinal/Assets/Edificios/edi1.png" id="5_nuwwg"]
 [ext_resource type="Texture2D" uid="uid://00uimm0ngyy7" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel5.png" id="6_5kh4r"]
+[ext_resource type="Texture2D" uid="uid://bwx1sbagjlxbb" path="res://VersiónFinal/Assets/Edificios/edi7.png" id="6_vpffv"]
+[ext_resource type="Texture2D" uid="uid://bpcp4vb5sripg" path="res://VersiónFinal/Assets/Edificios/edi3.png" id="7_ke2ej"]
 [ext_resource type="Texture2D" uid="uid://j6qqqrv4bu4l" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel6.png" id="7_v51lr"]
 [ext_resource type="Texture2D" uid="uid://fms08auwdvc6" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel7.png" id="8_o2rd4"]
 [ext_resource type="Texture2D" uid="uid://bsksgsds01njb" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel8.png" id="9_53tch"]
@@ -14,6 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://d0et70hufjnes" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Nivel 1-10/Nivel10.png" id="11_sm3xu"]
 [ext_resource type="PackedScene" uid="uid://cdw076q2tb178" path="res://VersiónFinal/Escenas/Interfaz/pantalla_carga.tscn" id="13_q6jlr"]
 [ext_resource type="Texture2D" uid="uid://duidxlu18b0p1" path="res://VersiónFinal/Assets/Menu/Botones/Niveles/Candado.png" id="14_cobrd"]
+[ext_resource type="PackedScene" uid="uid://cipkx2i3clfl3" path="res://VersiónFinal/Escenas/Global/jugador.tscn" id="21_d16m5"]
+[ext_resource type="Texture2D" uid="uid://d30krpkks2b" path="res://VersiónFinal/Assets/Pisos/PisoBsAs.png" id="21_iliiw"]
+[ext_resource type="Texture2D" uid="uid://cs0x8mn5k70mj" path="res://VersiónFinal/Assets/Personajes/CarpinchoPRototipo.png" id="24_vpffv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q6jlr"]
 
@@ -38,7 +48,50 @@ grow_vertical = 2
 pivot_offset = Vector2(780, -488)
 script = ExtResource("1_b2gyf")
 
+[node name="Cielo" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(32.2507, 18.2804)
+color = Color(0.372549, 0.701961, 0.858824, 1)
+
+[node name="Fondo" type="Node2D" parent="."]
+position = Vector2(-73, 258)
+scale = Vector2(1, 0.639999)
+
+[node name="Nubes" type="Sprite2D" parent="Fondo"]
+position = Vector2(711, -40.625)
+scale = Vector2(1, 1.2283)
+texture = ExtResource("2_nuwwg")
+
+[node name="Obelisco" type="Sprite2D" parent="Fondo"]
+position = Vector2(1196, 39.0625)
+scale = Vector2(1.46, 2.62788)
+texture = ExtResource("2_sm3xu")
+
+[node name="Edi5" type="Sprite2D" parent="Fondo"]
+position = Vector2(140, 437)
+texture = ExtResource("3_d16m5")
+
+[node name="Edi6" type="Sprite2D" parent="Fondo"]
+position = Vector2(423, 431)
+texture = ExtResource("4_iliiw")
+
+[node name="Edi1" type="Sprite2D" parent="Fondo"]
+position = Vector2(717, 414)
+texture = ExtResource("5_nuwwg")
+
+[node name="Edi7" type="Sprite2D" parent="Fondo"]
+position = Vector2(1414, 376.316)
+scale = Vector2(1, 1.10526)
+texture = ExtResource("6_vpffv")
+
+[node name="Edi3" type="Sprite2D" parent="Fondo"]
+position = Vector2(1068, 433)
+texture = ExtResource("7_ke2ej")
+
 [node name="Niveles" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0.847059)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -224,6 +277,21 @@ texture = ExtResource("14_cobrd")
 position = Vector2(651, 589)
 scale = Vector2(0.161719, 0.181944)
 texture = ExtResource("14_cobrd")
+
+[node name="PisoBsAs" type="Sprite2D" parent="."]
+position = Vector2(640, 539)
+scale = Vector2(2.608, 1.935)
+texture = ExtResource("21_iliiw")
+
+[node name="Jugador" parent="." instance=ExtResource("21_d16m5")]
+position = Vector2(257, 602)
+scale = Vector2(-0.194212, 0.222892)
+
+[node name="CarpinchoPRototipo" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1014, 625)
+scale = Vector2(-0.356425, 0.273231)
+texture = ExtResource("24_vpffv")
 
 [connection signal="button_down" from="Niveles/N1" to="." method="InstanciarN1"]
 [connection signal="button_down" from="Niveles/N2" to="." method="InstanciarN2"]

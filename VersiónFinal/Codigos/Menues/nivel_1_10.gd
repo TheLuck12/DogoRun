@@ -81,6 +81,8 @@ func DesbloquearNiveles():
 	if Global.NivelesCompletados >= 9:
 		$Candado9.visible = false
 		$Niveles/N10.disabled = false
+	if Global.NivelesCompletados >=10:
+		$CarpinchoPRototipo.modulate = "ffffff"
 	if Global.NivelesCompletados == 0:
 		$Niveles/N2.disabled = true
 		$Niveles/N3.disabled = true
