@@ -4,12 +4,19 @@ extends Node2D
 @export var N3 :PackedScene
 @export var N4 :PackedScene
 @export var N5 :PackedScene
+@export var N6 :PackedScene
+@export var N7 :PackedScene
+@export var N8 :PackedScene
+@export var N9 :PackedScene
+@export var N10 :PackedScene
 
 func _ready() -> void:
 	ControlMusica.PararMusica()
 	ElegirNivel()
 	$Interfaz/MenuPausa.global_position = $PosicionDeMenu/PosicionP.global_position  
-	$Interfaz/MenuConfirmar.global_position = $PosicionDeMenu/PosicionC.global_position  
+	$Interfaz/MenuConfirmar.global_position = $PosicionDeMenu/PosicionC.global_position
+	if Global.Nivel >= 6:
+		$Meta.global_position = $Fin45sg.global_position	  
 	OcultarMostrar()
 	CambiarSprite(Global.provincia)
 func _process(_delta: float) -> void:
@@ -23,15 +30,24 @@ func InstanciarNivel(Nivel):
 func ElegirNivel():
 	if Global.Nivel == 1:
 		InstanciarNivel(N1)
-	if Global.Nivel == 2:
+	elif Global.Nivel == 2:
 		InstanciarNivel(N2)
-	if Global.Nivel == 3:
+	elif Global.Nivel == 3:
 		InstanciarNivel(N3)
-	if Global.Nivel == 4:
+	elif Global.Nivel == 4:
 		InstanciarNivel(N4)
-	if Global.Nivel == 5:
+	elif Global.Nivel == 5:
 		InstanciarNivel(N5)
-
+	elif Global.Nivel == 6:
+		InstanciarNivel(N6)
+	elif Global.Nivel == 7:
+		InstanciarNivel(N7)
+	elif Global.Nivel == 8:
+		InstanciarNivel(N8)
+	elif Global.Nivel == 9:
+		InstanciarNivel(N9)
+	elif Global.Nivel == 10:
+		InstanciarNivel(N10)
 
 func OcultarMostrar():
 	if Global.barraP == 100:

@@ -9,3 +9,8 @@ func PararMusica():
 	$MMenu.stop()
 	$MInGame.stop()
 		
+func PausarMusicaInGame():
+	if $MInGame.stream_paused == false: 
+		$MInGame.stream_paused = true
+	else:
+		$MInGame.stream_paused = false
