@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	Global.Nivel = 0
 	OcultarMostrar()
 	DesbloquearNiveles()
 

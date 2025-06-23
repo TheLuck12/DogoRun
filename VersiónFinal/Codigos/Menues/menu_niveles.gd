@@ -3,6 +3,7 @@ extends Control
 @onready var Jugador = $Icon
 
 func _ready() -> void:
+	Global.Nivel = 0
 	OcMoAmigos()
 	OcultarMostrar()
 	AbrirProvincia()

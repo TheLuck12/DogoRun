@@ -11,17 +11,14 @@ func SacarMenuP():
 	ControlMusica.PausarMusicaInGame()
 func IrMenuPr():
 	LlamarPantallaConfirmacion()
-	Global.Nivel = 0
 	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_principal.tscn"
 
 func IrMenuNi():
 	LlamarPantallaConfirmacion()
-	Global.Nivel = 0
 	if Global.provincia == 0:
 		Global.menu = "res://VersiónFinal/Escenas/Menues/Niveles/nivel_1_10.tscn"
 
 func IrMapa():
-	Global.Nivel = 0
 	LlamarPantallaConfirmacion()
 	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_niveles.tscn"
 	

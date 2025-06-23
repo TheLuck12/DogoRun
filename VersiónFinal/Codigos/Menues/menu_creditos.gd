@@ -27,3 +27,7 @@ func InsArgie() -> void:
 func VolverMenu() -> void:
 	Global.menu = "res://VersiónFinal/Escenas/Menues/menu_principal.tscn"
 	get_tree().call_group("Interfaz","ActPantalla")
+
+
+func ItchMosieur() -> void:
+	IrARed("https://monsieur-fred.itch.io")

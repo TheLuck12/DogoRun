@@ -11,5 +11,6 @@ func Ocultar() -> void:
 
 
 func LlamarPantallaCarga() -> void:
+
 	ControlMusica.PararMusica()
 	get_tree().call_group("Interfaz","ActPantalla")
