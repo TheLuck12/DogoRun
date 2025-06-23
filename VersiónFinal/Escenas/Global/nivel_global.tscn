@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=29 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
 [ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
@@ -12,68 +12,17 @@
 [ext_resource type="PackedScene" uid="uid://dm0qm1sbi1xw1" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_5.tscn" id="6_w4vyl"]
 [ext_resource type="PackedScene" uid="uid://yutivv3wig48" path="res://VersiónFinal/Escenas/Menues/menu_confirmar.tscn" id="7_dcodd"]
 [ext_resource type="PackedScene" uid="uid://nxr65j43bxbk" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_6.tscn" id="7_qw1sj"]
-[ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="8_1exvk"]
-[ext_resource type="PackedScene" uid="uid://dersvgviljy5m" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_3.tscn" id="9_qw1sj"]
-[ext_resource type="PackedScene" uid="uid://hxb6cwgttwie" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_2.tscn" id="10_3r2fm"]
+[ext_resource type="PackedScene" uid="uid://ce0frevatm6sg" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_7.tscn" id="8_qw1sj"]
+[ext_resource type="PackedScene" uid="uid://be7anttpu4hh1" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_8.tscn" id="9_3r2fm"]
 [ext_resource type="Texture2D" uid="uid://cbg7kthe1pqav" path="res://VersiónFinal/Assets/Monumentos/Obelisco.png" id="10_juonu"]
+[ext_resource type="PackedScene" uid="uid://gyrjxtfwyj0j" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_9.tscn" id="10_vvbdr"]
 [ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="11_pe66g"]
+[ext_resource type="PackedScene" uid="uid://b5j7b67qxh6mu" path="res://VersiónFinal/Escenas/DiseñoDeNiveles/BuenosAires/nivel_10.tscn" id="11_rpbly"]
 [ext_resource type="Texture2D" uid="uid://cjj74o5wkxf2k" path="res://VersiónFinal/Assets/Cielo/Nubes.png" id="12_mdodi"]
 [ext_resource type="Texture2D" uid="uid://w5st416wce7e" path="res://VersiónFinal/Assets/Edificios/conjunto edificios noche.png" id="15_mdodi"]
 [ext_resource type="Texture2D" uid="uid://chxp6pd1s8kdn" path="res://VersiónFinal/Assets/Edificios/conjunto_edificios.png" id="16_yp322"]
 [ext_resource type="PackedScene" uid="uid://bt8evi32fvylc" path="res://VersiónFinal/Escenas/Menues/menu_pausa.tscn" id="17_dcodd"]
 [ext_resource type="PackedScene" uid="uid://bha7dt506gu7a" path="res://VersiónFinal/Escenas/Global/meta.tscn" id="18_yp322"]
-
-[sub_resource type="PackedScene" id="PackedScene_vvbdr"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("Nivel7", "Node2D", "Enemigo", "metadata/_edit_horizontal_guides_", "metadata/_edit_vertical_guides_", "Colectivo", "Node2D", "Obstaculo1", "position", "Obstaculo2", "position", "Obstaculo3", "position", "Obstaculo4", "position", "Obstaculo5", "position", "Ciruja", "Node2D", "Obstaculo3", "position", "Obstaculo5", "position", "Obstaculo4", "position", "Obstaculo6", "position", "Obstaculo7", "position", "Obstaculo8", "position", "Dron", "Node2D", "Obstaculo2", "position", "direccion", "Obstaculo4", "position", "direccion", "Obstaculo3", "position", "direccion", "Obstaculo5", "position", "direccion", "Obstaculo6", "position", "direccion"),
-"node_count": 20,
-"node_paths": [NodePath("."), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("."), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("."), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 3, 0, 4, 1, 1, 2, 1073741824, 0, 6, 5, -1, 0, 0, 1073741825, 0, 2147483647, 7, 2, 1, 8, 3, 0, 1073741826, 0, 2147483647, 9, 4, 1, 10, 5, 0, 1073741827, 0, 2147483647, 11, 6, 1, 12, 7, 0, 1073741828, 0, 2147483647, 13, 8, 1, 14, 9, 0, 1073741829, 0, 2147483647, 15, 10, 1, 16, 11, 0, 1073741830, 0, 18, 17, -1, 0, 0, 1073741831, 0, 2147483647, 19, 12, 1, 20, 13, 0, 1073741832, 0, 2147483647, 21, 14, 1, 22, 15, 0, 1073741833, 0, 2147483647, 23, 16, 1, 24, 17, 0, 1073741834, 0, 2147483647, 25, 18, 1, 26, 19, 0, 1073741835, 0, 2147483647, 27, 20, 1, 28, 21, 0, 1073741836, 0, 2147483647, 29, 22, 1, 30, 23, 0, 1073741837, 0, 32, 31, -1, 0, 0, 1073741838, 0, 2147483647, 33, 24, 2, 34, 25, 35, 26, 0, 1073741839, 0, 2147483647, 36, 27, 2, 37, 28, 38, 29, 0, 1073741840, 0, 2147483647, 39, 30, 2, 40, 31, 41, 32, 0, 1073741841, 0, 2147483647, 42, 33, 2, 43, 34, 44, 35, 0, 1073741842, 0, 2147483647, 45, 36, 2, 46, 37, 47, 38, 0),
-"variants": [[617.0, 713.0], [30011.0], ExtResource("8_1exvk"), Vector2(1989, 539), ExtResource("8_1exvk"), Vector2(4433, 539), ExtResource("8_1exvk"), Vector2(7196, 539), ExtResource("8_1exvk"), Vector2(8282, 539), ExtResource("8_1exvk"), Vector2(10817, 539), ExtResource("9_qw1sj"), Vector2(2976, 586), ExtResource("9_qw1sj"), Vector2(6223, 586), ExtResource("9_qw1sj"), Vector2(3876, 581), ExtResource("9_qw1sj"), Vector2(9754, 581), ExtResource("9_qw1sj"), Vector2(13178, 581), ExtResource("9_qw1sj"), Vector2(14257, 581), ExtResource("10_3r2fm"), Vector2(3081, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(7762, 340), "Arriba", ExtResource("10_3r2fm"), Vector2(5205, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(9956.22, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(12058, 340), "Abajo"],
-"version": 3
-}
-
-[sub_resource type="PackedScene" id="PackedScene_rpbly"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("Nivel8", "Node2D", "Enemigo", "metadata/_edit_horizontal_guides_", "metadata/_edit_vertical_guides_", "Colectivo", "Node2D", "Obstaculo1", "position", "Obstaculo2", "position", "Obstaculo3", "position", "Obstaculo4", "position", "Obstaculo5", "position", "Ciruja", "Node2D", "Obstaculo3", "position", "Obstaculo5", "position", "Obstaculo4", "position", "Obstaculo6", "position", "Obstaculo7", "position", "Obstaculo8", "position", "Dron", "Node2D", "Obstaculo2", "position", "direccion", "Obstaculo4", "position", "direccion", "Obstaculo3", "position", "direccion", "Obstaculo5", "position", "direccion", "Obstaculo6", "position", "direccion"),
-"node_count": 20,
-"node_paths": [NodePath("."), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("."), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("."), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 3, 0, 4, 1, 1, 2, 1073741824, 0, 6, 5, -1, 0, 0, 1073741825, 0, 2147483647, 7, 2, 1, 8, 3, 0, 1073741826, 0, 2147483647, 9, 4, 1, 10, 5, 0, 1073741827, 0, 2147483647, 11, 6, 1, 12, 7, 0, 1073741828, 0, 2147483647, 13, 8, 1, 14, 9, 0, 1073741829, 0, 2147483647, 15, 10, 1, 16, 11, 0, 1073741830, 0, 18, 17, -1, 0, 0, 1073741831, 0, 2147483647, 19, 12, 1, 20, 13, 0, 1073741832, 0, 2147483647, 21, 14, 1, 22, 15, 0, 1073741833, 0, 2147483647, 23, 16, 1, 24, 17, 0, 1073741834, 0, 2147483647, 25, 18, 1, 26, 19, 0, 1073741835, 0, 2147483647, 27, 20, 1, 28, 21, 0, 1073741836, 0, 2147483647, 29, 22, 1, 30, 23, 0, 1073741837, 0, 32, 31, -1, 0, 0, 1073741838, 0, 2147483647, 33, 24, 2, 34, 25, 35, 26, 0, 1073741839, 0, 2147483647, 36, 27, 2, 37, 28, 38, 29, 0, 1073741840, 0, 2147483647, 39, 30, 2, 40, 31, 41, 32, 0, 1073741841, 0, 2147483647, 42, 33, 2, 43, 34, 44, 35, 0, 1073741842, 0, 2147483647, 45, 36, 2, 46, 37, 47, 38, 0),
-"variants": [[617.0, 713.0], [30011.0], ExtResource("8_1exvk"), Vector2(1989, 539), ExtResource("8_1exvk"), Vector2(4433, 539), ExtResource("8_1exvk"), Vector2(7196, 539), ExtResource("8_1exvk"), Vector2(8282, 539), ExtResource("8_1exvk"), Vector2(10817, 539), ExtResource("9_qw1sj"), Vector2(2976, 586), ExtResource("9_qw1sj"), Vector2(6223, 586), ExtResource("9_qw1sj"), Vector2(3876, 581), ExtResource("9_qw1sj"), Vector2(9754, 581), ExtResource("9_qw1sj"), Vector2(13178, 581), ExtResource("9_qw1sj"), Vector2(14257, 581), ExtResource("10_3r2fm"), Vector2(3081, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(7762, 340), "Arriba", ExtResource("10_3r2fm"), Vector2(5205, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(9956.22, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(12058, 340), "Abajo"],
-"version": 3
-}
-
-[sub_resource type="PackedScene" id="PackedScene_jhpwe"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("Nivel9", "Node2D", "Enemigo", "metadata/_edit_horizontal_guides_", "metadata/_edit_vertical_guides_", "Colectivo", "Node2D", "Obstaculo1", "position", "Obstaculo2", "position", "Obstaculo3", "position", "Obstaculo4", "position", "Obstaculo5", "position", "Ciruja", "Node2D", "Obstaculo3", "position", "Obstaculo5", "position", "Obstaculo4", "position", "Obstaculo6", "position", "Obstaculo7", "position", "Obstaculo8", "position", "Dron", "Node2D", "Obstaculo2", "position", "direccion", "Obstaculo4", "position", "direccion", "Obstaculo3", "position", "direccion", "Obstaculo5", "position", "direccion", "Obstaculo6", "position", "direccion"),
-"node_count": 20,
-"node_paths": [NodePath("."), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("."), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("."), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 3, 0, 4, 1, 1, 2, 1073741824, 0, 6, 5, -1, 0, 0, 1073741825, 0, 2147483647, 7, 2, 1, 8, 3, 0, 1073741826, 0, 2147483647, 9, 4, 1, 10, 5, 0, 1073741827, 0, 2147483647, 11, 6, 1, 12, 7, 0, 1073741828, 0, 2147483647, 13, 8, 1, 14, 9, 0, 1073741829, 0, 2147483647, 15, 10, 1, 16, 11, 0, 1073741830, 0, 18, 17, -1, 0, 0, 1073741831, 0, 2147483647, 19, 12, 1, 20, 13, 0, 1073741832, 0, 2147483647, 21, 14, 1, 22, 15, 0, 1073741833, 0, 2147483647, 23, 16, 1, 24, 17, 0, 1073741834, 0, 2147483647, 25, 18, 1, 26, 19, 0, 1073741835, 0, 2147483647, 27, 20, 1, 28, 21, 0, 1073741836, 0, 2147483647, 29, 22, 1, 30, 23, 0, 1073741837, 0, 32, 31, -1, 0, 0, 1073741838, 0, 2147483647, 33, 24, 2, 34, 25, 35, 26, 0, 1073741839, 0, 2147483647, 36, 27, 2, 37, 28, 38, 29, 0, 1073741840, 0, 2147483647, 39, 30, 2, 40, 31, 41, 32, 0, 1073741841, 0, 2147483647, 42, 33, 2, 43, 34, 44, 35, 0, 1073741842, 0, 2147483647, 45, 36, 2, 46, 37, 47, 38, 0),
-"variants": [[617.0, 713.0], [30011.0], ExtResource("8_1exvk"), Vector2(1989, 539), ExtResource("8_1exvk"), Vector2(4433, 539), ExtResource("8_1exvk"), Vector2(7196, 539), ExtResource("8_1exvk"), Vector2(8282, 539), ExtResource("8_1exvk"), Vector2(10817, 539), ExtResource("9_qw1sj"), Vector2(2976, 586), ExtResource("9_qw1sj"), Vector2(6223, 586), ExtResource("9_qw1sj"), Vector2(3876, 581), ExtResource("9_qw1sj"), Vector2(9754, 581), ExtResource("9_qw1sj"), Vector2(13178, 581), ExtResource("9_qw1sj"), Vector2(14257, 581), ExtResource("10_3r2fm"), Vector2(3081, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(7762, 340), "Arriba", ExtResource("10_3r2fm"), Vector2(5205, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(9956.22, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(12058, 340), "Abajo"],
-"version": 3
-}
-
-[sub_resource type="PackedScene" id="PackedScene_t6b4p"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("Nivel10", "Node2D", "Enemigo", "metadata/_edit_horizontal_guides_", "metadata/_edit_vertical_guides_", "Colectivo", "Node2D", "Obstaculo1", "position", "Obstaculo2", "position", "Obstaculo3", "position", "Obstaculo4", "position", "Obstaculo5", "position", "Ciruja", "Node2D", "Obstaculo3", "position", "Obstaculo5", "position", "Obstaculo4", "position", "Obstaculo6", "position", "Obstaculo7", "position", "Obstaculo8", "position", "Dron", "Node2D", "Obstaculo2", "position", "direccion", "Obstaculo4", "position", "direccion", "Obstaculo3", "position", "direccion", "Obstaculo5", "position", "direccion", "Obstaculo6", "position", "direccion"),
-"node_count": 20,
-"node_paths": [NodePath("."), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("./Colectivo"), NodePath("."), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("./Ciruja"), NodePath("."), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron"), NodePath("./Dron")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 3, 0, 4, 1, 1, 2, 1073741824, 0, 6, 5, -1, 0, 0, 1073741825, 0, 2147483647, 7, 2, 1, 8, 3, 0, 1073741826, 0, 2147483647, 9, 4, 1, 10, 5, 0, 1073741827, 0, 2147483647, 11, 6, 1, 12, 7, 0, 1073741828, 0, 2147483647, 13, 8, 1, 14, 9, 0, 1073741829, 0, 2147483647, 15, 10, 1, 16, 11, 0, 1073741830, 0, 18, 17, -1, 0, 0, 1073741831, 0, 2147483647, 19, 12, 1, 20, 13, 0, 1073741832, 0, 2147483647, 21, 14, 1, 22, 15, 0, 1073741833, 0, 2147483647, 23, 16, 1, 24, 17, 0, 1073741834, 0, 2147483647, 25, 18, 1, 26, 19, 0, 1073741835, 0, 2147483647, 27, 20, 1, 28, 21, 0, 1073741836, 0, 2147483647, 29, 22, 1, 30, 23, 0, 1073741837, 0, 32, 31, -1, 0, 0, 1073741838, 0, 2147483647, 33, 24, 2, 34, 25, 35, 26, 0, 1073741839, 0, 2147483647, 36, 27, 2, 37, 28, 38, 29, 0, 1073741840, 0, 2147483647, 39, 30, 2, 40, 31, 41, 32, 0, 1073741841, 0, 2147483647, 42, 33, 2, 43, 34, 44, 35, 0, 1073741842, 0, 2147483647, 45, 36, 2, 46, 37, 47, 38, 0),
-"variants": [[617.0, 713.0], [30011.0], ExtResource("8_1exvk"), Vector2(1989, 539), ExtResource("8_1exvk"), Vector2(4433, 539), ExtResource("8_1exvk"), Vector2(7196, 539), ExtResource("8_1exvk"), Vector2(8282, 539), ExtResource("8_1exvk"), Vector2(10817, 539), ExtResource("9_qw1sj"), Vector2(2976, 586), ExtResource("9_qw1sj"), Vector2(6223, 586), ExtResource("9_qw1sj"), Vector2(3876, 581), ExtResource("9_qw1sj"), Vector2(9754, 581), ExtResource("9_qw1sj"), Vector2(13178, 581), ExtResource("9_qw1sj"), Vector2(14257, 581), ExtResource("10_3r2fm"), Vector2(3081, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(7762, 340), "Arriba", ExtResource("10_3r2fm"), Vector2(5205, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(9956.22, 340), "Abajo", ExtResource("10_3r2fm"), Vector2(12058, 340), "Abajo"],
-"version": 3
-}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
 size = Vector2(39340.1, 20)
@@ -146,10 +95,10 @@ N3 = ExtResource("4_s2pmu")
 N4 = ExtResource("5_yh41c")
 N5 = ExtResource("6_w4vyl")
 N6 = ExtResource("7_qw1sj")
-N7 = SubResource("PackedScene_vvbdr")
-N8 = SubResource("PackedScene_rpbly")
-N9 = SubResource("PackedScene_jhpwe")
-N10 = SubResource("PackedScene_t6b4p")
+N7 = ExtResource("8_qw1sj")
+N8 = ExtResource("9_3r2fm")
+N9 = ExtResource("10_vvbdr")
+N10 = ExtResource("11_rpbly")
 metadata/_edit_horizontal_guides_ = [684.488, 617.0]
 metadata/_edit_vertical_guides_ = [15206.0]
 

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://gyrjxtfwyj0j"]
+
+[ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="1_284vh"]
+[ext_resource type="PackedScene" uid="uid://dersvgviljy5m" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_3.tscn" id="2_vmwrb"]
+[ext_resource type="PackedScene" uid="uid://hxb6cwgttwie" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_2.tscn" id="3_vkpyb"]
+
+[node name="Nivel7" type="Node2D" groups=["Enemigo"]]
+metadata/_edit_horizontal_guides_ = [617.0, 713.0]
+metadata/_edit_vertical_guides_ = [30011.0]
+
+[node name="Colectivo" type="Node2D" parent="."]
+
+[node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(1989, 539)
+
+[node name="Ciruja" type="Node2D" parent="."]
+
+[node name="Obstaculo3" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(2849, 586)
+
+[node name="Dron" type="Node2D" parent="."]
+
+[node name="Obstaculo2" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(2557, 340)
+direccion = "Arriba"

@@ -34,6 +34,21 @@ position = Vector2(14634, 539)
 [node name="Obstaculo8" parent="Colectivo" instance=ExtResource("1_wvcgp")]
 position = Vector2(17721, 539)
 
+[node name="Obstaculo9" parent="Colectivo" instance=ExtResource("1_wvcgp")]
+position = Vector2(19867, 539)
+
+[node name="Obstaculo10" parent="Colectivo" instance=ExtResource("1_wvcgp")]
+position = Vector2(21452, 539)
+
+[node name="Obstaculo11" parent="Colectivo" instance=ExtResource("1_wvcgp")]
+position = Vector2(22584, 539)
+
+[node name="Obstaculo12" parent="Colectivo" instance=ExtResource("1_wvcgp")]
+position = Vector2(24818, 539)
+
+[node name="Obstaculo13" parent="Colectivo" instance=ExtResource("1_wvcgp")]
+position = Vector2(26650, 539)
+
 [node name="Ciruja" type="Node2D" parent="."]
 
 [node name="Obstaculo3" parent="Ciruja" instance=ExtResource("2_ik0mx")]
@@ -57,8 +72,23 @@ position = Vector2(16215, 586)
 [node name="Obstaculo10" parent="Ciruja" instance=ExtResource("2_ik0mx")]
 position = Vector2(17234, 586)
 
+[node name="Obstaculo11" parent="Ciruja" instance=ExtResource("2_ik0mx")]
+position = Vector2(19373, 586)
+
+[node name="Obstaculo13" parent="Ciruja" instance=ExtResource("2_ik0mx")]
+position = Vector2(24248, 586)
+
+[node name="Obstaculo14" parent="Ciruja" instance=ExtResource("2_ik0mx")]
+position = Vector2(28035, 586)
+
+[node name="Obstaculo15" parent="Ciruja" instance=ExtResource("2_ik0mx")]
+position = Vector2(28925, 586)
+
 [node name="Obstaculo8" parent="Ciruja" instance=ExtResource("2_ik0mx")]
 position = Vector2(15011, 380)
+
+[node name="Obstaculo12" parent="Ciruja" instance=ExtResource("2_ik0mx")]
+position = Vector2(22984, 380)
 
 [node name="Dron" type="Node2D" parent="."]
 
@@ -100,4 +130,16 @@ direccion = "Arriba"
 
 [node name="Obstaculo11" parent="Dron" instance=ExtResource("3_m14hy")]
 position = Vector2(18448, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo12" parent="Dron" instance=ExtResource("3_m14hy")]
+position = Vector2(20391, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo13" parent="Dron" instance=ExtResource("3_m14hy")]
+position = Vector2(23430, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo14" parent="Dron" instance=ExtResource("3_m14hy")]
+position = Vector2(25472, 340)
 direccion = "Arriba"
