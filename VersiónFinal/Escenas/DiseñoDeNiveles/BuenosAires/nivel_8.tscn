@@ -97,7 +97,7 @@ position = Vector2(17398, 385)
 position = Vector2(19115, 385)
 
 [node name="Obstaculo15" parent="Ciruja" instance=ExtResource("2_r7pys")]
-position = Vector2(23726, 385)
+position = Vector2(23948, 385)
 
 [node name="Dron" type="Node2D" parent="."]
 
