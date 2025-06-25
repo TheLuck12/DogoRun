@@ -11,15 +11,179 @@ metadata/_edit_vertical_guides_ = [30011.0]
 [node name="Colectivo" type="Node2D" parent="."]
 
 [node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_284vh")]
-position = Vector2(1989, 539)
+position = Vector2(3523, 539)
+
+[node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(4425, 539)
+
+[node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(5603, 539)
+
+[node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(7195, 539)
+
+[node name="Obstaculo5" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(10144, 539)
+
+[node name="Obstaculo6" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(11879, 539)
+
+[node name="Obstaculo7" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(13553, 539)
+
+[node name="Obstaculo8" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(14457, 539)
+
+[node name="Obstaculo9" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(18125, 539)
+
+[node name="Obstaculo10" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(20949, 539)
+
+[node name="Obstaculo11" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(23026, 539)
+
+[node name="Obstaculo12" parent="Colectivo" instance=ExtResource("1_284vh")]
+position = Vector2(24664, 539)
 
 [node name="Ciruja" type="Node2D" parent="."]
 
 [node name="Obstaculo3" parent="Ciruja" instance=ExtResource("2_vmwrb")]
-position = Vector2(2849, 586)
+position = Vector2(2060, 586)
+
+[node name="Obstaculo4" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(2988, 586)
+
+[node name="Obstaculo7" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(8452, 582)
+
+[node name="Obstaculo8" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(9242, 582)
+
+[node name="Obstaculo9" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(11323, 582)
+
+[node name="Obstaculo10" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(12994, 582)
+
+[node name="Obstaculo12" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(15861, 582)
+
+[node name="Obstaculo13" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(15861, 582)
+
+[node name="Obstaculo14" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(17061, 582)
+
+[node name="Obstaculo15" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(17061, 582)
+
+[node name="Obstaculo16" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(20362, 582)
+
+[node name="Obstaculo17" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(22062, 582)
+
+[node name="Obstaculo18" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(25787, 582)
+
+[node name="Obstaculo20" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(26651, 582)
+
+[node name="Obstaculo21" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(27622, 582)
+
+[node name="Obstaculo22" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(27622, 582)
+
+[node name="Obstaculo23" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(28658, 582)
+
+[node name="Obstaculo24" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(28658, 582)
+
+[node name="Obstaculo5" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(4843, 387)
+
+[node name="Obstaculo6" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(5992, 390)
+
+[node name="Obstaculo11" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(14856, 390)
+
+[node name="Obstaculo19" parent="Ciruja" instance=ExtResource("2_vmwrb")]
+position = Vector2(23140, 390)
 
 [node name="Dron" type="Node2D" parent="."]
 
 [node name="Obstaculo2" parent="Dron" instance=ExtResource("3_vkpyb")]
-position = Vector2(2557, 340)
+position = Vector2(1496, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo3" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(2486, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo4" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(5043, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo5" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(6388, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo6" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(7796, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo7" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(8030, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo8" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(10787, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo9" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(16422, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo10" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(17185, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo11" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(17344, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo12" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(18802, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo13" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(19057, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo15" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(19553, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo14" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(19303, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo16" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(22194, 340)
+direccion = "Abajo"
+
+[node name="Obstaculo17" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(23746, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo18" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(25919, 340)
+direccion = "Arriba"
+
+[node name="Obstaculo19" parent="Dron" instance=ExtResource("3_vkpyb")]
+position = Vector2(26763, 340)
 direccion = "Arriba"

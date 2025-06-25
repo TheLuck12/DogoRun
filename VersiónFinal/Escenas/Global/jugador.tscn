@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cipkx2i3clfl3"]
+[gd_scene load_steps=12 format=3 uid="uid://cipkx2i3clfl3"]
 
 [ext_resource type="Texture2D" uid="uid://uu2fgpx4h2cv" path="res://VersiónFinal/Assets/Personajes/DogoArgentino.png" id="1_eq3m3"]
 [ext_resource type="Script" uid="uid://q2c5f1qtrwe1" path="res://VersiónFinal/Codigos/Global/jugador.gd" id="1_wecjo"]
@@ -316,8 +316,12 @@ _data = {
 &"Saltar": SubResource("Animation_etuoq")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_etuoq"]
-size = Vector2(594, 341)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hxo7l"]
+radius = 109.091
+height = 678.788
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cpgbl"]
+radius = 115.788
 
 [node name="Jugador" type="CharacterBody2D" groups=["PJ"]]
 z_index = 7
@@ -391,8 +395,14 @@ speed_scale = 5.0
 [node name="Perder" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perder"]
-position = Vector2(10, 82.5)
-shape = SubResource("RectangleShape2D_etuoq")
+position = Vector2(6.06061, 18.1818)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hxo7l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Perder"]
+position = Vector2(-272.727, -139.394)
+rotation = 1.5708
+shape = SubResource("CircleShape2D_cpgbl")
 
 [node name="Camara" type="Camera2D" parent="."]
 position = Vector2(-2012.12, 0)

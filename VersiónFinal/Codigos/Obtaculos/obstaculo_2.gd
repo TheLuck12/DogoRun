@@ -24,6 +24,6 @@ func MoverAbajo(area: Area2D) -> void:
 
 func Fin():
 	if Global.vivo == false: 
-		$MoverAb/CollisionShape2D.queue_free()
-		$MoverAr/CollisionShape2D.queue_free()
+		$MoverAb/CollisionShape2D.position.x = -1000
+		$MoverAr/CollisionShape2D.position.x = -1000
 		direccion = ""
