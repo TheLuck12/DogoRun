@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=32 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
 [ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://duras7iy31qc7" path="res://VersiónFinal/Assets/Cielo/Noche.png" id="17_qw1sj"]
 [ext_resource type="PackedScene" uid="uid://bha7dt506gu7a" path="res://VersiónFinal/Escenas/Global/meta.tscn" id="18_yp322"]
 [ext_resource type="Texture2D" uid="uid://bxrkptlt7o0g7" path="res://VersiónFinal/Assets/Cielo/luna.png" id="19_3r2fm"]
+[ext_resource type="Texture2D" uid="uid://ye5u8kq1stt1" path="res://VersiónFinal/Assets/Edificios/poste 2.png" id="23_vvbdr"]
+[ext_resource type="Texture2D" uid="uid://cko6dcspclo65" path="res://VersiónFinal/Assets/Edificios/poste 1.png" id="24_rpbly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
 size = Vector2(39340.1, 20)
@@ -192,6 +194,26 @@ position = Vector2(1295, 468.75)
 scale = Vector2(1, 0.624305)
 sprite_frames = SubResource("SpriteFrames_juonu")
 animation = &"BsAsBNoche"
+
+[node name="Poste1" type="Sprite2D" parent="Parallax/Medio"]
+position = Vector2(264.708, 487.552)
+scale = Vector2(0.453898, 0.387644)
+texture = ExtResource("23_vvbdr")
+
+[node name="Poste2" type="Sprite2D" parent="Parallax/Medio"]
+position = Vector2(814.53, 505.504)
+scale = Vector2(0.363118, 0.387644)
+texture = ExtResource("24_rpbly")
+
+[node name="Poste3" type="Sprite2D" parent="Parallax/Medio"]
+position = Vector2(1526.82, 483.552)
+scale = Vector2(0.453898, 0.387644)
+texture = ExtResource("23_vvbdr")
+
+[node name="Poste4" type="Sprite2D" parent="Parallax/Medio"]
+position = Vector2(2109.71, 499.552)
+scale = Vector2(0.453898, 0.387644)
+texture = ExtResource("24_rpbly")
 
 [node name="Piso" type="ParallaxLayer" parent="Parallax"]
 motion_scale = Vector2(1.29, 1)
