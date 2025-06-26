@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://hxb6cwgttwie"]
 
 [ext_resource type="Script" uid="uid://wgvwhjnh43in" path="res://VersiónFinal/Codigos/Obtaculos/obstaculo_2.gd" id="1_djts4"]
-[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="2_ya516"]
+[ext_resource type="Texture2D" uid="uid://bqayt6lmkuhwi" path="res://VersiónFinal/Assets/Obstaculos/BsAs/dron.png" id="2_djts4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aqvto"]
 radius = 56.3205
@@ -17,7 +17,9 @@ script = ExtResource("1_djts4")
 [node name="Enemigo" type="Area2D" parent="." groups=["Enemigo"]]
 
 [node name="Icon" type="Sprite2D" parent="Enemigo"]
-texture = ExtResource("2_ya516")
+position = Vector2(-14, 12)
+scale = Vector2(0.195215, 0.247273)
+texture = ExtResource("2_djts4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo"]
 shape = SubResource("CircleShape2D_aqvto")

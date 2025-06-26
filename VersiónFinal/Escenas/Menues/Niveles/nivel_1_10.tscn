@@ -60,13 +60,13 @@ position = Vector2(-73, 258)
 scale = Vector2(1, 0.639999)
 
 [node name="Nubes" type="Sprite2D" parent="Fondo"]
-position = Vector2(711, -40.625)
-scale = Vector2(1, 1.2283)
+position = Vector2(649, -58.5937)
+scale = Vector2(0.903125, 1.17839)
 texture = ExtResource("2_nuwwg")
 
 [node name="Obelisco" type="Sprite2D" parent="Fondo"]
 position = Vector2(1196, 39.0625)
-scale = Vector2(1.46, 2.62788)
+scale = Vector2(0.539999, 0.752877)
 texture = ExtResource("2_sm3xu")
 
 [node name="Edi5" type="Sprite2D" parent="Fondo"]

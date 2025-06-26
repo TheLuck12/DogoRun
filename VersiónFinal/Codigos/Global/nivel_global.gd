@@ -67,6 +67,7 @@ func CambiarSprite(Provincia):
 			$Parallax/Cielo/NubEst.modulate = "ffffffb7"
 		elif Global.Nivel >= 6:
 			$Parallax/Fondo.modulate = "07101D"
+			$Parallax/Luna.visible = true
 			$Parallax/Medio/Medio.play("BsAsBNoche")
 			$Parallax/Cielo/NubEst.play("Estrellas")
 			$Parallax/Cielo/NubEst.modulate = "ffffff"
