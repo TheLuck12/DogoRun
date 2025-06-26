@@ -9,11 +9,11 @@ script = ExtResource("1_q5u58")
 
 [node name="MMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_y17sc")
-volume_db = -37.0
+volume_db = -15.0
 
 [node name="MInGame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_y17sc")
-volume_db = -37.0
+volume_db = -15.0
 
 [connection signal="finished" from="MMenu" to="." method="EmpezarMusica"]
 [connection signal="finished" from="MInGame" to="." method="EmpezarMusica"]

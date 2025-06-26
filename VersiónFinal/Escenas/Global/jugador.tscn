@@ -414,12 +414,12 @@ limit_bottom = 720
 
 [node name="Ladrido" type="AudioStreamPlayer" parent="Sonidos"]
 stream = ExtResource("3_etuoq")
-volume_db = -7.704
+volume_db = -15.0
 pitch_scale = 1.11
 
 [node name="Llorando" type="AudioStreamPlayer" parent="Sonidos"]
 stream = ExtResource("4_hxo7l")
-volume_db = -7.704
+volume_db = -15.0
 pitch_scale = 0.8
 
 [connection signal="area_entered" from="Perder" to="." method="DetectoEnemigo"]

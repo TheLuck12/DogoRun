@@ -18,7 +18,7 @@ script = ExtResource("1_djts4")
 
 [node name="Icon" type="Sprite2D" parent="Enemigo"]
 position = Vector2(-14, 12)
-scale = Vector2(0.195215, 0.247273)
+scale = Vector2(0.237333, 0.305455)
 texture = ExtResource("2_djts4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo"]

@@ -150,6 +150,7 @@ polygon = PackedVector2Array(-553, -106, -521.556, -123, 467.333, -122, 479, -10
 
 [node name="TocarBocina" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_u17l4")
+volume_db = -15.0
 
 [node name="DetectarPJ" type="Area2D" parent="."]
 
