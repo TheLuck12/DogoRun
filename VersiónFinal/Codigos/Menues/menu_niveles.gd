@@ -1,5 +1,5 @@
 extends Control
-
+var demo = true 
 @onready var Jugador = $Icon
 
 func _ready() -> void:
@@ -67,13 +67,13 @@ func OcultarMostrar():
 	if Global.barraP == 100:
 		$MoverDeProvincia.visible = false
 	elif Global.barraP == 0:
-		$MoverDeProvincia.visible = true
+		$MoverDeProvincia.visible = true 
 
 func AbrirProvincia():
 	if Global.provincia == 0:
 		$MoverDeProvincia/Viajar.visible = true
 		$MoverDeProvincia/Proximamente.visible = false
-	elif Global.NivelesCompletados >= 10 and Global.provincia == 1:
+	elif Global.NivelesCompletados >= 10 and Global.provincia == 1 and demo == false:
 		$MoverDeProvincia/Viajar.visible = true
 	elif Global.NivelesCompletados >= 20 and Global.provincia == 3:
 		$MoverDeProvincia/Viajar.visible = true

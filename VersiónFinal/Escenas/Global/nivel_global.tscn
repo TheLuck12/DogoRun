@@ -170,9 +170,8 @@ sprite_frames = SubResource("SpriteFrames_dcodd")
 animation = &"Nubes"
 
 [node name="Luna" type="Sprite2D" parent="Parallax"]
-visible = false
-position = Vector2(481, 210)
-scale = Vector2(0.570833, 0.570833)
+position = Vector2(1162.56, 164.75)
+scale = Vector2(0.445139, 0.445139)
 texture = ExtResource("19_3r2fm")
 
 [node name="Monumentos" type="ParallaxLayer" parent="Parallax"]
