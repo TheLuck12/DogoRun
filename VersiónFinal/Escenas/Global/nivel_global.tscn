@@ -195,24 +195,26 @@ scale = Vector2(1, 0.624305)
 sprite_frames = SubResource("SpriteFrames_juonu")
 animation = &"BsAsBNoche"
 
-[node name="Poste1" type="Sprite2D" parent="Parallax/Medio"]
+[node name="Postes" type="Node2D" parent="Parallax/Medio"]
+
+[node name="Poste1" type="Sprite2D" parent="Parallax/Medio/Postes"]
 position = Vector2(264.708, 487.552)
 scale = Vector2(0.453898, 0.387644)
 texture = ExtResource("23_vvbdr")
 
-[node name="Poste2" type="Sprite2D" parent="Parallax/Medio"]
-position = Vector2(814.53, 505.504)
-scale = Vector2(0.363118, 0.387644)
+[node name="Poste2" type="Sprite2D" parent="Parallax/Medio/Postes"]
+position = Vector2(814.53, 523.594)
+scale = Vector2(0.290495, 0.310116)
 texture = ExtResource("24_rpbly")
 
-[node name="Poste3" type="Sprite2D" parent="Parallax/Medio"]
+[node name="Poste3" type="Sprite2D" parent="Parallax/Medio/Postes"]
 position = Vector2(1526.82, 483.552)
 scale = Vector2(0.453898, 0.387644)
 texture = ExtResource("23_vvbdr")
 
-[node name="Poste4" type="Sprite2D" parent="Parallax/Medio"]
-position = Vector2(2109.71, 499.552)
-scale = Vector2(0.453898, 0.387644)
+[node name="Poste4" type="Sprite2D" parent="Parallax/Medio/Postes"]
+position = Vector2(2109.71, 517.642)
+scale = Vector2(0.363118, 0.310116)
 texture = ExtResource("24_rpbly")
 
 [node name="Piso" type="ParallaxLayer" parent="Parallax"]
