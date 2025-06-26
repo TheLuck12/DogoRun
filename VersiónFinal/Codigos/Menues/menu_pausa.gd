@@ -1,9 +1,10 @@
 extends Control
 
-
-func TituloDeMenu(Titulo : String):
-	$Titulo.text = Titulo
-
+func PausaOGameOver():
+	if Global.pausa == true:
+		$Menues.play("Pausa")
+	else:
+		$Menues.play("GameOver")
 func SacarMenuP():
 	Global.pausa = false
 	get_tree().call_group("Menu", "MostrarMenuP")

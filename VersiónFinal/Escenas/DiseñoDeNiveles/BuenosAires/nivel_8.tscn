@@ -162,7 +162,7 @@ position = Vector2(18059, 340)
 direccion = "Arriba"
 
 [node name="Obstaculo17" parent="Dron" instance=ExtResource("3_1fwbo")]
-position = Vector2(20046, 340)
+position = Vector2(19929, 340)
 direccion = "Arriba"
 
 [node name="Obstaculo19" parent="Dron" instance=ExtResource("3_1fwbo")]

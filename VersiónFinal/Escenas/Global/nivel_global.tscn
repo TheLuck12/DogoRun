@@ -172,6 +172,7 @@ sprite_frames = SubResource("SpriteFrames_dcodd")
 animation = &"Nubes"
 
 [node name="Luna" type="Sprite2D" parent="Parallax"]
+visible = false
 position = Vector2(1162.56, 164.75)
 scale = Vector2(0.445139, 0.445139)
 texture = ExtResource("19_3r2fm")
@@ -230,7 +231,7 @@ animation = &"BsAs"
 [node name="PosicionDeMenu" type="Node2D" parent="."]
 
 [node name="PosicionP" type="Marker2D" parent="PosicionDeMenu"]
-position = Vector2(497, 207)
+position = Vector2(315, 156)
 
 [node name="PosicionC" type="Marker2D" parent="PosicionDeMenu"]
 position = Vector2(407, 261)

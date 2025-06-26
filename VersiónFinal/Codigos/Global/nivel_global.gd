@@ -85,4 +85,5 @@ func MostrarMenuLose():
 		$Interfaz/MenuPausa.visible = true
 		$Interfaz/Controles.visible = false
 		$Interfaz/MenuPausa/Volver.visible = false
-		get_tree().call_group("Interfaz", "TituloDeMenu", "GAME OVER")
+		get_tree().call_group("Interfaz", "TituloDeMenu")
+		get_tree().call_group("Interfaz", "PausaOGameOver")

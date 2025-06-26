@@ -1,83 +1,94 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt8evi32fvylc"]
+[gd_scene load_steps=10 format=3 uid="uid://bt8evi32fvylc"]
 
 [ext_resource type="Script" uid="uid://y2m06f6xfebo" path="res://VersiónFinal/Codigos/Menues/menu_pausa.gd" id="1_27eaq"]
+[ext_resource type="Texture2D" uid="uid://5dlkq7aubdmc" path="res://VersiónFinal/Assets/Menu/MenuGameOver.png" id="2_4ol5w"]
+[ext_resource type="Texture2D" uid="uid://chmlxjaqjax33" path="res://VersiónFinal/Assets/Menu/MenuPausa.png" id="2_sx0pt"]
+[ext_resource type="Texture2D" uid="uid://bojpsg2nm5bko" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Niveles.png" id="4_x3650"]
+[ext_resource type="Texture2D" uid="uid://bj600tkop84ki" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/menu.png" id="5_x3650"]
+[ext_resource type="Texture2D" uid="uid://xbiy12tq51fe" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Salir.png" id="6_e04rb"]
+[ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="7_f6f40"]
+[ext_resource type="Texture2D" uid="uid://bxs3earojur0q" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Play.png" id="8_k6rte"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_s3pah"]
-font_size = 36
-outline_size = 20
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="SpriteFrames" id="SpriteFrames_sx0pt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4ol5w")
+}],
+"loop": true,
+"name": &"GameOver",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sx0pt")
+}],
+"loop": true,
+"name": &"Pausa",
+"speed": 5.0
+}]
 
 [node name="MenuPausa" type="Control" groups=["Interfaz"]]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_27eaq")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_top = -1.0
-offset_right = 40.0
-offset_bottom = 39.0
-scale = Vector2(7.56, 9.02)
-size_flags_horizontal = 4
-color = Color(0.909728, 0, 0.122048, 1)
+[node name="Menues" type="AnimatedSprite2D" parent="."]
+position = Vector2(338, 214)
+scale = Vector2(0.403125, 0.418519)
+sprite_frames = SubResource("SpriteFrames_sx0pt")
+animation = &"Pausa"
 
 [node name="MenuNiveles" type="Button" parent="."]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 240.0
-offset_right = 118.0
-offset_bottom = 271.0
+offset_left = 503.0
+offset_top = 146.0
+offset_right = 612.0
+offset_bottom = 254.0
 size_flags_horizontal = 4
-text = "MenuNiveles"
+icon = ExtResource("4_x3650")
+flat = true
 
 [node name="Mapa" type="Button" parent="."]
 layout_mode = 0
-offset_left = 219.0
-offset_top = 236.0
-offset_right = 271.0
-offset_bottom = 267.0
+offset_left = 74.0
+offset_top = 307.0
+offset_right = 182.0
+offset_bottom = 415.0
+scale = Vector2(1.0368, 0.891)
 size_flags_horizontal = 4
-text = "Mapa"
+icon = ExtResource("5_x3650")
+flat = true
 
 [node name="Menu" type="Button" parent="."]
 layout_mode = 0
-offset_left = 130.0
-offset_top = 290.0
-offset_right = 183.0
-offset_bottom = 321.0
+offset_left = 504.0
+offset_top = 266.0
+offset_right = 661.0
+offset_bottom = 374.0
 size_flags_horizontal = 4
-text = "Menu"
+icon = ExtResource("6_e04rb")
+flat = true
 
 [node name="Reiniciar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 118.0
-offset_top = 195.0
-offset_right = 194.0
-offset_bottom = 226.0
+offset_left = 77.0
+offset_top = 202.0
+offset_right = 185.0
+offset_bottom = 310.0
 size_flags_horizontal = 4
-text = "Reiniciar"
+icon = ExtResource("7_f6f40")
+flat = true
 
 [node name="Volver" type="Button" parent="."]
 layout_mode = 0
-offset_left = 115.0
-offset_top = 118.0
-offset_right = 197.0
-offset_bottom = 173.0
+offset_left = 77.0
+offset_top = 107.0
+offset_right = 185.0
+offset_bottom = 215.0
 size_flags_horizontal = 4
-text = "Volver "
-
-[node name="Titulo" type="Label" parent="."]
-layout_mode = 0
-offset_left = 58.0
-offset_top = 32.0
-offset_right = 264.0
-offset_bottom = 82.0
-pivot_offset = Vector2(104, 24)
-size_flags_horizontal = 4
-label_settings = SubResource("LabelSettings_s3pah")
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_lock_ = true
+icon = ExtResource("8_k6rte")
+flat = true
 
 [connection signal="button_down" from="MenuNiveles" to="." method="IrMenuNi"]
 [connection signal="button_down" from="Mapa" to="." method="IrMapa"]

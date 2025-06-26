@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://yutivv3wig48"]
+[gd_scene load_steps=3 format=3 uid="uid://yutivv3wig48"]
 
 [ext_resource type="Script" uid="uid://8djpl2iah75a" path="res://VersiónFinal/Codigos/Menues/menu_confirmar.gd" id="1_3j6cu"]
+[ext_resource type="Texture2D" uid="uid://dxyqsj6r1t54k" path="res://VersiónFinal/Assets/Menu/Confirmacion.png" id="2_7t6g8"]
 
 [node name="MenuConfirmar" type="Control" groups=["Interfaz"]]
 layout_mode = 3
@@ -11,36 +12,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3j6cu")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 471.0
-offset_bottom = 233.0
-color = Color(1, 0, 0, 1)
+[node name="Confirmacion" type="Sprite2D" parent="."]
+position = Vector2(242, 124.5)
+scale = Vector2(0.297917, 0.243519)
+texture = ExtResource("2_7t6g8")
 
 [node name="Si" type="Button" parent="."]
 layout_mode = 0
 offset_left = 119.0
-offset_top = 151.0
+offset_top = 111.0
 offset_right = 199.0
-offset_bottom = 182.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 46
 text = "SI"
 
 [node name="No" type="Button" parent="."]
 layout_mode = 0
 offset_left = 263.0
-offset_top = 151.0
+offset_top = 111.0
 offset_right = 343.0
-offset_bottom = 182.0
-text = "NO"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 40.0
-offset_right = 427.0
-offset_bottom = 104.0
+offset_bottom = 183.0
 theme_override_font_sizes/font_size = 46
-text = "¿ESTAS SEGURO?"
+text = "NO"
 
 [connection signal="button_down" from="Si" to="." method="LlamarPantallaCarga"]
 [connection signal="button_down" from="No" to="." method="Ocultar"]

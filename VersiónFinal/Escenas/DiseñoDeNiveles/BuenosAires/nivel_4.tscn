@@ -46,7 +46,7 @@ position = Vector2(8283, 587)
 position = Vector2(10022, 587)
 
 [node name="Obstaculo8" parent="Ciruja" instance=ExtResource("2_g73vn")]
-position = Vector2(11924, 587)
+position = Vector2(11971, 587)
 
 [node name="Obstaculo9" parent="Ciruja" instance=ExtResource("2_g73vn")]
 position = Vector2(14166, 587)
