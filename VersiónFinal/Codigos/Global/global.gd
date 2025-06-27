@@ -9,6 +9,7 @@ var pausa = false
 var menu : String
 var barraP : int
 var finNivel : bool
+var control : int
 
 func Randomizar(MinNum, MaxNum):
 	rng.randomize()

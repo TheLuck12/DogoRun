@@ -14,3 +14,7 @@ func PausarMusicaInGame():
 		$MInGame.stream_paused = true
 	else:
 		$MInGame.stream_paused = false
+
+func PonerAutoPlay():
+	if $MMenu.autoplay == false:
+		$MMenu.autoplay = true

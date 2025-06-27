@@ -65,11 +65,19 @@ func CambiarSprite(Provincia):
 			$Parallax/Cielo/NubEst.play("Nubes")
 			$Parallax/Medio/Medio.play("BsAsBDia")
 			$Parallax/Cielo/NubEst.modulate = "ffffffb7"
+			$Parallax/Medio/Postes/Farola.play("SinLuz")
+			$Parallax/Medio/Postes/Farola2.play("SinLuz")
+			$Parallax/Medio/Postes/Poste.play("SinLuz")
+			$Parallax/Medio/Postes/Poste2.play("SinLuz")
 		elif Global.Nivel >= 6:
 			$Parallax/Fondo.modulate = "07101D"
 			$Parallax/Luna.visible = true
 			$Parallax/Medio/Medio.play("BsAsBNoche")
 			$Parallax/Cielo/NubEst.play("Estrellas")
+			$Parallax/Medio/Postes/Farola.play("ConLuz")
+			$Parallax/Medio/Postes/Farola2.play("ConLuz")
+			$Parallax/Medio/Postes/Poste.play("ConLuz")
+			$Parallax/Medio/Postes/Poste2.play("ConLuz")
 			$Parallax/Cielo/NubEst.modulate = "ffffff"
 func MostrarMenuP():
 	if Global.pausa == true:

@@ -279,8 +279,8 @@ scale = Vector2(0.161719, 0.181944)
 texture = ExtResource("14_cobrd")
 
 [node name="PisoBsAs" type="Sprite2D" parent="."]
-position = Vector2(640, 539)
-scale = Vector2(2.608, 1.935)
+position = Vector2(640, 534)
+scale = Vector2(0.889646, 0.383358)
 texture = ExtResource("21_iliiw")
 
 [node name="Jugador" parent="." instance=ExtResource("21_d16m5")]
