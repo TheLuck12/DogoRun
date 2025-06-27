@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	$Plataforma.text = "PC"
 	OcultarMostrar()
 	Global.Nivel = 0
 	$Botones/Jugador/Animacion.play("Correr")
@@ -25,3 +26,12 @@ func OcultarMostrar():
 		$Botones.visible = false
 	elif Global.barraP == 0:
 		$Botones.visible = true
+
+
+func ControlMobil() -> void:
+	if Global.control == 0:
+		Global.control = 1
+		$Plataforma.text = "CELULAR"
+	elif Global.control == 1:
+		Global.control = 0
+		$Plataforma.text = "PC"
