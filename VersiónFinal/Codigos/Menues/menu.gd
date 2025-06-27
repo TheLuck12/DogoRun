@@ -2,9 +2,10 @@ extends Control
 
 func _ready() -> void:
 	$Plataforma.text = "PC"
+	ControlMusica.PonerAutoPlay()
 	OcultarMostrar()
 	Global.Nivel = 0
-	$Botones/Jugador/Animacion.play("Correr")
+	$Jugador/Animacion.play("Correr")
 	$AnimationPlayer.play("MoverPiso")
 	ControlMusica.EmpezarMusica()
 
@@ -32,6 +33,8 @@ func ControlMobil() -> void:
 	if Global.control == 0:
 		Global.control = 1
 		$Plataforma.text = "CELULAR"
+		$PerroHabla.text = "¡Salta Y Cae Con las Flechas en Pantalla!"
 	elif Global.control == 1:
 		Global.control = 0
+		$PerroHabla.text = "¡Salta Con (W) y Cae Con (S)!"
 		$Plataforma.text = "PC"
