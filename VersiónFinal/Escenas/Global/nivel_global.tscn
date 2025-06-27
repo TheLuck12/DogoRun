@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b7ho1g8nl4pgv"]
+[gd_scene load_steps=36 format=3 uid="uid://b7ho1g8nl4pgv"]
 
 [ext_resource type="PackedScene" uid="uid://bm1anxrfsfvis" path="res://VersiónFinal/Escenas/Interfaz/controles.tscn" id="1_d827q"]
 [ext_resource type="Script" uid="uid://bk4gjeuqtqgtg" path="res://VersiónFinal/Codigos/Global/nivel_global.gd" id="1_vtksu"]
@@ -24,8 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://duras7iy31qc7" path="res://VersiónFinal/Assets/Cielo/Noche.png" id="17_qw1sj"]
 [ext_resource type="PackedScene" uid="uid://bha7dt506gu7a" path="res://VersiónFinal/Escenas/Global/meta.tscn" id="18_yp322"]
 [ext_resource type="Texture2D" uid="uid://bxrkptlt7o0g7" path="res://VersiónFinal/Assets/Cielo/luna.png" id="19_3r2fm"]
+[ext_resource type="Texture2D" uid="uid://c6f3ykcmwavwm" path="res://VersiónFinal/Assets/Edificios/postes sinluz2.png" id="23_t6b4p"]
 [ext_resource type="Texture2D" uid="uid://ye5u8kq1stt1" path="res://VersiónFinal/Assets/Edificios/poste 2.png" id="23_vvbdr"]
 [ext_resource type="Texture2D" uid="uid://cko6dcspclo65" path="res://VersiónFinal/Assets/Edificios/poste 1.png" id="24_rpbly"]
+[ext_resource type="Texture2D" uid="uid://badwy4ydeakym" path="res://VersiónFinal/Assets/Edificios/poste sinluz.png" id="26_4nrfd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtksu"]
 size = Vector2(39340.1, 20)
@@ -76,6 +78,44 @@ animations = [{
 }],
 "loop": true,
 "name": &"BsAsBNoche",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qna1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_vvbdr")
+}],
+"loop": true,
+"name": &"ConLuz",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_t6b4p")
+}],
+"loop": true,
+"name": &"SinLuz",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tyjf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_rpbly")
+}],
+"loop": true,
+"name": &"ConLuz",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_4nrfd")
+}],
+"loop": true,
+"name": &"SinLuz",
 "speed": 5.0
 }]
 
@@ -194,39 +234,44 @@ motion_mirroring = Vector2(2488.98, 0)
 position = Vector2(1295, 468.75)
 scale = Vector2(1, 0.624305)
 sprite_frames = SubResource("SpriteFrames_juonu")
-animation = &"BsAsBNoche"
+animation = &"BsAsBDia"
 
 [node name="Postes" type="Node2D" parent="Parallax/Medio"]
 
-[node name="Poste1" type="Sprite2D" parent="Parallax/Medio/Postes"]
-position = Vector2(264.708, 487.552)
-scale = Vector2(0.453898, 0.387644)
-texture = ExtResource("23_vvbdr")
+[node name="Poste" type="AnimatedSprite2D" parent="Parallax/Medio/Postes"]
+position = Vector2(304, 504)
+scale = Vector2(0.5, 0.337125)
+sprite_frames = SubResource("SpriteFrames_qna1l")
+animation = &"SinLuz"
 
-[node name="Poste2" type="Sprite2D" parent="Parallax/Medio/Postes"]
-position = Vector2(814.53, 523.594)
-scale = Vector2(0.290495, 0.310116)
-texture = ExtResource("24_rpbly")
+[node name="Poste2" type="AnimatedSprite2D" parent="Parallax/Medio/Postes"]
+position = Vector2(1508, 504)
+scale = Vector2(0.5, 0.337125)
+sprite_frames = SubResource("SpriteFrames_qna1l")
+animation = &"SinLuz"
 
-[node name="Poste3" type="Sprite2D" parent="Parallax/Medio/Postes"]
-position = Vector2(1526.82, 483.552)
-scale = Vector2(0.453898, 0.387644)
-texture = ExtResource("23_vvbdr")
+[node name="Farola" type="AnimatedSprite2D" parent="Parallax/Medio/Postes"]
+position = Vector2(917, 537)
+scale = Vector2(0.3, 0.28)
+sprite_frames = SubResource("SpriteFrames_tyjf7")
+animation = &"SinLuz"
 
-[node name="Poste4" type="Sprite2D" parent="Parallax/Medio/Postes"]
-position = Vector2(2109.71, 517.642)
-scale = Vector2(0.363118, 0.310116)
-texture = ExtResource("24_rpbly")
+[node name="Farola2" type="AnimatedSprite2D" parent="Parallax/Medio/Postes"]
+position = Vector2(1980, 537)
+scale = Vector2(0.3, 0.28)
+sprite_frames = SubResource("SpriteFrames_tyjf7")
+animation = &"SinLuz"
 
 [node name="Piso" type="ParallaxLayer" parent="Parallax"]
 motion_scale = Vector2(1.29, 1)
 motion_mirroring = Vector2(1280, 0)
 
 [node name="Pisos" type="AnimatedSprite2D" parent="Parallax/Piso"]
-position = Vector2(635.5, 426)
-scale = Vector2(2.566, 3)
+position = Vector2(1328, 502)
+scale = Vector2(0.852667, 0.469964)
 sprite_frames = SubResource("SpriteFrames_qo3xd")
 animation = &"BsAs"
+offset = Vector2(-813.523, -88)
 
 [node name="PosicionDeMenu" type="Node2D" parent="."]
 

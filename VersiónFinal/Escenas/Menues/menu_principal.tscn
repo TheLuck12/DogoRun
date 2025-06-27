@@ -150,15 +150,15 @@ animation = &"BsAs"
 frame_progress = 0.983812
 
 [node name="Pisos" type="AnimatedSprite2D" parent="Animacion"]
-position = Vector2(638, 426)
-scale = Vector2(2.57056, 3)
+position = Vector2(641.878, 408.207)
+scale = Vector2(0.858504, 0.598559)
 sprite_frames = SubResource("SpriteFrames_hraw3")
 animation = &"BsAs"
 frame_progress = 0.882393
 
 [node name="Pisos2" type="AnimatedSprite2D" parent="Animacion"]
-position = Vector2(1921, 426)
-scale = Vector2(2.566, 3)
+position = Vector2(1921.64, 408)
+scale = Vector2(0.848486, 0.598558)
 sprite_frames = SubResource("SpriteFrames_hraw3")
 animation = &"BsAs"
 
