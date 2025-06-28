@@ -14,6 +14,7 @@ config/name="DogoRun"
 run/main_scene="uid://ocsls6ou13p8"
 config/features=PackedStringArray("4.4", "Mobile")
 run/max_fps=30
+boot_splash/image="uid://dswl13f464to4"
 config/icon="res://icon.svg"
 
 [autoload]

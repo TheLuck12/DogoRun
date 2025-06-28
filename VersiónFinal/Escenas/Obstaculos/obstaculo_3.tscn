@@ -15,6 +15,33 @@
 radius = 50.4581
 height = 185.607
 
+[sub_resource type="Animation" id="Animation_lt2xs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cuerpo/CirujaBrazoDelante:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.87979]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cuerpo/CirujaBrazoAtras:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.785397]
+}
+
 [sub_resource type="Animation" id="Animation_2pc2j"]
 resource_name = "TirarBotella"
 length = 1.2
@@ -42,33 +69,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 0.659754),
 "update": 0,
 "values": [0.785397, -0.261799]
-}
-
-[sub_resource type="Animation" id="Animation_lt2xs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cuerpo/CirujaBrazoDelante:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.87979]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cuerpo/CirujaBrazoAtras:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.785397]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lt2xs"]
@@ -148,11 +148,11 @@ speed_scale = 1.5
 
 [node name="Fuira" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_i4iro")
-volume_db = 10.0
+volume_db = 5.0
 
 [node name="Cucha" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_mg68j")
-volume_db = 10.0
+volume_db = 5.0
 
 [node name="Area2D2" type="Area2D" parent="."]
 
