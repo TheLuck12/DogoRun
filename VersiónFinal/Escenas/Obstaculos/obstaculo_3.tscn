@@ -1,24 +1,95 @@
-[gd_scene load_steps=5 format=3 uid="uid://dersvgviljy5m"]
+[gd_scene load_steps=16 format=3 uid="uid://dersvgviljy5m"]
 
 [ext_resource type="Script" uid="uid://bttumesmu0cqr" path="res://VersiónFinal/Codigos/Obtaculos/obstaculo_3.gd" id="1_3qfs4"]
-[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_y5fyh"]
 [ext_resource type="PackedScene" uid="uid://83btf534xqes" path="res://VersiónFinal/Escenas/Obstaculos/obs_tirable.tscn" id="2_oohgq"]
+[ext_resource type="Texture2D" uid="uid://lnsfhwgc8jrg" path="res://VersiónFinal/Assets/Personajes/ciruja brazo atras.png" id="3_2pc2j"]
+[ext_resource type="Texture2D" uid="uid://gr6ck3v6vadm" path="res://VersiónFinal/Assets/Personajes/ciruja cabeza.png" id="4_lt2xs"]
+[ext_resource type="Texture2D" uid="uid://d3w8fyer7rr57" path="res://VersiónFinal/Assets/Personajes/ciruja pierna atras.png" id="5_i4iro"]
+[ext_resource type="Texture2D" uid="uid://cbpbpog085euq" path="res://VersiónFinal/Assets/Personajes/ciruja pierna delante (3).png" id="6_mg68j"]
+[ext_resource type="Texture2D" uid="uid://bw2gemnkey6wq" path="res://VersiónFinal/Assets/Personajes/ciruja torso.png" id="7_yxck8"]
+[ext_resource type="Texture2D" uid="uid://b2jheraygoclp" path="res://VersiónFinal/Assets/Personajes/ciruja brazo delante.png" id="8_qfbme"]
+[ext_resource type="AudioStream" uid="uid://di3bgpn2fsnae" path="res://VersiónFinal/Sonidos/Persona/Fuira.wav" id="9_i4iro"]
+[ext_resource type="AudioStream" uid="uid://bud75voh16fbk" path="res://VersiónFinal/Sonidos/Persona/Cucha.wav" id="10_mg68j"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qfs4"]
-size = Vector2(112, 114)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2pc2j"]
+radius = 50.4581
+height = 185.607
+
+[sub_resource type="Animation" id="Animation_2pc2j"]
+resource_name = "TirarBotella"
+length = 1.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cuerpo/CirujaBrazoDelante:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.87979, 1.0472]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cuerpo/CirujaBrazoAtras:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 0.659754),
+"update": 0,
+"values": [0.785397, -0.261799]
+}
+
+[sub_resource type="Animation" id="Animation_lt2xs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cuerpo/CirujaBrazoDelante:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.87979]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cuerpo/CirujaBrazoAtras:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.785397]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lt2xs"]
+_data = {
+&"RESET": SubResource("Animation_lt2xs"),
+&"TirarBotella": SubResource("Animation_2pc2j")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4iro"]
+size = Vector2(681.301, 464.48)
 
 [node name="Obstaculo3" type="Node2D" groups=["Enemigo"]]
-scale = Vector2(0.455824, 0.560325)
+position = Vector2(0, -56)
+scale = Vector2(0.867695, 0.861591)
 script = ExtResource("1_3qfs4")
 ObjTirable = ExtResource("2_oohgq")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemigo"]]
 
-[node name="Icon" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("1_y5fyh")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_3qfs4")
+shape = SubResource("CapsuleShape2D_2pc2j")
 
 [node name="PoInObjeto" type="Marker2D" parent="."]
 position = Vector2(-72, -69)
@@ -27,4 +98,67 @@ metadata/_edit_lock_ = true
 [node name="InsTime" type="Timer" parent="PoInObjeto"]
 wait_time = 1.2
 
+[node name="Cuerpo" type="Node2D" parent="."]
+position = Vector2(10.9691, 26.7702)
+rotation = 0.07364
+
+[node name="CirujaBrazoAtras" type="Sprite2D" parent="Cuerpo"]
+position = Vector2(-19.7445, -85.6646)
+rotation = 0.785397
+scale = Vector2(0.189374, 0.161475)
+texture = ExtResource("3_2pc2j")
+offset = Vector2(-110.261, 405.817)
+
+[node name="CirujaCabeza" type="Sprite2D" parent="Cuerpo"]
+position = Vector2(-40.6251, -20.1352)
+scale = Vector2(0.189374, 0.161475)
+texture = ExtResource("4_lt2xs")
+
+[node name="CirujaPiernaAtras" type="Sprite2D" parent="Cuerpo"]
+position = Vector2(-15.3568, -16.0621)
+rotation = 0.523598
+scale = Vector2(0.189374, 0.161475)
+texture = ExtResource("5_i4iro")
+offset = Vector2(-133.43, -25.2243)
+
+[node name="CirujaPiernaDelante(3)" type="Sprite2D" parent="Cuerpo"]
+position = Vector2(3.8147e-06, -10.7081)
+rotation = -0.261799
+scale = Vector2(0.189374, 0.161475)
+texture = ExtResource("6_mg68j")
+offset = Vector2(-214.523, -58.3814)
+
+[node name="CirujaTorso" type="Sprite2D" parent="Cuerpo"]
+position = Vector2(-40.6251, -20.1352)
+scale = Vector2(0.189374, 0.161475)
+texture = ExtResource("7_yxck8")
+
+[node name="CirujaBrazoDelante" type="Sprite2D" parent="Cuerpo"]
+position = Vector2(-4.38766, -85.6646)
+rotation = 2.87979
+scale = Vector2(0.189374, 0.161475)
+texture = ExtResource("8_qfbme")
+offset = Vector2(-191.355, 405.818)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lt2xs")
+}
+speed_scale = 1.5
+
+[node name="Fuira" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_i4iro")
+volume_db = 10.0
+
+[node name="Cucha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_mg68j")
+volume_db = 10.0
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-394.631, -132.202)
+shape = SubResource("RectangleShape2D_i4iro")
+
 [connection signal="timeout" from="PoInObjeto/InsTime" to="." method="_on_ins_time_timeout"]
+[connection signal="body_entered" from="Area2D2" to="." method="DetectoPerro"]

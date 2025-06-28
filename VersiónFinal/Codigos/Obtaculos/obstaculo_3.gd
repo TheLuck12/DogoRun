@@ -1,7 +1,8 @@
 extends Node2D
 
 @export var ObjTirable : PackedScene
-
+func _ready() -> void:
+	ComenzarNivel()
 func InstanciarObj():
 	var Objeto = ObjTirable.instantiate()
 	add_child(Objeto)
@@ -20,3 +21,15 @@ func ComenzarNivel():
 	if Global.vivo == true:
 		$PoInObjeto/InsTime.start()
 		$PoInObjeto/InsTime.autostart = true
+		$AnimationPlayer.play("TirarBotella")
+
+
+func DetectoPerro(body: Node2D) -> void:
+	if body.is_in_group("PJ"):
+		var skin = 0
+		skin = Global.Randomizar(1,2) 
+		print(skin)
+		if skin == 1:
+			$Cucha.play()
+		elif skin == 2:
+			$Fuira.play()

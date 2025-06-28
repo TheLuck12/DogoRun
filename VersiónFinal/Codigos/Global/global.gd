@@ -1,7 +1,7 @@
 extends Node
 
 @onready var rng = RandomNumberGenerator.new()
-var NivelesCompletados = 0
+var NivelesCompletados = 6
 var Nivel : int
 var provincia = 0
 var vivo = false

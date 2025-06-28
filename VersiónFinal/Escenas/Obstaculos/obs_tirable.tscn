@@ -1,7 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://83btf534xqes"]
+[gd_scene load_steps=8 format=3 uid="uid://83btf534xqes"]
 
-[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_5xkp4"]
 [ext_resource type="Script" uid="uid://dfcuf7qbgjd4k" path="res://VersiónFinal/Codigos/Obtaculos/obs_tirable.gd" id="1_pvykg"]
+[ext_resource type="Texture2D" uid="uid://gkl7j048w8uo" path="res://VersiónFinal/Assets/botella de vino.png" id="2_5pyqw"]
+[ext_resource type="Texture2D" uid="uid://dsvf46tqqhs6u" path="res://VersiónFinal/Assets/vino uvita.png" id="3_lq2cx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0b8x"]
+atlas = ExtResource("2_5pyqw")
+region = Rect2(207, 0, 325, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbrm4"]
+atlas = ExtResource("3_lq2cx")
+region = Rect2(650, 0, 325, 720)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iiv25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0b8x")
+}],
+"loop": true,
+"name": &"Botella",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbrm4")
+}],
+"loop": true,
+"name": &"Uvita",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pvykg"]
 radius = 58.0086
@@ -11,9 +39,11 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_pvykg")
 
-[node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.386036, 0.397601)
-texture = ExtResource("1_5xkp4")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 7)
+scale = Vector2(0.174242, 0.113805)
+sprite_frames = SubResource("SpriteFrames_iiv25")
+animation = &"Uvita"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.386036, 0.397601)
