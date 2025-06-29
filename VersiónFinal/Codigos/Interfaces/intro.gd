@@ -6,4 +6,4 @@ func _ready() -> void:
 	$AnimationPlayer.play("Intro")
 	
 func IrAMenu():
-	get_tree().change_scene_to_file("res://VersiónFinal/Escenas/Menues/menu_principal.tscn")
+	get_tree().change_scene_to_file("res://VersiónFinal/Escenas/Menues/menu_elec_dispositivo.tscn")

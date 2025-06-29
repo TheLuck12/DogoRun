@@ -1,6 +1,7 @@
 extends Node2D
 
-
+func _ready() -> void: 
+	$Sprite2D/AnimationPlayer.play("Mover")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Jugador":

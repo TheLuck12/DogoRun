@@ -1,8 +1,45 @@
-[gd_scene load_steps=5 format=3 uid="uid://bha7dt506gu7a"]
+[gd_scene load_steps=8 format=3 uid="uid://bha7dt506gu7a"]
 
 [ext_resource type="Script" uid="uid://ibk0usnf1fck" path="res://VersiónFinal/Codigos/Global/meta.gd" id="1_7yyiv"]
-[ext_resource type="Texture2D" uid="uid://d381luoo0uhdm" path="res://icon.svg" id="1_nxspb"]
 [ext_resource type="AudioStream" uid="uid://da28quat2muj3" path="res://VersiónFinal/Sonidos/De-Vic/Victoria.wav" id="2_u6kyp"]
+[ext_resource type="Texture2D" uid="uid://bdow6y80mjifl" path="res://VersiónFinal/Assets/matev y termo.png" id="3_u6kyp"]
+
+[sub_resource type="Animation" id="Animation_5swer"]
+resource_name = "Mover"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -45)]
+}
+
+[sub_resource type="Animation" id="Animation_011bv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7ip4"]
+_data = {
+&"Mover": SubResource("Animation_5swer"),
+&"RESET": SubResource("Animation_011bv")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yyiv"]
 size = Vector2(137, 912)
@@ -15,7 +52,13 @@ stream = ExtResource("2_u6kyp")
 volume_db = -13.481
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_nxspb")
+scale = Vector2(0.4375, 0.339844)
+texture = ExtResource("3_u6kyp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_o7ip4")
+}
 
 [node name="Area2D" type="Area2D" parent="."]
 

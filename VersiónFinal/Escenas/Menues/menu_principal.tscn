@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dlb158ow8u3l3"]
+[gd_scene load_steps=23 format=3 uid="uid://dlb158ow8u3l3"]
 
 [ext_resource type="Script" uid="uid://b0i33ejyflr1v" path="res://VersiónFinal/Codigos/Menues/menu.gd" id="1_ghthh"]
 [ext_resource type="Texture2D" uid="uid://bxs3earojur0q" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/Play.png" id="2_ty8ne"]
@@ -59,8 +59,6 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_41jgc"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4crre"]
-
 [sub_resource type="Animation" id="Animation_41jgc"]
 resource_name = "MoverPiso"
 length = 2.0
@@ -107,11 +105,6 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_bgnk5"]
 font_size = 31
 outline_size = 10
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_q84pr"]
-font_size = 51
-outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
 [node name="MenuPrincipal" type="Control" groups=["Menu"]]
@@ -225,15 +218,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_41jgc")
 text = "Creditos "
 icon = ExtResource("9_4crre")
 
-[node name="BotonP" type="CheckButton" parent="Botones"]
-layout_mode = 0
-offset_left = 254.0
-offset_top = 103.0
-offset_right = 298.0
-offset_bottom = 127.0
-scale = Vector2(2.12, 2.12)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4crre")
-
 [node name="PantallaCarga" parent="." instance=ExtResource("6_7fq04")]
 visible = false
 
@@ -273,20 +257,8 @@ text = "¡Salta Con (W) y Cae Con (S)!"
 label_settings = SubResource("LabelSettings_bgnk5")
 horizontal_alignment = 1
 
-[node name="Plataforma" type="Label" parent="."]
-layout_mode = 0
-offset_left = 191.0
-offset_top = 29.0
-offset_right = 411.0
-offset_bottom = 99.0
-theme_override_font_sizes/font_size = 51
-text = "PC"
-label_settings = SubResource("LabelSettings_q84pr")
-horizontal_alignment = 1
-
 [connection signal="button_down" from="Botones/BotonNivel" to="." method="IrMenuNiveles"]
 [connection signal="button_down" from="Botones/BotonSalir" to="." method="SalirDelJuego"]
 [connection signal="button_down" from="Botones/BotonAjustes" to="." method="IrMenuAjustes"]
-[connection signal="button_down" from="Botones/BotonP" to="." method="ControlMobil"]
 [connection signal="ready" from="PantallaCarga" to="." method="_on_pantalla_carga_ready"]
 [connection signal="timeout" from="IrA" to="." method="_on_ir_a_timeout"]

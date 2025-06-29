@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://cx6osx6yp1yxy"]
 
-[ext_resource type="Texture2D" uid="uid://crn7hmdf18g51" path="res://VersiónFinal/Assets/Cielo/Estrellas.png" id="1_18o5s"]
 [ext_resource type="Script" uid="uid://b2d7e77upgog6" path="res://VersiónFinal/Codigos/Menues/menu_creditos.gd" id="1_lsqmi"]
 [ext_resource type="Texture2D" uid="uid://cb3v1qoj14yuu" path="res://VersiónFinal/Assets/Edificios/BsAs.png" id="2_lsqmi"]
+[ext_resource type="Texture2D" uid="uid://duras7iy31qc7" path="res://VersiónFinal/Assets/Cielo/Noche.png" id="2_qbp2v"]
 [ext_resource type="Texture2D" uid="uid://badjyf83j7wow" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/volver.png" id="4_50bn3"]
 [ext_resource type="Texture2D" uid="uid://bt54ttqlifxnk" path="res://VersiónFinal/Assets/Creditos/Instagram.png" id="5_50bn3"]
 [ext_resource type="Texture2D" uid="uid://hw83emlpv73" path="res://VersiónFinal/Assets/Creditos/Itch.jpg" id="6_qbp2v"]
@@ -28,22 +28,13 @@ grow_vertical = 2
 script = ExtResource("1_lsqmi")
 metadata/_edit_horizontal_guides_ = [475.0]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -5.0
-offset_top = -4.0
-offset_right = 35.0
-offset_bottom = 36.0
-scale = Vector2(32.285, 18.2759)
-color = Color(0.027451, 0.0627451, 0.113725, 1)
-
-[node name="Estrellas" type="Sprite2D" parent="."]
-position = Vector2(644.5, 264)
-scale = Vector2(1.00703, 1)
-texture = ExtResource("1_18o5s")
+[node name="Noche" type="Sprite2D" parent="."]
+position = Vector2(637.5, 366.5)
+scale = Vector2(1.01797, 1.02917)
+texture = ExtResource("2_qbp2v")
 
 [node name="BsAs" type="Sprite2D" parent="."]
-position = Vector2(647, 762)
+position = Vector2(647, 675)
 scale = Vector2(1.00781, 0.875694)
 texture = ExtResource("2_lsqmi")
 
