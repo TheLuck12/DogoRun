@@ -70,6 +70,20 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.785397, -0.261799]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"InstanciarObj"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lt2xs"]
 _data = {
@@ -94,9 +108,6 @@ shape = SubResource("CapsuleShape2D_2pc2j")
 [node name="PoInObjeto" type="Marker2D" parent="."]
 position = Vector2(-72, -69)
 metadata/_edit_lock_ = true
-
-[node name="InsTime" type="Timer" parent="PoInObjeto"]
-wait_time = 1.2
 
 [node name="Cuerpo" type="Node2D" parent="."]
 position = Vector2(10.9691, 26.7702)
@@ -160,5 +171,4 @@ volume_db = 5.0
 position = Vector2(-394.631, -132.202)
 shape = SubResource("RectangleShape2D_i4iro")
 
-[connection signal="timeout" from="PoInObjeto/InsTime" to="." method="_on_ins_time_timeout"]
 [connection signal="body_entered" from="Area2D2" to="." method="DetectoPerro"]
