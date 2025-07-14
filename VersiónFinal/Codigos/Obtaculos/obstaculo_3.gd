@@ -9,8 +9,8 @@ func InstanciarObj():
 	Objeto.global_position = $PoInObjeto.global_position
 
 
-#func _on_ins_time_timeout() -> void:
-	#InstanciarObj()
+func _on_ins_time_timeout() -> void:
+	InstanciarObj()
 
 func Fin():
 	$PoInObjeto/InsTime.autostart = false

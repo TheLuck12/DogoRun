@@ -8,6 +8,7 @@ func _ready() -> void:
 	$Jugador/Animacion.play("Correr")
 	$AnimationPlayer.play("MoverPiso")
 	ControlMusica.EmpezarMusica()
+	$MoverTutorial.play("MoverTuto")
 
 
 func SalirDelJuego() -> void:

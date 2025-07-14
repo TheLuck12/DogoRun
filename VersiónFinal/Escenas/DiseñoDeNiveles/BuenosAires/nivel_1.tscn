@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs3c03h3v5l6a"]
+[gd_scene load_steps=5 format=3 uid="uid://bs3c03h3v5l6a"]
 
 [ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="1_out0g"]
 [ext_resource type="PackedScene" uid="uid://dersvgviljy5m" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_3.tscn" id="2_cerri"]
 [ext_resource type="PackedScene" uid="uid://hxb6cwgttwie" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_2.tscn" id="2_w8l6g"]
+[ext_resource type="Texture2D" uid="uid://duf1i0qrdctbh" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/FlechaSeguir.png" id="4_co4tt"]
 
 [node name="Nivel1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [15205.0]
@@ -45,3 +46,46 @@ direccion = "Arriba"
 [node name="Obstaculo3" parent="Dron" instance=ExtResource("2_w8l6g")]
 position = Vector2(13981, 410)
 direccion = "Abajo"
+
+[node name="Flechas" type="Node2D" parent="."]
+
+[node name="FlechaSeguir" type="Sprite2D" parent="Flechas"]
+position = Vector2(1441, 505)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir2" type="Sprite2D" parent="Flechas"]
+position = Vector2(4084, 505)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir3" type="Sprite2D" parent="Flechas"]
+position = Vector2(5013, 288)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir4" type="Sprite2D" parent="Flechas"]
+position = Vector2(8183, 530)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir5" type="Sprite2D" parent="Flechas"]
+position = Vector2(9780, 530)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir6" type="Sprite2D" parent="Flechas"]
+position = Vector2(11528, 530)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir8" type="Sprite2D" parent="Flechas"]
+position = Vector2(12040, 530)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir9" type="Sprite2D" parent="Flechas"]
+position = Vector2(12884, 530)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir10" type="Sprite2D" parent="Flechas"]
+position = Vector2(13775, 310)
+texture = ExtResource("4_co4tt")
+
+[node name="FlechaSeguir7" type="Sprite2D" parent="Flechas"]
+position = Vector2(11801, 380)
+rotation = 1.83259
+texture = ExtResource("4_co4tt")

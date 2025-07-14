@@ -41,6 +41,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.785397]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cuerpo/CirujaPiernaAtras:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.523598]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cuerpo/CirujaPiernaDelante(3):rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.261799]
+}
 
 [sub_resource type="Animation" id="Animation_2pc2j"]
 resource_name = "TirarBotella"
@@ -84,6 +108,30 @@ tracks/2/keys = {
 "method": &"InstanciarObj"
 }]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cuerpo/CirujaPiernaAtras:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.523598, -0.473593]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cuerpo/CirujaPiernaDelante(3):rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.261799, 0.558715]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lt2xs"]
 _data = {
@@ -108,6 +156,10 @@ shape = SubResource("CapsuleShape2D_2pc2j")
 [node name="PoInObjeto" type="Marker2D" parent="."]
 position = Vector2(-72, -69)
 metadata/_edit_lock_ = true
+
+[node name="InsTime" type="Timer" parent="PoInObjeto"]
+wait_time = 1.2
+autostart = true
 
 [node name="Cuerpo" type="Node2D" parent="."]
 position = Vector2(10.9691, 26.7702)
