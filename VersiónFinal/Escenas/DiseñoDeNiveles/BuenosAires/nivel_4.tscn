@@ -30,24 +30,6 @@ position = Vector2(12639, 540)
 
 [node name="Ciruja" type="Node2D" parent="."]
 
-[node name="Obstaculo3" parent="Ciruja" instance=ExtResource("2_g73vn")]
-position = Vector2(3745, 587)
-
-[node name="Obstaculo4" parent="Ciruja" instance=ExtResource("2_g73vn")]
-position = Vector2(3012, 587)
-
-[node name="Obstaculo5" parent="Ciruja" instance=ExtResource("2_g73vn")]
-position = Vector2(5502, 587)
-
-[node name="Obstaculo6" parent="Ciruja" instance=ExtResource("2_g73vn")]
-position = Vector2(8283, 587)
-
-[node name="Obstaculo7" parent="Ciruja" instance=ExtResource("2_g73vn")]
-position = Vector2(10022, 587)
-
-[node name="Obstaculo8" parent="Ciruja" instance=ExtResource("2_g73vn")]
-position = Vector2(11971, 587)
-
 [node name="Obstaculo9" parent="Ciruja" instance=ExtResource("2_g73vn")]
 position = Vector2(14166, 587)
 

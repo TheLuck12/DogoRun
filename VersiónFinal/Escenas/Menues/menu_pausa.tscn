@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bt8evi32fvylc"]
+[gd_scene load_steps=11 format=3 uid="uid://bt8evi32fvylc"]
 
 [ext_resource type="Script" uid="uid://y2m06f6xfebo" path="res://VersiónFinal/Codigos/Menues/menu_pausa.gd" id="1_27eaq"]
 [ext_resource type="Texture2D" uid="uid://5dlkq7aubdmc" path="res://VersiónFinal/Assets/Menu/MenuGameOver.png" id="2_4ol5w"]
@@ -28,6 +28,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3650"]
+
 [node name="MenuPausa" type="Control" groups=["Interfaz"]]
 layout_mode = 3
 anchors_preset = 0
@@ -46,6 +48,7 @@ offset_top = 146.0
 offset_right = 612.0
 offset_bottom = 254.0
 size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3650")
 icon = ExtResource("4_x3650")
 flat = true
 
@@ -57,6 +60,7 @@ offset_right = 182.0
 offset_bottom = 415.0
 scale = Vector2(1.0368, 0.891)
 size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3650")
 icon = ExtResource("5_x3650")
 flat = true
 
@@ -67,6 +71,7 @@ offset_top = 266.0
 offset_right = 661.0
 offset_bottom = 374.0
 size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3650")
 icon = ExtResource("6_e04rb")
 flat = true
 
@@ -77,6 +82,7 @@ offset_top = 202.0
 offset_right = 185.0
 offset_bottom = 310.0
 size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3650")
 icon = ExtResource("7_f6f40")
 flat = true
 
@@ -87,6 +93,7 @@ offset_top = 107.0
 offset_right = 185.0
 offset_bottom = 215.0
 size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3650")
 icon = ExtResource("8_k6rte")
 flat = true
 

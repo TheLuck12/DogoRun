@@ -12,14 +12,13 @@ func InstanciarObj():
 func _on_ins_time_timeout() -> void:
 	InstanciarObj()
 
-func Fin():
-	$PoInObjeto/InsTime.autostart = false
-	$PoInObjeto/InsTime.stop()
 
 
 func ComenzarNivel():
 	if Global.vivo == true:
 		$AnimationPlayer.play("TirarBotella")
+	elif Global.vivo == false:
+		$AnimationPlayer.stop()
 
 
 func DetectoPerro(body: Node2D) -> void:

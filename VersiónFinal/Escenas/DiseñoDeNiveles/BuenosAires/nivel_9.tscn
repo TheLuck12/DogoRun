@@ -103,16 +103,16 @@ position = Vector2(28658, 582)
 position = Vector2(28658, 582)
 
 [node name="Obstaculo5" parent="Ciruja" instance=ExtResource("2_vmwrb")]
-position = Vector2(4843, 387)
+position = Vector2(4843, 335)
 
 [node name="Obstaculo6" parent="Ciruja" instance=ExtResource("2_vmwrb")]
-position = Vector2(5992, 390)
+position = Vector2(5992, 335)
 
 [node name="Obstaculo11" parent="Ciruja" instance=ExtResource("2_vmwrb")]
-position = Vector2(14856, 390)
+position = Vector2(14856, 335)
 
 [node name="Obstaculo19" parent="Ciruja" instance=ExtResource("2_vmwrb")]
-position = Vector2(23140, 390)
+position = Vector2(23140, 335)
 
 [node name="Dron" type="Node2D" parent="."]
 

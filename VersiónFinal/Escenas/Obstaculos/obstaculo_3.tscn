@@ -157,10 +157,6 @@ shape = SubResource("CapsuleShape2D_2pc2j")
 position = Vector2(-72, -69)
 metadata/_edit_lock_ = true
 
-[node name="InsTime" type="Timer" parent="PoInObjeto"]
-wait_time = 1.2
-autostart = true
-
 [node name="Cuerpo" type="Node2D" parent="."]
 position = Vector2(10.9691, 26.7702)
 rotation = 0.07364

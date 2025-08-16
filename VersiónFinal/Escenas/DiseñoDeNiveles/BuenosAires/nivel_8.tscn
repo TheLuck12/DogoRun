@@ -85,19 +85,13 @@ position = Vector2(26186, 581)
 position = Vector2(27071, 581)
 
 [node name="Obstaculo5" parent="Ciruja" instance=ExtResource("2_r7pys")]
-position = Vector2(8099, 385)
+position = Vector2(8099, 335)
 
 [node name="Obstaculo8" parent="Ciruja" instance=ExtResource("2_r7pys")]
-position = Vector2(12515, 385)
+position = Vector2(12515, 335)
 
 [node name="Obstaculo11" parent="Ciruja" instance=ExtResource("2_r7pys")]
-position = Vector2(17398, 385)
-
-[node name="Obstaculo12" parent="Ciruja" instance=ExtResource("2_r7pys")]
-position = Vector2(19115, 385)
-
-[node name="Obstaculo15" parent="Ciruja" instance=ExtResource("2_r7pys")]
-position = Vector2(23948, 385)
+position = Vector2(17398, 335)
 
 [node name="Dron" type="Node2D" parent="."]
 
@@ -149,20 +143,12 @@ direccion = "Arriba"
 position = Vector2(9828, 340)
 direccion = "Arriba"
 
-[node name="Obstaculo14" parent="Dron" instance=ExtResource("3_1fwbo")]
-position = Vector2(14766, 340)
-direccion = "Abajo"
-
 [node name="Obstaculo15" parent="Dron" instance=ExtResource("3_1fwbo")]
 position = Vector2(15010, 340)
 direccion = "Arriba"
 
 [node name="Obstaculo16" parent="Dron" instance=ExtResource("3_1fwbo")]
 position = Vector2(18059, 340)
-direccion = "Arriba"
-
-[node name="Obstaculo17" parent="Dron" instance=ExtResource("3_1fwbo")]
-position = Vector2(19929, 340)
 direccion = "Arriba"
 
 [node name="Obstaculo19" parent="Dron" instance=ExtResource("3_1fwbo")]

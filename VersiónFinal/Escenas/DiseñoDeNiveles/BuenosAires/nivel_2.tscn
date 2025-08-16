@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://piqe1xe4i55h"]
+[gd_scene load_steps=4 format=3 uid="uid://piqe1xe4i55h"]
 
 [ext_resource type="PackedScene" uid="uid://bro00b373nxme" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_1.tscn" id="1_kn6ib"]
 [ext_resource type="PackedScene" uid="uid://hxb6cwgttwie" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_2.tscn" id="2_o38lv"]
-[ext_resource type="PackedScene" uid="uid://dersvgviljy5m" path="res://VersiónFinal/Escenas/Obstaculos/obstaculo_3.tscn" id="3_0idaj"]
 [ext_resource type="Texture2D" uid="uid://duf1i0qrdctbh" path="res://VersiónFinal/Assets/Menu/Botones/Interfaz/FlechaSeguir.png" id="4_o38lv"]
 
 [node name="Nivel2" type="Node2D"]
@@ -13,110 +12,88 @@ metadata/_edit_vertical_guides_ = [15216.0]
 position = Vector2(-10, 22)
 
 [node name="Obstaculo1" parent="Colectivo" instance=ExtResource("1_kn6ib")]
-position = Vector2(3360, 515)
+position = Vector2(1568, 515)
 
 [node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_kn6ib")]
-position = Vector2(5690, 515)
+position = Vector2(2950, 515)
 
 [node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_kn6ib")]
-position = Vector2(8669, 515)
+position = Vector2(4241, 515)
 
 [node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_kn6ib")]
-position = Vector2(10182, 515)
+position = Vector2(5956, 515)
 
 [node name="Obstaculo5" parent="Colectivo" instance=ExtResource("1_kn6ib")]
-position = Vector2(12987, 515)
+position = Vector2(7450, 515)
+
+[node name="Obstaculo8" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(9388, 515)
+
+[node name="Obstaculo9" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(11243, 515)
+
+[node name="Obstaculo10" parent="Colectivo" instance=ExtResource("1_kn6ib")]
+position = Vector2(13051, 515.301)
 
 [node name="Dron" type="Node2D" parent="."]
 
-[node name="Obstaculo2" parent="Dron" instance=ExtResource("2_o38lv")]
-position = Vector2(4261, 351)
-direccion = "Arriba"
-
 [node name="Obstaculo3" parent="Dron" instance=ExtResource("2_o38lv")]
-position = Vector2(9386, 351)
+position = Vector2(10209, 351)
+direccion = "Abajo"
+
+[node name="Obstaculo4" parent="Dron" instance=ExtResource("2_o38lv")]
+position = Vector2(13859, 351)
 direccion = "Arriba"
-
-[node name="Ciruja" type="Node2D" parent="."]
-
-[node name="Obstaculo3" parent="Ciruja" instance=ExtResource("3_0idaj")]
-position = Vector2(1686, 602)
-
-[node name="Obstaculo4" parent="Ciruja" instance=ExtResource("3_0idaj")]
-position = Vector2(7271, 602)
-
-[node name="Obstaculo5" parent="Ciruja" instance=ExtResource("3_0idaj")]
-position = Vector2(11595, 602)
-
-[node name="Obstaculo6" parent="Ciruja" instance=ExtResource("3_0idaj")]
-position = Vector2(14372, 602)
 
 [node name="Flechas" type="Node2D" parent="."]
-
-[node name="FlechaSeguir" type="Sprite2D" parent="Flechas"]
-position = Vector2(1476, 505)
-texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir5" type="Sprite2D" parent="Flechas"]
 position = Vector2(878, 536)
 texture = ExtResource("4_o38lv")
 
-[node name="FlechaSeguir6" type="Sprite2D" parent="Flechas"]
-position = Vector2(1156, 379)
-rotation = 2.09439
-texture = ExtResource("4_o38lv")
-
 [node name="FlechaSeguir2" type="Sprite2D" parent="Flechas"]
-position = Vector2(2681, 505)
+position = Vector2(2020, 315)
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir3" type="Sprite2D" parent="Flechas"]
-position = Vector2(3751, 298)
+position = Vector2(3378, 329)
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir4" type="Sprite2D" parent="Flechas"]
-position = Vector2(5004, 529)
+position = Vector2(4733, 301)
+rotation = 1.83259
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir7" type="Sprite2D" parent="Flechas"]
-position = Vector2(6162, 306)
+position = Vector2(6431, 300)
 rotation = 1.83259
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir8" type="Sprite2D" parent="Flechas"]
-position = Vector2(6579, 547)
-texture = ExtResource("4_o38lv")
-
-[node name="FlechaSeguir11" type="Sprite2D" parent="Flechas"]
-position = Vector2(7075, 547)
+position = Vector2(5258, 547)
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir10" type="Sprite2D" parent="Flechas"]
-position = Vector2(6833, 387)
-rotation = 2.09439
+position = Vector2(6772, 515)
+texture = ExtResource("4_o38lv")
+
+[node name="FlechaSeguir11" type="Sprite2D" parent="Flechas"]
+position = Vector2(8696, 515)
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir12" type="Sprite2D" parent="Flechas"]
-position = Vector2(9105, 277)
-rotation = 2.09439
-texture = ExtResource("4_o38lv")
-
-[node name="FlechaSeguir9" type="Sprite2D" parent="Flechas"]
-position = Vector2(8029, 563)
+position = Vector2(9807, 298)
+rotation = 1.83259
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir13" type="Sprite2D" parent="Flechas"]
-position = Vector2(9567, 557)
+position = Vector2(10584, 536)
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir14" type="Sprite2D" parent="Flechas"]
-position = Vector2(11337, 557)
+position = Vector2(12348, 536.301)
 texture = ExtResource("4_o38lv")
 
 [node name="FlechaSeguir15" type="Sprite2D" parent="Flechas"]
-position = Vector2(12272, 557)
-texture = ExtResource("4_o38lv")
-
-[node name="FlechaSeguir16" type="Sprite2D" parent="Flechas"]
-position = Vector2(14007, 557)
+position = Vector2(13518, 282.301)
 texture = ExtResource("4_o38lv")

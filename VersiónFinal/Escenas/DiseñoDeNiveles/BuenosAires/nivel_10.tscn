@@ -97,49 +97,49 @@ position = Vector2(9204, 586)
 position = Vector2(9204, 586)
 
 [node name="Obstaculo6" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(4637, 384)
+position = Vector2(4637, 335)
 
 [node name="Obstaculo7" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(5817, 384)
+position = Vector2(5817, 335)
 
 [node name="Obstaculo8" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(6989, 384)
+position = Vector2(6989, 335)
 
 [node name="Obstaculo13" parent="Ciruja" instance=ExtResource("2_xa8q8")]
 position = Vector2(11813, 384)
 
 [node name="Obstaculo14" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(11813, 384)
+position = Vector2(11813, 335)
 
 [node name="Obstaculo15" parent="Ciruja" instance=ExtResource("2_xa8q8")]
 position = Vector2(12722, 384)
 
 [node name="Obstaculo16" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(12722, 384)
+position = Vector2(12722, 335)
 
 [node name="Obstaculo21" parent="Ciruja" instance=ExtResource("2_xa8q8")]
 position = Vector2(16614, 384)
 
 [node name="Obstaculo22" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(16614, 384)
+position = Vector2(16614, 335)
 
 [node name="Obstaculo23" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(17355, 384)
+position = Vector2(17355, 335)
 
 [node name="Obstaculo24" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(20301, 384)
+position = Vector2(20301, 335)
 
 [node name="Obstaculo28" parent="Ciruja" instance=ExtResource("2_xa8q8")]
 position = Vector2(25666, 384)
 
 [node name="Obstaculo29" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(25666, 384)
+position = Vector2(25666, 335)
 
 [node name="Obstaculo32" parent="Ciruja" instance=ExtResource("2_xa8q8")]
 position = Vector2(28475, 384)
 
 [node name="Obstaculo33" parent="Ciruja" instance=ExtResource("2_xa8q8")]
-position = Vector2(28475, 384)
+position = Vector2(28475, 335)
 
 [node name="Dron" type="Node2D" parent="."]
 

@@ -16,9 +16,6 @@ position = Vector2(1989, 539)
 [node name="Obstaculo2" parent="Colectivo" instance=ExtResource("1_soglf")]
 position = Vector2(4433, 539)
 
-[node name="Obstaculo3" parent="Colectivo" instance=ExtResource("1_soglf")]
-position = Vector2(7196, 539)
-
 [node name="Obstaculo4" parent="Colectivo" instance=ExtResource("1_soglf")]
 position = Vector2(8282, 539)
 
@@ -27,17 +24,11 @@ position = Vector2(10817, 539)
 
 [node name="Ciruja" type="Node2D" parent="."]
 
-[node name="Obstaculo3" parent="Ciruja" instance=ExtResource("2_p8dkx")]
-position = Vector2(2976, 586)
-
-[node name="Obstaculo5" parent="Ciruja" instance=ExtResource("2_p8dkx")]
-position = Vector2(6223, 586)
-
 [node name="Obstaculo4" parent="Ciruja" instance=ExtResource("2_p8dkx")]
-position = Vector2(3876, 581)
+position = Vector2(6251, 581)
 
 [node name="Obstaculo6" parent="Ciruja" instance=ExtResource("2_p8dkx")]
-position = Vector2(9754, 581)
+position = Vector2(9540, 581)
 
 [node name="Obstaculo7" parent="Ciruja" instance=ExtResource("2_p8dkx")]
 position = Vector2(13178, 581)
@@ -48,19 +39,15 @@ position = Vector2(14257, 581)
 [node name="Dron" type="Node2D" parent="."]
 
 [node name="Obstaculo2" parent="Dron" instance=ExtResource("3_ok8rg")]
-position = Vector2(3081, 340)
+position = Vector2(2801, 340)
 direccion = "Abajo"
 
 [node name="Obstaculo4" parent="Dron" instance=ExtResource("3_ok8rg")]
 position = Vector2(7762, 340)
-direccion = "Arriba"
+direccion = "Abajo"
 
 [node name="Obstaculo3" parent="Dron" instance=ExtResource("3_ok8rg")]
 position = Vector2(5205, 340)
-direccion = "Abajo"
-
-[node name="Obstaculo5" parent="Dron" instance=ExtResource("3_ok8rg")]
-position = Vector2(9956.22, 340)
 direccion = "Abajo"
 
 [node name="Obstaculo6" parent="Dron" instance=ExtResource("3_ok8rg")]
